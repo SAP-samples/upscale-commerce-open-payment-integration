@@ -1,0 +1,83 @@
+{
+  "id": "2f199b9a-9934-4161-93bf-99ffab37ac08",
+  "name": "PayPal iFrame",
+  "values": [
+    {
+      "key": "token",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "key": "rootUrl",
+      "value": "https:\/\/gatewaystage-approuter-caas2-sap-stage.cfapps.us10.hana.ondemand.com",
+      "enabled": true
+    },
+    {
+      "key": "accountGroupId",
+      "value": "56202",
+      "enabled": true
+    },
+    {
+      "key": "accountId",
+      "value": "69353",
+      "enabled": true
+    },
+    {
+      "key": "authentication_outbound_basic_auth_username_export_1618",
+      "value": "maggiePayPalBasicAuth_username",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "authentication_outbound_basic_auth_password_export_1618",
+      "value": "maggiePayPalBasicAuth_password",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "capturePattern",
+      "value": "PARTIAL_CAPTURE",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "settlementInitiationType",
+      "value": "AFTER_SHIPMENT",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "authorizationTimeoutDays",
+      "value": "7",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "intent",
+      "value": "authorize",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "restUrl",
+      "value": "api.sandbox.paypal.com",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "webhookId",
+      "value": "",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "restClientId",
+      "value": "",
+      "enabled": true
+    }
+
+  ],
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "",
+  "_postman_exported_using": "Postman\/7.35.0"
+}

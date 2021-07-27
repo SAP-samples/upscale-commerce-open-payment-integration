@@ -1,0 +1,77 @@
+{
+  "id": "37ea349a-480d-4b37-9bec-83db1fb2a4d9",
+  "name": "Worldpay iFrame",
+  "values": [
+    {
+      "key": "token",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "key": "rootUrl",
+      "value": "https:\/\/gatewaystage-approuter-caas2-sap-stage.cfapps.us10.hana.ondemand.com",
+      "enabled": true
+    },
+    {
+      "key": "accountGroupId",
+      "value": "10000",
+      "enabled": true
+    },
+    {
+      "key": "accountId",
+      "value": "18250",
+      "enabled": true
+    },
+    {
+      "key": "authentication_outbound_basic_auth_username_export_4",
+      "value": "worldpay_basic_auth_username",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "authentication_outbound_basic_auth_password_export_4",
+      "value": "worldpay_basic_auth_password",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "capturePattern",
+      "value": "CAPTURE_PER_SHIPMENT",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "settlementInitiationType",
+      "value": "AFTER_SHIPMENT",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "authorizationTimeoutDays",
+      "value": "7",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "googlePayGateway",
+      "value": "worldpay",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "installationId",
+      "value": "1402695",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "merchantCode",
+      "value": "SAPUPSECOMTEST",
+      "enabled": true
+    }
+
+  ],
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "",
+  "_postman_exported_using": "Postman\/7.35.0"
+}

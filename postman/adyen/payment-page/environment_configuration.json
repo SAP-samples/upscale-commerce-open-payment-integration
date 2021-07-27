@@ -1,0 +1,119 @@
+{
+  "id": "73a50c6a-6115-4c07-8433-237f4cb84e25",
+  "name": "Adyen Hosted Page",
+  "values": [
+    {
+      "key": "token",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "key": "rootUrl",
+      "value": "https:\/\/gatewaystage-approuter-caas2-sap-stage.cfapps.us10.hana.ondemand.com",
+      "enabled": true
+    },
+    {
+      "key": "accountGroupId",
+      "value": "15150",
+      "enabled": true
+    },
+    {
+      "key": "accountId",
+      "value": "23402",
+      "enabled": true
+    },
+    {
+      "key": "authentication_inbound_basic_auth_username_export_196",
+      "value": "(Notification Basic Auth)Basic Auth_export_username",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "authentication_inbound_basic_auth_password_export_196",
+      "value": "(Notification Basic Auth)Basic Auth_export_password",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "authentication_outbound_api_key_value_export_198",
+      "value": "(Webservice User)API Key_export",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "capturePattern",
+      "value": "PARTIAL_CAPTURE",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "settlementInitiationType",
+      "value": "AFTER_SHIPMENT",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "authorizationTimeoutDays",
+      "value": "7",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "googlePayGateway",
+      "value": "adyen",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "skinCode",
+      "value": "0CKaQtGq",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "merchantCode",
+      "value": "SAPCOM_STAGE_GATEWAY",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "apiVersion",
+      "value": "v64",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "checkoutPaymentHost",
+      "value": "checkout-test.adyen.com",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "hostedPaymentPageHost",
+      "value": "test.adyen.com",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "standardPaymentHost",
+      "value": "pal-test.adyen.com",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "skinHmacKey",
+      "value": "",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "notificationHmacKey",
+      "value": "",
+      "enabled": true
+    }
+
+  ],
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "",
+  "_postman_exported_using": "Postman\/7.35.0"
+}
