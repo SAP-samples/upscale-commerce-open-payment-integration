@@ -13,15 +13,16 @@ One or more test/live merchant accounts for the Payment Gateway/Method you are i
 ## Download and Installation
 Replace the payment account specific secrets and varibales in the Envrionments file.
 
-Import the postman collection with the updated Environment settings into your Upscale tenant as described [here](https://help.sap.com/viewer/a99d6fa0606f4f3cbf251e4e61f35feb/SHIP/en-US/7f1efa3c176746548c79d984314fee94.html)
+Import the postman collection with the updated Environment settings into your Upscale tenant as described [on SAP Help Portal](https://help.sap.com/viewer/a99d6fa0606f4f3cbf251e4e61f35feb/SHIP/en-US/7f1efa3c176746548c79d984314fee94.html).
 
 ## Known Issues
+No known issues.
 
 ## How to obtain support
 
 [Create an issue](https://github.com/SAP-samples/upscale-commerce-open-payment-integration/issues) in this repository if you find a bug or have questions about the content.
 
-Read the OPF [documentation](https://help.sap.com/viewer/a99d6fa0606f4f3cbf251e4e61f35feb/SHIP/en-US/5efc3463b4504d27bb9c4fbbb95a4ccc.html)
+Read the Open Payment Framework [documentation](https://help.sap.com/viewer/a99d6fa0606f4f3cbf251e4e61f35feb/SHIP/en-US/5efc3463b4504d27bb9c4fbbb95a4ccc.html) on SAP Help Portal.
  
 For additional support, request you can request access to SAP Upscale Open Payment Framework slack channel via your assigned integration manager.
 
