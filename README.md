@@ -20,6 +20,8 @@ Import the postman collection with the updated Environment settings into your Up
 ## How to obtain support
 
 [Create an issue](https://github.com/SAP-samples/upscale-commerce-open-payment-integration/issues) in this repository if you find a bug or have questions about the content.
+
+Read the OPF [documentation](https://help.sap.com/viewer/a99d6fa0606f4f3cbf251e4e61f35feb/SHIP/en-US/5efc3463b4504d27bb9c4fbbb95a4ccc.html)
  
 For additional support, request you can request access to SAP Upscale Open Payment Framework slack channel via your assigned integration manager.
 
