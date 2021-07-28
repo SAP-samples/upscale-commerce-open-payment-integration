@@ -3,7 +3,7 @@
 ## Description
 This repository offers sample pre-built integrations to payment gateways and methods in the form of 'Postman Collections' that can be imported into your SAP Upsclae tenant.
 
-The repository is a means to share working examples and comes with no official SAP support. 
+The repository is a means to share working examples and is provided as-is coming with no official SAP/Payment Provider support. You are strongly advised to test out the integration on your Upscale tenant before promoting to live customers.
 
 ## Requirements
 A licensed SAP Upscale Tenant.
