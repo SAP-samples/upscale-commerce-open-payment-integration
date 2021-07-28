@@ -6,8 +6,9 @@ This repository offers sample pre-built integrations to payment gateways and met
 The repository is a means to share working examples and comes with no official SAP support. 
 
 ## Requirements
-A licensed SAP Upscale Tenant
-One or more test/live merchant accounts for a Payment Gateway/Method.
+A licensed SAP Upscale Tenant.
+
+One or more test/live merchant accounts for the Payment Gateway/Method you are importing the collection of.
 
 ## Download and Installation
 Replace the payment account specific secrets and varibales in the Envrionments file.
