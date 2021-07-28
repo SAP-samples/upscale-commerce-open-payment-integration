@@ -1,0 +1,89 @@
+{
+  "id": "3d65fe8e-1775-4b75-8cad-8c31a2416f71",
+  "name": "Klarna",
+  "values": [
+    {
+      "key": "token",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "key": "rootUrl",
+      "value": "https:\/\/gatewaystage-approuter-caas2-sap-stage.cfapps.us10.hana.ondemand.com",
+      "enabled": true
+    },
+    {
+      "key": "accountGroupId",
+      "value": "51302",
+      "enabled": true
+    },
+    {
+      "key": "accountId",
+      "value": "64402",
+      "enabled": true
+    },
+    {
+      "key": "authentication_outbound_basic_auth_username_export_1156",
+      "value": "Klarna_API_Credential_username",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "authentication_outbound_basic_auth_password_export_1156",
+      "value": "Klarna_API_Credential_password",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "capturePattern",
+      "value": "CAPTURE_PER_SHIPMENT",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "settlementInitiationType",
+      "value": "AFTER_SHIPMENT",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "authorizationTimeoutDays",
+      "value": "7",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "notificationURL",
+      "value": "https:\/\/gatewaystage-approuter-caas2-sap-stage.cfapps.us10.hana.ondemand.com\/consumer\/payment-service\/gateway\/notifications\/64402",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "checkoutVersion",
+      "value": "v3",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "orderManagementVersion",
+      "value": "v1",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "checkoutPaymentHost",
+      "value": "api.playground.klarna.com",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "termsURL",
+      "value": "https:\/\/www.baidu.com",
+      "enabled": true
+    }
+
+  ],
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "",
+  "_postman_exported_using": "Postman\/7.35.0"
+}
