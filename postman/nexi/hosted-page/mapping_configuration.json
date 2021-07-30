@@ -1,0 +1,715 @@
+{
+  "info": {
+    "_postman_id": "d6895168-7be6-4db6-a6e7-f6dd10f90c23",
+    "name": "Nexi",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Variable",
+      "item": [
+        {
+          "name": "Variable_alias",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":132,\"sensitive\":false,\"value\":\"{{alias}}\",\"key\":\"alias\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}\/variables",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+                ,
+                "variables"
+
+              ]
+            }
+          },
+          "response": []
+        }
+        ,
+        {
+          "name": "Variable_secret",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":131,\"sensitive\":true,\"value\":\"{{secret}}\",\"key\":\"secret\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}\/variables",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+                ,
+                "variables"
+
+              ]
+            }
+          },
+          "response": []
+        }
+        ,
+        {
+          "name": "Variable_TCONTAB",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":128,\"sensitive\":false,\"value\":\"{{TCONTAB}}\",\"key\":\"TCONTAB\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}\/variables",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+                ,
+                "variables"
+
+              ]
+            }
+          },
+          "response": []
+        }
+        ,
+        {
+          "name": "Variable_apiEnv",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":129,\"sensitive\":false,\"value\":\"{{apiEnv}}\",\"key\":\"apiEnv\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}\/variables",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+                ,
+                "variables"
+
+              ]
+            }
+          },
+          "response": []
+        }
+        ,
+        {
+          "name": "Variable_EUR",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":130,\"sensitive\":false,\"value\":\"{{EUR}}\",\"key\":\"EUR\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}\/variables",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+                ,
+                "variables"
+
+              ]
+            }
+          },
+          "response": []
+        }
+
+      ],
+      "protocolProfileBehavior": {}
+    }
+    ,
+    {
+      "name": "Account",
+      "item": [
+        {
+          "name": "Account Patch",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"capturePattern\":\"{{capturePattern}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+
+              ]
+            }
+          },
+          "response": []
+        }
+
+      ],
+      "protocolProfileBehavior": {}
+    }
+    ,
+    {
+      "name": "AccountGroup",
+      "item": [
+        {
+          "name": "Account Group Patch",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"authorizationTimeoutDays\":{{authorizationTimeoutDays}}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+
+              ]
+            }
+          },
+          "response": []
+        }
+
+      ],
+      "protocolProfileBehavior": {}
+    }
+    ,
+    {
+      "name": "Authentications",
+      "item": [
+        {
+          "name": "Hmac_outbound_signature_calculation",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "7fc15610-3581-4317-bc37-b1d7dbb16ef3",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;    \npm.test(\"Location is present\", function () {\n    pm.response.to.have.header(\"Location\");\n    var location=pm.response.headers.get(\"Location\");\n    pm.environment.set(\"authentication_outbound_hmac_outbound_signature_calculation_132\", location.substring(location.lastIndexOf(\"\/\")+1,location.length));\n});"
+
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"charset\":\"UTF-8\",\"baseEncoding\":\"BASE16_LOWERCASE\",\"method\":\"HMAC_OUTBOUND_SIGNATURE_CALCULATION\",\"hmacSignatureFlag\":false,\"name\":\"Nexi API MAC_export_export\",\"source\":\"apiKey=${vars.alias}codiceTransazione=${input.referenceId}divisa=978importo=${input.amountInExponent}timeStamp=${auth.hmac.hmacFields.timeStamp}${vars.secret}\",\"id\":132,\"hmacFields\":{\"timeStamp\":\"${.now?long?c}\"},\"algorithm\":\"SHA1\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/gateway\/authentications",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "gateway"
+                ,
+                "authentications"
+
+              ]
+            }
+          },
+          "response": []
+        }
+        ,
+        {
+          "name": "Hmac_signature_calculation",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "0ae8f49e-0dc8-419d-8359-f9c94a18c82c",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;    \npm.test(\"Location is present\", function () {\n    pm.response.to.have.header(\"Location\");\n    var location=pm.response.headers.get(\"Location\");\n    pm.environment.set(\"authentication_inbound_hmac_signature_calculation_129\", location.substring(location.lastIndexOf(\"\/\")+1,location.length));\n});"
+
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"charset\":\"UTF-8\",\"baseEncoding\":\"BASE16_LOWERCASE\",\"method\":\"HMAC_SIGNATURE_CALCULATION\",\"hmacSignatureFlag\":false,\"name\":\"Nexi Verify MAC_export_export\",\"source\":\"codTrans=${input.codTrans}esito=${input.esito}importo=${input.importo}divisa=${input.divisa}data=${input.data}orario=${input.orario}codAut=${input.codAut}${vars.secret}\",\"id\":129,\"algorithm\":\"SHA1\",\"target\":\"${input.mac}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/gateway\/authentications",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "gateway"
+                ,
+                "authentications"
+
+              ]
+            }
+          },
+          "response": []
+        }
+        ,
+        {
+          "name": "Hmac_outbound_signature_calculation",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "7fe674e3-5b21-4311-8c05-b8b623892417",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;    \npm.test(\"Location is present\", function () {\n    pm.response.to.have.header(\"Location\");\n    var location=pm.response.headers.get(\"Location\");\n    pm.environment.set(\"authentication_inbound_hmac_outbound_signature_calculation_130\", location.substring(location.lastIndexOf(\"\/\")+1,location.length));\n});"
+
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"charset\":\"UTF-8\",\"baseEncoding\":\"BASE16_LOWERCASE\",\"method\":\"HMAC_OUTBOUND_SIGNATURE_CALCULATION\",\"hmacSignatureFlag\":false,\"name\":\"Nexi iFrame MAC_export_export\",\"source\":\"codTrans=${auth.hmac.hmacFields.codTrans}divisa=${input.currency}importo=${input.amountInExponent}${vars.secret}\",\"id\":130,\"hmacFields\":{\"codTrans\":\"${input.referenceId}\"},\"algorithm\":\"SHA1\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/gateway\/authentications",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "gateway"
+                ,
+                "authentications"
+
+              ]
+            }
+          },
+          "response": []
+        }
+        ,
+        {
+          "name": "Hmac_signature_calculation",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "fd514931-09df-48a0-8a3a-f9f981260efa",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;    \npm.test(\"Location is present\", function () {\n    pm.response.to.have.header(\"Location\");\n    var location=pm.response.headers.get(\"Location\");\n    pm.environment.set(\"authentication_inbound_hmac_signature_calculation_131\", location.substring(location.lastIndexOf(\"\/\")+1,location.length));\n});"
+
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"charset\":\"UTF-8\",\"baseEncoding\":\"BASE16_LOWERCASE\",\"method\":\"HMAC_SIGNATURE_CALCULATION\",\"hmacSignatureFlag\":false,\"name\":\"Nexi Notification MAC_export_export\",\"source\":\"codTrans=${input.customFields.codTrans}esito=${input.customFields.esito}importo=${input.customFields.importo}divisa=${input.customFields.divisa}data=${input.customFields.data}orario=${input.customFields.orario}codAut=${input.customFields.codAut}${vars.secret}\",\"id\":131,\"algorithm\":\"SHA1\",\"target\":\"${input.targetSignature}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/gateway\/authentications",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "gateway"
+                ,
+                "authentications"
+
+              ]
+            }
+          },
+          "response": []
+        }
+
+      ],
+      "protocolProfileBehavior": {}
+    }
+    ,
+    {
+      "name": "Authorization",
+      "item": [
+        {
+          "name": "Authorization",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":107,\"pattern\":\"FULL_PAGE\",\"requestType\":\"AUTHORIZATION\",\"destination\":{\"url\":\"https:\/${vars.apiEnv}\/ecomm\/ecomm\/DispatcherServlet\",\"method\":\"POST\",\"contentType\":\"application\/x-www-form-urlencoded\",\"body\":null,\"authenticationIds\":[\"{{authentication_inbound_hmac_outbound_signature_calculation_130}}\"],\"form\":[{\"name\":\"divisa\",\"value\":\"${input.currency}\"},{\"name\":\"urlpost\",\"value\":\"${input.notificationURL}\"},{\"name\":\"mail\",\"value\":\"${input.emailAddress}\"},{\"name\":\"TCONTAB\",\"value\":\"${vars.TCONTAB}\"},{\"name\":\"url\",\"value\":\"${input.resultURL}\"},{\"name\":\"codTrans\",\"value\":\"${auth.hmac.hmacFields.codTrans}\"},{\"name\":\"url_back\",\"value\":\"${input.cancelURL}\"},{\"name\":\"mac\",\"value\":\"${auth.hmac.digest}\"},{\"name\":\"alias\",\"value\":\"${vars.alias}\"},{\"name\":\"importo\",\"value\":\"${input.amountInExponent}\"}]},\"verify\":{\"localVerifyMapping\":{\"mappings\":[{\"from\":\"esito\",\"to\":\"result\",\"map\":{\"OK\":\"AUTHORIZED\",\"KO\":\"UNAUTHORIZED\",\"ANNULLO\":\"CANCELLED\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false}]},\"localVerifyAuthenticationId\":\"{{authentication_inbound_hmac_signature_calculation_129}}\"}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}\/authorization",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+                ,
+                "authorization"
+
+              ]
+            }
+          },
+          "response": []
+        }
+
+      ],
+      "protocolProfileBehavior": {}
+    }
+    ,
+    {
+      "name": "Notification",
+      "item": [
+        {
+          "name": "Notification",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":108,\"requestType\":\"NOTIFICATION\",\"inboundMapping\":{\"preprocessingMethodId\":null,\"authenticationIds\":[\"{{authentication_inbound_hmac_signature_calculation_131}}\"],\"contentType\":\"application\/x-www-form-urlencoded\",\"requestMapping\":{\"authorization\":{\"requestExample\":\"xpay__lb__token=&mail=r.cotton%40sap.com&data=20201130&messaggio=Message+OK&cognome=cotton&nazionalita=ITA&terminalId=00028426&regione=&mac=ed3e613416887a5ae63ff5746090bdb1f02ebd2c&codAut=B127H9&tipoProdotto=VISA+CLASSIC+-+CREDIT+-+N&selectedcard=&alias=ALIAS_WEB_00028426&pan=453997XXXXXX0006&brand=VISA&orario=124606&divisa=EUR&scadenza_pan=203002&importo=32000&codiceEsito=0&languageId=ENG&nome=richard+&check=&tipoTransazione=VBV_FULL&codiceConvenzione=00028426104&codTrans=0678282455_1606736722402&tipo_richiesta=PA&esito=OK&aliasEffettivo=&TCONTAB=C&OPTION_CF=&num_contratto=\",\"requestMappingFields\":{\"mappings\":[{\"from\":\"scadenza_pan\",\"to\":\"cardExpiryDate\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"pan\",\"to\":\"cardLast4\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"brand\",\"to\":\"cardType\",\"map\":{\"VISA\":\"VISA\",\"Master\":\"MASTERCARD\",\"AMEX\":\"AMEX\",\"Mastercard\":\"MASTERCARD\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"terminalId\",\"to\":\"merchantId\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"brand\",\"to\":\"paymentMethod\",\"map\":{\"VISA\":\"CREDIT_CARD\",\"default\":\"CREDIT_CARD\",\"MasterCard\":\"CREDIT_CARD\",\"Amex\":\"CREDIT_CARD\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"codTrans\",\"to\":\"pspReference\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"codTrans\",\"to\":\"referenceId\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"TCONTAB\",\"to\":\"requestType\",\"map\":{\"C\":\"AUTHORIZATION\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"mac\",\"to\":\"targetSignature\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"codTrans\",\"to\":\"transactionId\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"esito\",\"to\":\"transactionStatus\",\"map\":{\"OK\":\"ACCEPTED\",\"KO\":\"REJECTED\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"data\",\"to\":\"data\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":true,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"orario\",\"to\":\"orario\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":true,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"codTrans\",\"to\":\"codTrans\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":true,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"esito\",\"to\":\"esito\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":true,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"importo\",\"to\":\"importo\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":true,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"divisa\",\"to\":\"divisa\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":true,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"codAut\",\"to\":\"codAut\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":true,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"xpay__lb__token\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"mail\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"messaggio\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"cognome\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"nazionalita\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"regione\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"tipoProdotto\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"selectedcard\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"alias\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"codiceEsito\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"languageId\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"nome\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"check\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"tipoTransazione\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"codiceConvenzione\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"tipo_richiesta\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"aliasEffettivo\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"OPTION_CF\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"num_contratto\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false}]}},\"settlement\":{\"requestExample\":\"\",\"requestMappingFields\":null},\"refund\":{\"requestExample\":\"\",\"requestMappingFields\":null}},\"responseMapping\":{\"content\":\"OK\"}}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}\/notification",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+                ,
+                "notification"
+
+              ]
+            }
+          },
+          "response": []
+        }
+
+      ],
+      "protocolProfileBehavior": {}
+    }
+    ,
+    {
+      "name": "Refund",
+      "item": [
+        {
+          "name": "Refund",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":109,\"requestType\":\"REFUND\",\"outboundMappings\":[{\"url\":\"https:\/\/${vars.apiEnv}\/ecomm\/api\/bo\/storna\",\"authenticationIds\":[\"{{authentication_outbound_hmac_outbound_signature_calculation_132}}\"],\"method\":\"POST\",\"requestContentType\":\"application\/json\",\"requestExample\":\"{\\n    \\\"apiKey\\\" : \\\"APIKEY\\\",\\n    \\\"codiceTransazione\\\" : \\\"tx_code\\\",\\n    \\\"importo\\\" : \\\"23000\\\",\\n    \\\"divisa\\\" : \\\"978\\\",\\n    \\\"timeStamp\\\" : \\\"1606740903518\\\",\\n    \\\"mac\\\" : \\\"sig1234\\\"\\n}\",\"responseExample\":\"{\\n   \\\"timeStamp\\\": \\\"1607707701553\\\",\\n  \\\"esito\\\" : \\\"OK\\\",\\n    \\\"idOperazione\\\": \\\"1866937\\\",\\n    \\\"errore\\\": {\\n        \\\"messaggio\\\": \\\"Mac non valido\\\",\\n        \\\"codice\\\": 3\\n    },\\n    \\\"mac\\\": \\\"7481f6a33076d228e896f71de86779a3f5c32843\\\"\\n}\",\"requestMappingFields\":{\"mappings\":[{\"from\":\"$.timeStamp\",\"to\":\"${auth.hmac.hmacFields.timeStamp}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isObject\":false,\"isScript\":false},{\"from\":\"$.codiceTransazione\",\"to\":\"${input.referenceId}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.apiKey\",\"to\":\"${vars.alias}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.divisa\",\"to\":\"${input.currency}\",\"map\":{\"EUR\":\"978\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.importo\",\"to\":\"${input.amountInExponent}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.mac\",\"to\":\"${auth.hmac.digest}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isObject\":false,\"isScript\":false}]},\"responseMappingFields\":{\"mappings\":[{\"from\":\"errore.messaggio\",\"to\":\"errorCode\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"idOperazione\",\"to\":\"pspReference\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"esito\",\"to\":\"transactionStatus\",\"map\":{\"KO\":\"REJECTED\",\"OK\":\"ACCEPTED\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"timeStamp\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"errore.codice\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"mac\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false}]},\"responseContentType\":\"application\/json\",\"headers\":{},\"formArrayIndicator\":null}]}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}\/refund",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+                ,
+                "refund"
+
+              ]
+            }
+          },
+          "response": []
+        }
+
+      ],
+      "protocolProfileBehavior": {}
+    }
+
+  ],
+  "protocolProfileBehavior": {}
+}
