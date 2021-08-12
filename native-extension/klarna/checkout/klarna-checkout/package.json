@@ -1,17 +1,16 @@
 {
-  "name": "custom-component",
-  "version": "0.0.2",
+  "name": "klarna-checkout",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "package": "npm run build",
+    "postpackage": "npm pack ./dist/klarna-checkout"
   },
   "private": true,
-  "peerDependencies": {
-    "@caas/service-client-angular": "0.8.183"
-  },
   "dependencies": {
     "@angular/animations": "~11.2.14",
     "@angular/common": "~11.2.14",
@@ -23,14 +22,12 @@
     "@angular/router": "~11.2.14",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "upscale-web-storefront-sdk": "file:../upscale-web-storefront-sdk/upscale-web-storefront-sdk-0.0.1.tgz",
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.13",
     "@angular/cli": "~11.2.14",
     "@angular/compiler-cli": "~11.2.14",
-    "@caas/service-client-angular": "0.8.183",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
@@ -46,5 +43,9 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.1.5"
+  },
+  "peerDependencies": {
+    "@caas/service-client-angular": "0.8.177",
+    "@upscale/web-storefront-sdk": "0.0.1-BETA.4"
   }
 }

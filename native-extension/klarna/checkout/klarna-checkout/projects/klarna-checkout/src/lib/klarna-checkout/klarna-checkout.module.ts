@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { RegistrationService } from 'upscale-web-storefront-sdk';
-import { KlarnaCheckoutComponent } from './klarna-checkout.component';
+import { NgModule } from "@angular/core";
+import { RegistrationService } from "@upscale/web-storefront-sdk";
+import { KlarnaCheckoutComponent } from "./klarna-checkout.component";
 
 @NgModule({
   declarations: [KlarnaCheckoutComponent],
@@ -9,7 +9,7 @@ import { KlarnaCheckoutComponent } from './klarna-checkout.component';
 export class KlarnaCheckoutModule {
   constructor(private registrationService: RegistrationService) {
     this.registrationService.register(
-      'klarna-checkout',
+      "klarna-checkout",
       KlarnaCheckoutComponent
     );
   }

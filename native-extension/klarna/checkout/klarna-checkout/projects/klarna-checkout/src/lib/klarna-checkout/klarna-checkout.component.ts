@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import {
   ActiveConfiguration,
   Channel,
@@ -8,7 +8,7 @@ import {
   OrdersService,
   PaymentService,
   SupportedLocale,
-} from '@caas/service-client-angular';
+} from "@caas/service-client-angular";
 import {
   AppConfiguration,
   AppConfigurationService,
@@ -16,7 +16,7 @@ import {
   ConsentService,
   OpenPaymentService,
   ShoppingCartService,
-} from 'upscale-web-storefront-sdk';
+} from "@upscale/web-storefront-sdk";
 import {
   catchError,
   concatMap,
@@ -25,17 +25,17 @@ import {
   mapTo,
   take,
   tap,
-} from 'rxjs/operators';
-import { Router } from '@angular/router';
-import { from, of, throwError } from 'rxjs';
+} from "rxjs/operators";
+import { Router } from "@angular/router";
+import { from, of, throwError } from "rxjs";
 
 @Component({
-  selector: 'lib-klarna-checkout',
-  templateUrl: './klarna-checkout.component.html',
+  selector: "lib-klarna-checkout",
+  templateUrl: "./klarna-checkout.component.html",
   styles: [],
 })
 export class KlarnaCheckoutComponent implements OnInit {
-  @ViewChild('paymentMethodContainer', { static: false })
+  @ViewChild("paymentMethodContainer", { static: false })
   paymentMethodContainer: ElementRef;
 
   appData: AppConfiguration;
@@ -67,7 +67,7 @@ export class KlarnaCheckoutComponent implements OnInit {
           if (cart) {
             return of(cart);
           } else {
-            return from(this.router.navigate([this.localeString, 'cart'])).pipe(
+            return from(this.router.navigate([this.localeString, "cart"])).pipe(
               mapTo(undefined as void)
             );
           }
@@ -108,18 +108,18 @@ export class KlarnaCheckoutComponent implements OnInit {
         ),
         concatMap((configs) => {
           const klarnaConfig = configs.find((config) => {
-            return config.gatewayProviderName === 'klarna-checkout';
+            return config.gatewayProviderName === "klarna-checkout";
           });
 
           if (!klarnaConfig) {
-            return from(this.router.navigate([this.localeString, 'cart'])).pipe(
+            return from(this.router.navigate([this.localeString, "cart"])).pipe(
               mapTo(undefined as void)
             );
           }
 
           const currentDate = new Date();
           const timezoneOffset = currentDate.getTimezoneOffset();
-          const baseURI = document?.baseURI ?? '';
+          const baseURI = document?.baseURI ?? "";
           const url = `${baseURI}${this.localeString}/redirect-result/checkout`;
 
           return this.paymentService.opfInitiate({
