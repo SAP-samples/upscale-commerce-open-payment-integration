@@ -34,7 +34,7 @@ After development implementation, the merchant account configuration is done in 
 2. Create a merchant account.
 ![create merchant account](./images/create_merchant_acc.png)
 3. In the new quick creation page above, make sure the Payment Integration is set to Open payment framework – gateway.
-4. enter the Payment gateway name. Note that if Google pay is integrated, you need to provide the exact gateway ID in Google pay.
+4. Enter the Payment gateway name. Note that if Google pay is integrated, you need to provide the exact gateway ID in Google pay.
 5. Assign the division.
 6. For the alternative payment method assignment, you can make the assignment once an alternative payment method is created.
 
