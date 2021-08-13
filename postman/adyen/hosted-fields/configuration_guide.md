@@ -32,7 +32,7 @@ After development implementation, the merchant account configuration is done in 
 ## Create Merchant Account in Target Tenant
 1. Log on to the target tenant.
 2. Create a merchant account.
-![solution diagram](./documentation/images/create_merchant_acc.png)
+![solution diagram](../documentation/images/create_merchant_acc.png)
 ![solution diagram](./documentation/images/solutiondiagramm-1.png) 
 3. In the new quick creation page above, make sure the Payment Integration is set to Open payment framework – gateway.
 4. Enter the Payment gateway name. Note that if Google pay is integrated, you need to provide the exact gateway ID in Google pay.
