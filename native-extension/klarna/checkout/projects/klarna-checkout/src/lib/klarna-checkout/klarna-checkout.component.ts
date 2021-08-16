@@ -78,7 +78,7 @@ export class KlarnaCheckoutComponent implements OnInit {
         }),
         take(1),
         concatMapTo(
-          this.appConfigService.getAppConfiguration().pipe(
+          this.appConfigService.appConfiguration.pipe(
             take(1),
             tap((appData) => {
               this.appData = appData;
@@ -149,10 +149,10 @@ export class KlarnaCheckoutComponent implements OnInit {
         }),
         concatMap((initResponse) =>
           this.openPaymentService
-            .loadResources(
-              initResponse.dynamicScript?.jsUrls,
-              initResponse.dynamicScript?.cssUrls
-            )
+            .loadResources({
+              scripts: initResponse.dynamicScript?.jsUrls,
+              styles: initResponse.dynamicScript?.cssUrls,
+            })
             .pipe(mapTo(initResponse))
         ),
         tap((initResponse) =>

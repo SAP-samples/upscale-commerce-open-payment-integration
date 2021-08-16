@@ -6,7 +6,8 @@ import { KlarnaCheckoutComponent } from "./klarna-checkout.component";
   declarations: [KlarnaCheckoutComponent],
   exports: [KlarnaCheckoutComponent],
 })
-export class KlarnaCheckoutModule {
+
+export class UpscaleExtensionModule {
   constructor(private registrationService: RegistrationService) {
     this.registrationService.register(
       "klarna-checkout",
