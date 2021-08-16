@@ -18,11 +18,11 @@ Find the folder containing the klarna-checkout source. Open the klarna-checkout.
 
 Take note of the following code starting on line 110: 
 
-    ```sql
+    
     const klarnaConfig = configs.find((config) => {
     return config.gatewayProviderName === 'klarna-checkout';
     });
-    ```
+   
 This code is checking for a payment configuration with a gatewayProviderName matching "klarna-checkout". Feel free to change this string to something else, so long as it is consistent with that of a compatible payment configuration (more on this later).
 
 3. Component mapping
