@@ -73,7 +73,8 @@ Before the component can be used, you will need to configure a gateway or paymen
 
 A postman collection to quickly setup one of these should be accessible via the [SAP-samples Github](https://github.com/SAP-samples/upscale-commerce-open-payment-integration). Instructions on how to install a payment configuration using a postman collection can be found [here](https://github.com/SAP-samples/upscale-commerce-open-payment-integration/tree/main/postman/klarna/iframe).
 
-Please also be sure to fill in your config's gatewayProviderName (labelled as "Payment gateway name") as the string specified in klarna-checkout.component.ts above.
+Please also be sure to fill in your configuration's gatewayProviderName (labelled as "Payment gateway name") as the string specified in klarna-checkout.component.ts above.
+
 ![configure payment](./documentation/images/configure_payment.png) 
 
 ## Testing
