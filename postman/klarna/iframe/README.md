@@ -78,9 +78,9 @@ Please also be sure to fill in your configuration's gatewayProviderName (labelle
 ## Testing
 If all the above setup is complete, please follow the steps below to test your new custom component!
 
-1. Download the app
+1. Download the app.
 
-2. Extract the contents of the zip
+2. Extract the contents of the zip.
 
 3. Access the project root in terminal and run:
    ```
@@ -88,7 +88,7 @@ If all the above setup is complete, please follow the steps below to test your n
     npm start
     ```
 
-4. Access the application via localhost:4200, add a product to cart, and proceed to checkout. A klarna payment form should appear in the place of the regular checkout! 
+4. Access the application via localhost:4200, add a product to cart, and proceed to checkout. A klarna payment form should appear in the place of the regular checkout.
 ![test in pwa](./documentation/images/test_in_pwa.png) 
 
 ## How it all works
