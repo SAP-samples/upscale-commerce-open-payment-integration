@@ -85,11 +85,13 @@ Please also be sure to fill in your config's gatewayProviderName (labelled as "P
 ## Testing
 If all the above setup is complete, please follow the steps below to test your new custom component!
 
-**1\. Download the app.**
+**1\. Download the app from workbench**
 
-**2\. Extract the contents of the zip.**
+**2\. Extract the contents of the zip**
 
-**3\. Access the project root in terminal and run "npm install"**
+**3\. Install dependencies:**
+
+Access the project root in terminal and run "npm install"
 
 **4\. Add the library module to your application:**
 
@@ -104,7 +106,11 @@ Then add UpscaleExtensionModule to the array of native extension modules:
     // Add Native Extension Modules here
     const modules = [ UpscaleExtensionModule ];
 
-**5\. Test in browswer:**
+**5\. Start app:**
+
+Access the project root in terminal and run "npm start"
+
+**6\. Test in browser:**
 
 Access the application via localhost:4200, add a product to cart, and proceed to checkout. A klarna payment form should appear in the place of the regular checkout! 
 ![test in pwa](./documentation/images/test_in_pwa.png) 
