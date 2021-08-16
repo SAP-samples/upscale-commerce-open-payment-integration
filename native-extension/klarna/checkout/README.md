@@ -97,12 +97,12 @@ Open the file src/app/core/extension.module.ts in your ide/text editor
 
 Add the following to the first list of imports:
 
-    import { KlarnaCheckoutModule } from 'klarna-checkout';
+    import { UpscaleExtensionModule } from 'klarna-checkout';
 
-Then add KlarnaCheckoutModule to the array of native extension modules:
+Then add UpscaleExtensionModule to the array of native extension modules:
 
     // Add Native Extension Modules here
-    const modules = [ KlarnaCheckoutModule ];
+    const modules = [ UpscaleExtensionModule ];
 
 **5\. Test in browswer:**
 
