@@ -40,7 +40,7 @@ This code is mapping the KlarnaCheckoutComponent component class to the string "
 4. Publish Component Library
 Open the klarna-checkout folder in terminal and execute commands to install all dependencies, build, and package the application.
 
-Note: For the current release, neither upscale-web-storefront-sdk nor caas-service-client-angular will not be available publicly. As such, you'll need to reference them from an existing Upscale PWA whose dependencies have been installed.
+Note: For the current release, neither upscale-web-storefront-sdk, nor caas-service-client-angular will be available publicly. As such, you'll need to reference them from an existing Upscale PWA whose dependencies have been installed.
 
     npm install
     npm install --save-dev <path to Upscale PWA>/libs/caas-service-client-angular-<version>.tgz
