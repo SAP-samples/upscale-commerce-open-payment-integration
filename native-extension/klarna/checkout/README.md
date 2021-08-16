@@ -39,6 +39,7 @@ Take note of the following code starting on line 10:
     
 This code is mapping the KlarnaCheckoutComponent component class to the string "klarna-checkout". The registrationService is a service which is shared between the PWA and the custom component, and essentially by providing this mapping, we are telling the PWA that this component exists. Like the gatewayProviderName property above, feel free to set this string to anything you like as well.
 
+
 **4\. Publish Component Library**
 
 Open the klarna-checkout folder in terminal and execute commands to install all dependencies, build, and package the application. For the current release, neither upscale-web-storefront-sdk nor caas-service-client-angular will be available publicly. For now, they will be bundled together with the PWA app. Download a new PWA app from Workbench, and there will be a "libs" folder containing the .tgz files you'll need to install. The exact commands are as follows:
@@ -113,6 +114,7 @@ Access the project root in terminal and run "npm start"
 **6\. Test in browser:**
 
 Access the application via localhost:4200, add a product to cart, and proceed to checkout. A klarna payment form should appear in the place of the regular checkout! 
+
 ![test in pwa](./documentation/images/test_in_pwa.png) 
 
 ## How it all works
