@@ -3,9 +3,9 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/upscale-commerce-open-payment-integration)](https://api.reuse.software/info/github.com/SAP-samples/upscale-commerce-open-payment-integration)
 
 ## What is it?
-The Klarna checkout custom component is a sample of what will be possible with our brand new overhaul of the existing custom component implementation. The existing solution is only capable of injecting iframes into an Upscale PWA. The new version of custom components, which we are calling native extensions, will be capable of injecting native angular components and services directly into an application. In addition to being visible to web-crawlers, these components will be able to interact directly with the PWA’s front end state and services, enabling the merchant to build essentially anything that an Upscale developer could.
+The Klarna checkout custom component is a sample of an overhaul of the existing custom component implementation. The existing solution is only capable of injecting iframes into an Upscale PWA. The new version of custom components, which we are calling native extensions, can inject native angular components and services directly into an application. In addition to being visible to web-crawlers, these components can interact directly with the PWA’s front end state and services, enabling the merchants to build essentially anything that an Upscale developer could.
 
-To make it easier for a merchant to create a native extension, we have created a new public-facing upscale-web-storefront-sdk containing abstract classes which the component can access. The implementations of these classes exist as part of the PWA, and when the component is loaded, any references to them resolve to the implementations in the PWA. Those services interact with the PWA state, and are what enable much of the complex functionality that a merchant would want. The component can also access our caas-service-client-angular which provides services that interface directly with the back end services, for more fine-grained control.
+To make it easier for merchants to create a native extension, we have created a new public-facing upscale-web-storefront-sdk containing abstract classes that the component can access. The implementations of these classes exist as part of the PWA, and when the component is loaded, any references to them resolve to the implementations in the PWA. Those services interact with the PWA state, and are what enable much of the complex functionality that a merchant would want. The component can also access our caas-service-client-angular, which provides services that interface directly with the back end services, for more fine-grained control.
 
 ## Setting up the Custom Component
 Follow the steps below to create your own version of the klarna-checkout native component:
@@ -14,7 +14,7 @@ Follow the steps below to create your own version of the klarna-checkout native 
 The klarna-checkout native component code lives in the [SAP-samples Github](https://github.com/SAP-samples/upscale-commerce-open-payment-integration). Download the repository as a zip file and extract it.
 
 2. Configure mapping
-Find the folder containing the klarna-checkout source. Open the klarna-checkout.component.ts file in your desired IDE/text editor. You can find it in the path: projects/klarna-checkout/src/lib/klarna-checkout.component.ts.
+Find the folder containing the klarna-checkout source. Open the klarna-checkout.component.ts file in your desired IDE or text editor. You can find it in the path: projects/klarna-checkout/src/lib/klarna-checkout.component.ts.
 
 Take note of the following code starting on line 110: 
 
@@ -35,7 +35,7 @@ Take note of the following code starting on line 10:
       KlarnaCheckoutComponent
     );
     
-This code is mapping the KlarnaCheckoutComponent component class to the string "klarna-checkout". The registrationService is a service which is shared between the PWA and the custom component, and essentially by providing this mapping, we are telling the PWA that this component exists. Like the gatewayProviderName property above, feel free to set this string to anything you like as well.
+This code is mapping the KlarnaCheckoutComponent component class to the string "klarna-checkout". The registrationService is a service shared between the PWA and the custom component, and essentially, by providing this mapping, we are telling the PWA that this component exists. Like the gatewayProviderName property above, feel free to set this string to anything you like as well.
 
 4. Publish Component Library
 Open the klarna-checkout folder in terminal and execute commands to install all dependencies, build, and package the application.
@@ -55,35 +55,36 @@ Add the library as a Native Extension within the workbench, similarly to how you
 ![create native extension](./documentation/images/Create_Native_Extension.png) 
 
 6. Assign Native Extension
-In order to add the library to an app where you wish to show the klarna checkout, select the extension name in the selectize field for extensions within the app configuration.
+In order to add the library to an app where you wish to show the klarna checkout, select the extension names within the app configuration.
 ![assign native extension](./documentation/images/Assign_native_extension.png) 
 
-Note: You'll need to download the app to actually see the changes.
+Note: You need to download the app to actually see the changes.
 
 7. Configure Experience
-Navigate to the experience editor for the experience associated with the app. You will need to remove the existing checkout component within the checkout template and replace it with a custom component.
+Navigate to the experience editor for the experience associated with the app. You need to remove the existing checkout component within the checkout template and replace it with a custom component.
 
-In the custom component configuration, there is a dropdown for selecting either iframe or native component. Select native and then enter a string for the component identifier corresponding to mapping done in klarna-checkout.module.ts. 
+In the custom component configuration, there is a dropdown for selecting either iFrame or native component. Select native and then enter a string for the component identifier corresponding to mapping done in klarna-checkout.module.ts. 
 ![configure experience](./documentation/images/configure_experience.png) 
 
 8. Payment Configuration
-Before the component can be used, you will need to configure a gateway or payment method with a compatible klarna script and assign it to the division associated with the app.
+Before the component can be used, you need to configure a gateway or payment method with a compatible Klarna script and assign it to the division associated with the app.
 
-A postman collection to quickly setup one of these should be accessible via the [SAP-samples Github](https://github.com/SAP-samples/upscale-commerce-open-payment-integration). Instructions on how to install a payment configuration using a postman collection can be found [here](https://github.com/SAP-samples/upscale-commerce-open-payment-integration/tree/main/postman/klarna/iframe).
+A Postman collection to quickly set up one of these should be accessible via the [SAP-samples Github](https://github.com/SAP-samples/upscale-commerce-open-payment-integration). Instructions on how to install a payment configuration using a Postman collection can be found [here](https://github.com/SAP-samples/upscale-commerce-open-payment-integration/tree/main/postman/klarna/iframe).
 
 Please also be sure to fill in your configuration's gatewayProviderName (labelled as "Payment gateway name") as the string specified in klarna-checkout.component.ts above.
 
 ![configure payment](./documentation/images/configure_payment.png) 
 
 ## Testing
-If all the above setup is complete, please follow the steps below to test your new custom component!
+If all the above setup is complete, follow the steps below to test your new custom component!
 
 1. Download the app.
 
 2. Extract the contents of the zip.
 
 3. Access the project root in terminal and run:
-   ```
+
+    ```
     npm install
     npm start
     ```
