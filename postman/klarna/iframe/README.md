@@ -23,7 +23,7 @@ Take note of the following code starting on line 110:
     return config.gatewayProviderName === 'klarna-checkout';
     });
    
-This code is checking for a payment configuration with a gatewayProviderName matching "klarna-checkout". Feel free to change this string to something else, so long as it is consistent with that of a compatible payment configuration (more on this later).
+This code is checking for a payment configuration with a gatewayProviderName matching "klarna-checkout". Feel free to change this string to something else, so long as it is consistent with that of a compatible payment configuration.
 
 3. Component mapping
 Open klarna-checkout.module.ts located in the same directory.
