@@ -30,12 +30,11 @@ Open klarna-checkout.module.ts located in the same directory.
 
 Take note of the following code starting on line 10:
 
-    ```sql
     this.registrationService.register(
       'klarna-checkout',
       KlarnaCheckoutComponent
     );
-    ```
+    
 This code is mapping the KlarnaCheckoutComponent component class to the string "klarna-checkout". The registrationService is a service which is shared between the PWA and the custom component, and essentially by providing this mapping, we are telling the PWA that this component exists. Like the gatewayProviderName property above, feel free to set this string to anything you like as well.
 
 4. Publish Component Library
@@ -43,13 +42,12 @@ Open the klarna-checkout folder in terminal and execute commands to install all 
 
 Note: For the current release, neither upscale-web-storefront-sdk nor caas-service-client-angular will not be available publicly. As such, you'll need to reference them from an existing Upscale PWA whose dependencies have been installed.
 
-    ```sql
     npm install
     npm install --save-dev <path to Upscale PWA>/libs/caas-service-client-angular-<version>.tgz
     npm install --save-dev <path to Upscale PWA>/libs/upscale-web-storefront-sdk-<version>.tgz
     npm run build
     npm pack
-    ```
+    
 Host the generated tarball (.tgz) or dist folder of the component library in a public environment such as NPM, GitHub, or S3.
 
 5. Create Native Extension
@@ -86,10 +84,9 @@ If all the above setup is complete, please follow the steps below to test your n
 
 3. Access the project root in terminal and run:
 
-    ```sql
     npm install
     npm start
-    ```
+   
 4. Access the application via localhost:4200, add a product to cart, and proceed to checkout. A klarna payment form should appear in the place of the regular checkout! 
 ![test in pwa](./documentation/images/test_in_pwa.png) 
 
