@@ -81,9 +81,9 @@ Please also be sure to fill in your config's gatewayProviderName (labelled as "P
 ## Testing
 If all the above setup is complete, please follow the steps below to test your new custom component!
 
-1. Download the app
+1. Download the app.
 
-2. Extract the contents of the zip
+2. Extract the contents of the zip.
 
 3. Access the project root in terminal and run "npm install"
 
