@@ -1,5 +1,5 @@
 {
-  "id": "83bf8f04-6ce7-4395-8cba-f8d776265b14",
+  "id": "49e621a2-545d-4cb8-98c8-b2e6e01a36ea",
   "name": "klarna custom checkout",
   "values": [
     {
@@ -65,6 +65,12 @@
     }
     ,
     {
+      "key": "klarnaDataClientId",
+      "value": "f5c6d325-b3ca-5963-a113-fe15e25d4032",
+      "enabled": true
+    }
+    ,
+    {
       "key": "checkoutPaymentHost",
       "value": "api.playground.klarna.com",
       "enabled": true
@@ -75,7 +81,7 @@
       "value": "https:\/\/www.baidu.com\/",
       "enabled": true
     }
-
+    
   ],
   "_postman_variable_scope": "environment",
   "_postman_exported_at": "",
