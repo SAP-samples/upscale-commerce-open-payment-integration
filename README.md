@@ -11,7 +11,7 @@ A licensed SAP Upscale Tenant.
 One or more test/live merchant accounts for the Payment Gateway/Method you are importing the collection of.
 
 ## Download and Installation
-Replace the payment account specific secrets and varibales in the Environment file.
+Replace the payment account specific secrets and variables in the Environment file.
 
 Import the postman collection with the updated Environment settings into your Upscale tenant as described [on SAP Help Portal](https://help.sap.com/viewer/a99d6fa0606f4f3cbf251e4e61f35feb/SHIP/en-US/7f1efa3c176746548c79d984314fee94.html).
 
@@ -25,6 +25,10 @@ No known issues.
 Read the Open Payment Framework [documentation](https://help.sap.com/viewer/a99d6fa0606f4f3cbf251e4e61f35feb/SHIP/en-US/5efc3463b4504d27bb9c4fbbb95a4ccc.html) on SAP Help Portal.
  
 For additional support, request you can request access to SAP Upscale Open Payment Framework slack channel via your assigned integration manager.
+
+## Troubleshooting
+
+Please refer to the [SAP Upscale Commerce Logging](https://help.sap.com/viewer/a99d6fa0606f4f3cbf251e4e61f35feb/SHIP/en-US/8a33201d95154e9c9b29b31d652e097c.html) feature.
 
 ## Contributing
 You are welcome to add collections for other gateways to this repo. 

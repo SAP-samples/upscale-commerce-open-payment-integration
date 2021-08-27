@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "4aa2766c-7b98-49f7-b2c5-462c1e6940c5",
+		"name": "Adyen Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Adyen Payment Methods",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Adyen Account exist\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.response.to.be.json;",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.paymentMethods).to.be.an(\"array\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept-encoding": true,
+					"user-agent": true,
+					"accept": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-Key",
+						"value": "{{authenticationApiKey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"merchantAccount\": \"{{merchantAccount}}\",\n  \"countryCode\": \"{{countryCode}}\",\n  \"shopperLocale\": \"{{shopperLocale}}\",\n  \"amount\": {\n    \"currency\": \"{{currency}}\",\n    \"value\": {{amount_value}}\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{checkoutPaymentHost}}/{{apiVersion}}/paymentMethods",
+					"protocol": "https",
+					"host": [
+						"{{checkoutPaymentHost}}"
+					],
+					"path": [
+						"{{apiVersion}}",
+						"paymentMethods"
+					]
+				},
+				"description": "Test Adyen Api - Get all supported payment methods for your account."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Upscale Merchant Account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Upscale Merchant Account exist\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    pm.response.to.be.json;",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.merchantId).to.equal(pm.variables.get(\"merchantAccount\"));",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{upscaleToken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{upscaleRootUrl}}/payment-service/merchant/accountgroups/{{upscaleAccountGroupId}}/accounts/{{upscaleAccountId}}",
+					"host": [
+						"{{upscaleRootUrl}}"
+					],
+					"path": [
+						"payment-service",
+						"merchant",
+						"accountgroups",
+						"{{upscaleAccountGroupId}}",
+						"accounts",
+						"{{upscaleAccountId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
