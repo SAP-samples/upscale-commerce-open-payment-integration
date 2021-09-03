@@ -1,0 +1,125 @@
+{
+  "id": "f0506696-e60c-4881-9c20-240dcdcb6ca8",
+  "name": "Adyen_host_field_multibanco",
+  "values": [
+    {
+      "key": "token",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "key": "rootUrl",
+      "value": "https:\/\/gatewaytest.approuter.dev-use1.js-dev.shoot.live.k8s-hana.ondemand.com",
+      "enabled": true
+    },
+    {
+      "key": "accountGroupId",
+      "value": "145256",
+      "enabled": true
+    },
+    {
+      "key": "accountId",
+      "value": "151557",
+      "enabled": true
+    },
+    {
+      "key": "authentication_outbound_api_key_value_export_2252",
+      "value": "(Webservice User)Adyen Hosted Field_export",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "authentication_inbound_hmac_signature_calculation_secret_export_2251",
+      "value": "(Notification HMAC)Adyen Hosted Field_export",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "authentication_inbound_basic_auth_username_export_2250",
+      "value": "(Notification Basic Auth)Adyen Hosted Field_export_username",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "authentication_inbound_basic_auth_password_export_2250",
+      "value": "(Notification Basic Auth)Adyen Hosted Field_export_password",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "capturePattern",
+      "value": "PARTIAL_CAPTURE",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "settlementInitiationType",
+      "value": "AFTER_SHIPMENT",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "authorizationTimeoutDays",
+      "value": "7",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "allow3DS2",
+      "value": "true",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "checkoutPaymentHost",
+      "value": "checkout-test.adyen.com",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "merchantCode",
+      "value": "SAPAccount_InternalAccount_TEST",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "serviceVersion",
+      "value": "v67",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "clientKey",
+      "value": "",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "sdkVersion",
+      "value": "4.2.3",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "checkoutShopperHost",
+      "value": "checkoutshopper-test.adyen.com",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "mode",
+      "value": "test",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "standardPaymentHost",
+      "value": "pal-test.adyen.com",
+      "enabled": true
+    }
+    
+  ],
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "",
+  "_postman_exported_using": "Postman\/7.35.0"
+}
