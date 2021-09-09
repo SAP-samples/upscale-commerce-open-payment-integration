@@ -1,5 +1,5 @@
 {
-  "id": "c73f87f2-57b1-4555-9ed9-17f5afe10170",
+  "id": "5813c90a-45b2-4a07-841d-ef9a36f7701e",
   "name": "Stripe Checkout AUTO_CAPTURE",
   "values": [
     {
@@ -23,12 +23,6 @@
       "enabled": true
     },
     {
-      "key": "authentication_inbound_hmac_signature_calculation_secret_export_1816",
-      "value": "Stripe Notification authentication_export",
-      "enabled": true
-    }
-    ,
-    {
       "key": "authentication_outbound_basic_auth_username_export_1817",
       "value": "Stripe Private Key_export_username",
       "enabled": true
@@ -37,6 +31,12 @@
     {
       "key": "authentication_outbound_basic_auth_password_export_1817",
       "value": "Stripe Private Key_export_password",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "authentication_inbound_hmac_signature_calculation_secret_export_1816",
+      "value": "Stripe Notification authentication_export",
       "enabled": true
     }
     ,
