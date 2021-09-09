@@ -1,0 +1,89 @@
+{
+  "id": "49e621a2-545d-4cb8-98c8-b2e6e01a36ea",
+  "name": "klarna custom checkout",
+  "values": [
+    {
+      "key": "token",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "key": "rootUrl",
+      "value": "https:\/\/gatewaystage-approuter-caas2-sap-stage.cfapps.us10.hana.ondemand.com",
+      "enabled": true
+    },
+    {
+      "key": "accountGroupId",
+      "value": "104000",
+      "enabled": true
+    },
+    {
+      "key": "accountId",
+      "value": "115550",
+      "enabled": true
+    },
+    {
+      "key": "authentication_outbound_basic_auth_username_export_2872",
+      "value": "klarna-basic-auth_export_export_username",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "authentication_outbound_basic_auth_password_export_2872",
+      "value": "klarna-basic-auth_export_export_password",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "capturePattern",
+      "value": "PARTIAL_CAPTURE",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "settlementInitiationType",
+      "value": "AFTER_SHIPMENT",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "authorizationTimeoutDays",
+      "value": "28",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "checkoutVersion",
+      "value": "v3",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "orderManagementVersion",
+      "value": "v1",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "klarnaDataClientId",
+      "value": "f5c6d325-b3ca-5963-a113-fe15e25d4032",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "checkoutPaymentHost",
+      "value": "api.playground.klarna.com",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "termsURL",
+      "value": "https:\/\/www.baidu.com\/",
+      "enabled": true
+    }
+    
+  ],
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "",
+  "_postman_exported_using": "Postman\/7.35.0"
+}
