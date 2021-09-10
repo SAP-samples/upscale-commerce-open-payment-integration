@@ -1,0 +1,59 @@
+{
+  "id": "6e72092a-633d-4a2b-bff1-21a10c365d34",
+  "name": "Redsys",
+  "values": [
+    {
+      "key": "token",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "key": "rootUrl",
+      "value": "https:\/\/gatewaystage-approuter-caas2-sap-stage.cfapps.us10.hana.ondemand.com",
+      "enabled": true
+    },
+    {
+      "key": "accountGroupId",
+      "value": "120500",
+      "enabled": true
+    },
+    {
+      "key": "accountId",
+      "value": "135350",
+      "enabled": true
+    },
+    {
+      "key": "capturePattern",
+      "value": "AUTO_CAPTURE",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "settlementInitiationType",
+      "value": "AFTER_SHIPMENT",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "authorizationTimeoutDays",
+      "value": "7",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "hostedPageUrl",
+      "value": "https:\/\/sis-t.redsys.es:25443\/sis\/realizarPago",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "tradeCode",
+      "value": "",
+      "enabled": true
+    }
+
+  ],
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "",
+  "_postman_exported_using": "Postman\/7.35.0"
+}
