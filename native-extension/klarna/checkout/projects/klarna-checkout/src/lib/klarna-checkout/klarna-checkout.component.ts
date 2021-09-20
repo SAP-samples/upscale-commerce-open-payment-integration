@@ -88,19 +88,39 @@ export class KlarnaCheckoutComponent implements OnInit {
       )
       .pipe(
         concatMapTo(this.consentService.consentsStatus),
-        concatMap((consent) =>
+        concatMap((consents) =>
           this.orderBrokerService.updateOrder(
             this.draftOrder.orderId,
             {
-              consent: consent?.filter(
+              consent: consents?.filter(
                 (consent) =>
                   consent.consentTemplateType === ConsentType.PPANDTOS ||
                   consent.consentTemplateType === ConsentType.NEXTSELL
               ),
             },
-            { allowAsync: this.appData.useAsync }
+            { orderLineResponseViewType: true }
           )
         ),
+        concatMap(() => {
+          let calculateCostRequest = of(void 0);
+          const shippingAddress = this.draftOrder.shippingAddress;
+          if (shippingAddress) {
+            const { city, state, zip, country } = shippingAddress;
+            calculateCostRequest = this.orderBrokerService.calculateCost(
+              this.draftOrder.orderId,
+              {
+                shippingAddress: {
+                  city,
+                  state,
+                  zip,
+                  country,
+                },
+              },
+              { orderLineResponseViewType: true }
+            );
+          }
+          return calculateCostRequest;
+        }),
         concatMap(() =>
           this.paymentService.getActiveConfigurationV2({
             divisionId: this.appData.experience.divisionId,
