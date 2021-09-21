@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import {
   ActiveConfiguration,
+  CalculatedCostForOrder,
   Channel,
   ConsentType,
   InitOpenPaymentResponse,
@@ -27,7 +28,7 @@ import {
   tap,
 } from "rxjs/operators";
 import { Router } from "@angular/router";
-import { from, of, throwError } from "rxjs";
+import { from, Observable, of, throwError } from "rxjs";
 
 @Component({
   selector: "lib-klarna-checkout",
@@ -88,19 +89,20 @@ export class KlarnaCheckoutComponent implements OnInit {
       )
       .pipe(
         concatMapTo(this.consentService.consentsStatus),
-        concatMap((consent) =>
+        concatMap((consents) =>
           this.orderBrokerService.updateOrder(
             this.draftOrder.orderId,
             {
-              consent: consent?.filter(
+              consent: consents?.filter(
                 (consent) =>
                   consent.consentTemplateType === ConsentType.PPANDTOS ||
                   consent.consentTemplateType === ConsentType.NEXTSELL
               ),
             },
-            { allowAsync: this.appData.useAsync }
+            { orderLineResponseViewType: true }
           )
         ),
+        concatMap(() => this.conditionalCalculateCost()),
         concatMap(() =>
           this.paymentService.getActiveConfigurationV2({
             divisionId: this.appData.experience.divisionId,
@@ -166,5 +168,28 @@ export class KlarnaCheckoutComponent implements OnInit {
         })
       )
       .subscribe();
+  }
+
+  private conditionalCalculateCost(): Observable<void | CalculatedCostForOrder> {
+    let calculateCostRequest: Observable<void | CalculatedCostForOrder> = of(
+      void 0
+    );
+    const shippingAddress = this.draftOrder.shippingAddress;
+    if (shippingAddress) {
+      const { city, state, zip, country } = shippingAddress;
+      calculateCostRequest = this.orderBrokerService.calculateCost(
+        this.draftOrder.orderId,
+        {
+          shippingAddress: {
+            city,
+            state,
+            zip,
+            country,
+          },
+        },
+        { orderLineResponseViewType: true }
+      );
+    }
+    return calculateCostRequest;
   }
 }
