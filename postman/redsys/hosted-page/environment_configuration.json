@@ -1,6 +1,6 @@
 {
-  "id": "5813c90a-45b2-4a07-841d-ef9a36f7701e",
-  "name": "Stripe Checkout AUTO_CAPTURE",
+  "id": "6e72092a-633d-4a2b-bff1-21a10c365d34",
+  "name": "Redsys",
   "values": [
     {
       "key": "token",
@@ -14,32 +14,14 @@
     },
     {
       "key": "accountGroupId",
-      "value": "75950",
+      "value": "120500",
       "enabled": true
     },
     {
       "key": "accountId",
-      "value": "90800",
+      "value": "135350",
       "enabled": true
     },
-    {
-      "key": "authentication_outbound_basic_auth_username_export_1817",
-      "value": "Stripe Private Key_export_username",
-      "enabled": true
-    }
-    ,
-    {
-      "key": "authentication_outbound_basic_auth_password_export_1817",
-      "value": "Stripe Private Key_export_password",
-      "enabled": true
-    }
-    ,
-    {
-      "key": "authentication_inbound_hmac_signature_calculation_secret_export_1816",
-      "value": "Stripe Notification authentication_export",
-      "enabled": true
-    }
-    ,
     {
       "key": "capturePattern",
       "value": "AUTO_CAPTURE",
@@ -59,8 +41,14 @@
     }
     ,
     {
-      "key": "publickey",
-      "value": "pk_test_DtwiHhs63jJLGiNKq45Q2yet00FpCWLASQ",
+      "key": "hostedPageUrl",
+      "value": "https:\/\/sis-t.redsys.es:25443\/sis\/realizarPago",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "tradeCode",
+      "value": "",
       "enabled": true
     }
 

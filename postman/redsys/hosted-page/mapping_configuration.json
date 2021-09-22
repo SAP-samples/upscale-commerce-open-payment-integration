@@ -1,0 +1,584 @@
+{
+  "info": {
+    "_postman_id": "e8539f42-853a-47ce-9f32-787c3fd8d008",
+    "name": "Redsys",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Variable",
+      "item": [
+        {
+          "name": "Variable_hostedPageUrl",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":3567,\"sensitive\":false,\"value\":\"{{hostedPageUrl}}\",\"key\":\"hostedPageUrl\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}\/variables",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+                ,
+                "variables"
+
+              ]
+            }
+          },
+          "response": []
+        }
+        ,
+        {
+          "name": "Variable_tradeCode",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":3568,\"sensitive\":true,\"value\":\"{{tradeCode}}\",\"key\":\"tradeCode\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}\/variables",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+                ,
+                "variables"
+
+              ]
+            }
+          },
+          "response": []
+        }
+
+      ],
+      "protocolProfileBehavior": {}
+    }
+    ,
+    {
+      "name": "Account",
+      "item": [
+        {
+          "name": "Account Patch",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"capturePattern\":\"{{capturePattern}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+
+              ]
+            }
+          },
+          "response": []
+        }
+
+      ],
+      "protocolProfileBehavior": {}
+    }
+    ,
+    {
+      "name": "AccountGroup",
+      "item": [
+        {
+          "name": "Account Group Patch",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"authorizationTimeoutDays\":{{authorizationTimeoutDays}}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+
+              ]
+            }
+          },
+          "response": []
+        }
+
+      ],
+      "protocolProfileBehavior": {}
+    }
+    ,
+    {
+      "name": "Authentications",
+      "item": [
+        {
+          "name": "Hmac_outbound_signature_calculation",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "e651a809-9088-41a0-8b80-e43a2b91b93d",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;    \npm.test(\"Location is present\", function () {\n    pm.response.to.have.header(\"Location\");\n    var location=pm.response.headers.get(\"Location\");\n    pm.environment.set(\"authentication_inbound_hmac_outbound_signature_calculation_3170\", location.substring(location.lastIndexOf(\"\/\")+1,location.length));\n});"
+
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"charset\":\"UTF-8\",\"secretBaseEncoding\":\"BASE64\",\"baseEncoding\":\"BASE64\",\"method\":\"HMAC_OUTBOUND_SIGNATURE_CALCULATION\",\"hmacSignatureFlag\":true,\"secretType\":\"SCRIPT\",\"name\":\"Redsys_authentication_export_export_export\",\"secret\":\"<#assign orderId><#if 4-(input.transactionId?length) gt 0><#list 1..(4-(input.transactionId?length)) as t>0<\\\/#list><\\\/#if>${input.transactionId}<\\\/#assign>${functions.encodeMessage('BASE64','UTF-8', functions.encryptMessage('${vars.tradeCode}','DESede', 'CBC','NoPadding','UTF-8','AAAAAAAAAAA=','none','BASE64','${orderId}'))}\",\"source\":\"<#assign orderId><#if 4-(input.transactionId?length) gt 0><#list 1..(4-(input.transactionId?length)) as t>0<\\\/#list><\\\/#if>${input.transactionId}<\\\/#assign>${functions.encodeMessage('BASE64','UTF-8','{\\\"DS_MERCHANT_AMOUNT\\\":\\\"${input.amountInExponent}\\\",\\\"DS_MERCHANT_CURRENCY\\\":\\\"${functions.getCurrencyNumericCode(input.currency)}\\\",\\\"DS_MERCHANT_MERCHANTCODE\\\":\\\"${input.merchantId}\\\",\\\"DS_MERCHANT_MERCHANTURL\\\":\\\"${input.notificationURL}\\\",\\\"DS_MERCHANT_ORDER\\\":\\\"${orderId}\\\",\\\"DS_MERCHANT_TERMINAL\\\":\\\"3\\\",\\\"DS_MERCHANT_TRANSACTIONTYPE\\\":\\\"0\\\",\\\"DS_MERCHANT_URLKO\\\":\\\"${input.resultURL}?result=FAILURE\\\",\\\"DS_MERCHANT_URLOK\\\":\\\"${input.resultURL}?result=SUCCESS\\\",\\\"DS_MERCHANT_MERCHANTDATA\\\":\\\"${input.referenceId}\\\"}')}\",\"id\":3170,\"hmacFields\":{},\"algorithm\":\"HmacSHA256\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/gateway\/authentications",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "gateway"
+                ,
+                "authentications"
+
+              ]
+            }
+          },
+          "response": []
+        }
+        ,
+        {
+          "name": "Hmac_signature_calculation",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "ecd36bf4-eb61-4b10-b1ee-421586f89777",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;    \npm.test(\"Location is present\", function () {\n    pm.response.to.have.header(\"Location\");\n    var location=pm.response.headers.get(\"Location\");\n    pm.environment.set(\"authentication_inbound_hmac_signature_calculation_3171\", location.substring(location.lastIndexOf(\"\/\")+1,location.length));\n});"
+
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"charset\":\"UTF-8\",\"secretBaseEncoding\":\"BASE64\",\"baseEncoding\":\"BASE64_URL\",\"method\":\"HMAC_SIGNATURE_CALCULATION\",\"hmacSignatureFlag\":true,\"secretType\":\"SCRIPT\",\"name\":\"Redsys_notification_export_export_export\",\"secret\":\"${functions.encodeMessage('BASE64','UTF-8', functions.encryptMessage('${vars.tradeCode}','DESede', 'CBC','NoPadding','UTF-8','AAAAAAAAAAA=','none','BASE64','${input.pspReference}'))}\",\"source\":\"${input.customFields.payload}\",\"id\":3171,\"algorithm\":\"HmacSHA256\",\"target\":\"${input.customFields.signature}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/gateway\/authentications",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "gateway"
+                ,
+                "authentications"
+
+              ]
+            }
+          },
+          "response": []
+        }
+        ,
+        {
+          "name": "Hmac_outbound_signature_calculation",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "5c9cd940-82bc-4f7f-9c6b-3b5e8c05320a",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;    \npm.test(\"Location is present\", function () {\n    pm.response.to.have.header(\"Location\");\n    var location=pm.response.headers.get(\"Location\");\n    pm.environment.set(\"authentication_outbound_hmac_outbound_signature_calculation_3169\", location.substring(location.lastIndexOf(\"\/\")+1,location.length));\n});"
+
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"charset\":\"UTF-8\",\"secretBaseEncoding\":\"BASE64\",\"baseEncoding\":\"BASE64\",\"method\":\"HMAC_OUTBOUND_SIGNATURE_CALCULATION\",\"hmacSignatureFlag\":true,\"secretType\":\"SCRIPT\",\"name\":\"Redsys_refund_export_export_export\",\"secret\":\"${functions.encodeMessage('BASE64','UTF-8', functions.encryptMessage('${vars.tradeCode}','DESede', 'CBC','NoPadding','UTF-8','AAAAAAAAAAA=','none','BASE64','${input.authPspReference}'))}\",\"source\":\"${functions.encodeMessage('BASE64','UTF-8','{\\\"DS_MERCHANT_AMOUNT\\\":\\\"${input.amountInExponent}\\\",\\\"DS_MERCHANT_CURRENCY\\\":\\\"${functions.getCurrencyNumericCode(input.currency)}\\\",\\\"DS_MERCHANT_MERCHANTCODE\\\":\\\"${vars.merchantCode}\\\",\\\"DS_MERCHANT_ORDER\\\":\\\"${input.authPspReference}\\\",\\\"DS_MERCHANT_TERMINAL\\\":\\\"3\\\",\\\"DS_MERCHANT_TRANSACTIONTYPE\\\":\\\"3\\\",\\\"DS_MERCHANT_MERCHANTDATA\\\":\\\"${input.id}\\\",\\\"DS_MERCHANT_MERCHANTURL\\\":\\\"${vars.notificationUrl}\\\"}')}\",\"id\":3169,\"hmacFields\":{},\"algorithm\":\"HmacSHA256\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/gateway\/authentications",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "gateway"
+                ,
+                "authentications"
+
+              ]
+            }
+          },
+          "response": []
+        }
+
+      ],
+      "protocolProfileBehavior": {}
+    }
+    ,
+    {
+      "name": "Preprocessing_methods",
+      "item": [
+        {
+          "name": "preprocessing-Redsys Preprocess-abeff44d-8599-471d-af80-0d2521522c73",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "b441abe7-ae7d-4a45-993d-fc4286e97f9c",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;    \npm.test(\"Location is present\", function () {\n    pm.response.to.have.header(\"Location\");\n    var location=pm.response.headers.get(\"Location\");\n    pm.environment.set(\"preprocessingMethod_Redsys Preprocess_abeff44d-8599-471d-af80-0d2521522c73\", location.substring(location.lastIndexOf(\"\/\")+1,location.length));\n});"
+
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\":\"Redsys Preprocess\",\"contentType\":\"application\/x-www-form-urlencoded\",\"requestExample\":\"Ds_SignatureVersion=HMAC_SHA256_V1&Ds_MerchantParameters=eyJEc19EYXRlIjoiMzElMkYwOCUyRjIwMjEiLCJEc19Ib3VyIjoiMTUlM0E0MiIsIkRzX1NlY3VyZVBheW1lbnQiOiIxIiwiRHNfQ2FyZF9Db3VudHJ5IjoiNzI0IiwiRHNfQW1vdW50IjoiMTU1MjEiLCJEc19DdXJyZW5jeSI6Ijk3OCIsIkRzX09yZGVyIjoiNDI5NjkwMzgzNyIsIkRzX01lcmNoYW50Q29kZSI6IjMyMzg4MTQ3NCIsIkRzX1Rlcm1pbmFsIjoiMDAzIiwiRHNfUmVzcG9uc2UiOiIwMDAwIiwiRHNfTWVyY2hhbnREYXRhIjoiIiwiRHNfVHJhbnNhY3Rpb25UeXBlIjoiMCIsIkRzX0NvbnN1bWVyTGFuZ3VhZ2UiOiIxIiwiRHNfQXV0aG9yaXNhdGlvbkNvZGUiOiIyMjE1MjQiLCJEc19DYXJkX0JyYW5kIjoiMSIsIkRzX1Byb2Nlc3NlZFBheU1ldGhvZCI6IjUifQ%3D%3D&Ds_Signature=JCvfJvoaslIpeexjUwMdZmYpnuDzPSn4BrVYANwdWzE%3D\",\"requestMappingFields\":{\"mappings\":[{\"from\":\"Ds_MerchantParameters\",\"to\":\"payload\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_Signature\",\"to\":\"signature\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":true,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_MerchantParameters\",\"to\":\"payload\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":true,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_SignatureVersion\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false}]},\"preprocessors\":[{\"id\":\"80039940-e21f-427c-ad88-71246e2845d3\",\"preprocessorType\":\"DECODE\",\"algorithm\":null,\"baseEncoding\":null,\"contentBaseEncoding\":\"BASE64\",\"charset\":\"UTF-8\",\"secret\":null,\"secretType\":null,\"blockMode\":null,\"padding\":null,\"initializationVector\":null,\"authenticationTag\":null,\"securityProvider\":null}],\"preprocessorIds\":[\"80039940-e21f-427c-ad88-71246e2845d3\"],\"id\":\"abeff44d-8599-471d-af80-0d2521522c73\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/gateway\/preprocessing-methods",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "gateway"
+                ,
+                "preprocessing-methods"
+
+              ]
+            }
+          },
+          "response": []
+        }
+
+      ],
+      "protocolProfileBehavior": {}
+    }
+    ,
+    {
+      "name": "Authorization",
+      "item": [
+        {
+          "name": "Authorization",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":3764,\"pattern\":\"FULL_PAGE\",\"requestType\":\"AUTHORIZATION\",\"destination\":{\"url\":\"${vars.hostedPageUrl}\",\"method\":\"POST\",\"contentType\":\"application\/x-www-form-urlencoded\",\"body\":null,\"authenticationIds\":[\"{{authentication_inbound_hmac_outbound_signature_calculation_3170}}\"],\"form\":[{\"name\":\"Ds_Signature\",\"value\":\"${auth.hmac.signature}\"},{\"name\":\"Ds_SignatureVersion\",\"value\":\"HMAC_SHA256_V1\"},{\"name\":\"Ds_MerchantParameters\",\"value\":\"${auth.hmac.signatureSource}\"}]},\"verify\":{\"localVerifyMapping\":{\"mappings\":[{\"from\":\"result\",\"to\":\"result\",\"map\":{\"SUCCESS\":\"AUTHORIZED\",\"FAILURE\":\"UNAUTHORIZED\",\"CANCELLED\":\"CANCELLED\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false}]},\"localVerifyAuthenticationId\":null}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}\/authorization",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+                ,
+                "authorization"
+
+              ]
+            }
+          },
+          "response": []
+        }
+
+      ],
+      "protocolProfileBehavior": {}
+    }
+    ,
+    {
+      "name": "Notification",
+      "item": [
+        {
+          "name": "Notification",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":3763,\"requestType\":\"NOTIFICATION\",\"inboundMapping\":{\"preprocessingMethodId\":\"{{preprocessingMethod_Redsys Preprocess_abeff44d-8599-471d-af80-0d2521522c73}}\",\"authenticationIds\":[\"{{authentication_inbound_hmac_signature_calculation_3171}}\"],\"contentType\":\"application\/json\",\"requestMapping\":{\"authorization\":{\"requestExample\":\"{\\\"Ds_Date\\\":\\\"31\/08\/2021\\\",\\\"Ds_Hour\\\":\\\"15:42\\\",\\\"Ds_SecurePayment\\\":\\\"1\\\",\\\"Ds_Card_Country\\\":\\\"724\\\",\\\"Ds_Amount\\\":\\\"15521\\\",\\\"Ds_Currency\\\":\\\"978\\\",\\\"Ds_Order\\\":\\\"4296903837\\\",\\\"Ds_MerchantCode\\\":\\\"323881474\\\",\\\"Ds_Terminal\\\":\\\"003\\\",\\\"Ds_Response\\\":\\\"0000\\\",\\\"Ds_MerchantData\\\":\\\"\\\",\\\"Ds_TransactionType\\\":\\\"0\\\",\\\"Ds_ConsumerLanguage\\\":\\\"1\\\",\\\"Ds_AuthorisationCode\\\":\\\"221524\\\",\\\"Ds_Card_Brand\\\":\\\"1\\\",\\\"Ds_ProcessedPayMethod\\\":\\\"5\\\"}\",\"requestMappingFields\":{\"mappings\":[{\"from\":\"Ds_Card_Brand\",\"to\":\"cardType\",\"map\":{\"1\":\"VISA\",\"2\":\"MASTERCARD\",\"8\":\"AMEX\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_MerchantCode\",\"to\":\"merchantId\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_ProcessedPayMethod\",\"to\":\"paymentMethod\",\"map\":{\"1\":\"CREDIT_CARD\",\"5\":\"CREDIT_CARD\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_Order\",\"to\":\"pspReference\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_MerchantData\",\"to\":\"referenceId\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_TransactionType\",\"to\":\"requestType\",\"map\":{\"0\":\"AUTHORIZATION\",\"3\":\"REFUND\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_Response\",\"to\":\"transactionStatus\",\"map\":{\"0000\":\"ACCEPTED\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_ConsumerLanguage\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_Card_Country\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_Currency\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_SecurePayment\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_Amount\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_AuthorisationCode\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_Hour\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_Terminal\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_Date\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false}]}},\"authorizationReversal\":{\"requestExample\":null,\"requestMappingFields\":null},\"settlement\":{\"requestExample\":null,\"requestMappingFields\":null},\"refund\":{\"requestExample\":\"{\\n\\t\\\"Ds_Date\\\": \\\"07\\\\\/09\\\\\/2021\\\",\\n\\t\\\"Ds_Hour\\\": \\\"09:03\\\",\\n\\t\\\"Ds_SecurePayment\\\": \\\"1\\\",\\n\\t\\\"Ds_Card_Country\\\": \\\"840\\\",\\n\\t\\\"Ds_Amount\\\": \\\"20000\\\",\\n\\t\\\"Ds_Currency\\\": \\\"978\\\",\\n\\t\\\"Ds_Order\\\": \\\"2553285313\\\",\\n\\t\\\"Ds_MerchantCode\\\": \\\"323881474\\\",\\n\\t\\\"Ds_Terminal\\\": \\\"003\\\",\\n\\t\\\"Ds_Response\\\": \\\"0900\\\",\\n\\t\\\"Ds_MerchantData\\\": \\\"365506\\\",\\n\\t\\\"Ds_TransactionType\\\": \\\"3\\\",\\n\\t\\\"Ds_ConsumerLanguage\\\": \\\"1\\\",\\n\\t\\\"Ds_AuthorisationCode\\\": \\\"314510\\\",\\n\\t\\\"Ds_Card_Brand\\\": \\\"1\\\",\\n\\t\\\"Ds_ProcessedPayMethod\\\": \\\"1\\\"\\n}\",\"requestMappingFields\":{\"mappings\":[{\"from\":\"Ds_MerchantCode\",\"to\":\"merchantId\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_Order\",\"to\":\"pspReference\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_TransactionType\",\"to\":\"requestType\",\"map\":{\"0\":\"AUTHORIZATION\",\"3\":\"REFUND\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_MerchantData\",\"to\":\"transactionId\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_Response\",\"to\":\"transactionStatus\",\"map\":{\"0900\":\"ACCEPTED\",\"0950\":\"REJECTED\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_Card_Brand\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_ProcessedPayMethod\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_ConsumerLanguage\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_Card_Country\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_Currency\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_SecurePayment\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_Amount\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_AuthorisationCode\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_Hour\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_Terminal\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"Ds_Date\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false}]}}},\"responseMapping\":{\"content\":\"OK\"}}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}\/notification",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+                ,
+                "notification"
+
+              ]
+            }
+          },
+          "response": []
+        }
+
+      ],
+      "protocolProfileBehavior": {}
+    }
+    ,
+    {
+      "name": "Refund",
+      "item": [
+        {
+          "name": "Refund",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":3765,\"requestType\":\"REFUND\",\"outboundMappings\":[{\"url\":\"https:\/\/sis-t.redsys.es:25443\/sis\/rest\/trataPeticionREST\",\"authenticationIds\":[\"{{authentication_outbound_hmac_outbound_signature_calculation_3169}}\"],\"method\":\"POST\",\"requestContentType\":\"application\/json\",\"requestExample\":\"{\\n\\t\\\"Ds_MerchantParameters\\\": \\\"eyJEU19NRVJDSEFOVF9BTU9VTlQiOiIxNDUiLCJEU19NRVJDSEFOVF9PUkRFUiI6IjE0NDYwNjg1ODEiLCJEU19NRVJDSEFOVF9NRVJDSEFOVENPREUiOiI5OTkwMDg4ODEiLCJEU19NRVJDSEFOVF9DVVJSRU5DWSI6Ijk3OCIsIkRTX01FUkNIQU5UX1RSQU5TQUNUSU9OVFlQRSI6IjAiLCJEU19NRVJDSEFOVF9URVJNSU5BTCI6IjEiLCJEU19NRVJDSEFOVF9NRVJDSEFOVFVSTCI6Imh0dHA6XC9cL3d3dy5wcnVlYmEuY29tXC91cmxOb3RpZmljYWNpb24ucGhwIiwiRFNfTUVSQ0hBTlRfUEFOIjoiNDU0ODgxMjA0OTQwMDAwNCIsIkRTX01FUkNIQU5UX0VYUElSWURBVEUiOiIxNTEyIiwiRFNfTUVSQ0hBTlRfQ1ZWMiI6IjEyMyJ9\\\",\\n\\t\\\"Ds_Signature\\\": \\\"Da5q+leqj4ytBKC3T0y\/ThshxSe+8Wkh0wnn8Fx1wug=\\\",\\n\\t\\\"Ds_SignatureVersion\\\": \\\"HMAC_SHA256_V1\\\"\\n}\",\"responseExample\":\"{\\n\\t\\\"errorCode\\\": \\\"SIS0018\\\"\\n}\",\"requestMappingFields\":{\"mappings\":[{\"from\":\"$.Ds_MerchantParameters\",\"to\":\"${auth.hmac.signatureSource}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":true},{\"from\":\"$.Ds_Signature\",\"to\":\"${auth.hmac.signature}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":true},{\"from\":\"$.Ds_SignatureVersion\",\"to\":\"HMAC_SHA256_V1\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isObject\":false,\"isScript\":false}]},\"responseMappingFields\":{\"mappings\":[{\"from\":\"errorCode\",\"to\":\"errorCode\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false}]},\"responseContentType\":\"application\/json\",\"headers\":null,\"formArrayIndicator\":null}]}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}\/refund",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+                ,
+                "refund"
+
+              ]
+            }
+          },
+          "response": []
+        }
+
+      ],
+      "protocolProfileBehavior": {}
+    }
+
+  ],
+  "protocolProfileBehavior": {}
+}
