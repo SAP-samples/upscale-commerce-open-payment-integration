@@ -1,6 +1,6 @@
 {
-  "id": "6e72092a-633d-4a2b-bff1-21a10c365d34",
-  "name": "Redsys",
+  "id": "2ce791ca-0be8-4991-8251-0731f0c81b1c",
+  "name": "gatewaystage",
   "values": [
     {
       "key": "token",
@@ -51,7 +51,13 @@
       "value": "",
       "enabled": true
     }
-
+    ,
+    {
+      "key": "notificationUrl",
+      "value": "https:\/\/gatewaystage-approuter-caas2-sap-stage.cfapps.us10.hana.ondemand.com\/consumer\/payment-service\/gateway\/notifications\/135350",
+      "enabled": true
+    }
+    
   ],
   "_postman_variable_scope": "environment",
   "_postman_exported_at": "",

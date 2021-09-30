@@ -1,7 +1,7 @@
 {
   "info": {
-    "_postman_id": "e8539f42-853a-47ce-9f32-787c3fd8d008",
-    "name": "Redsys",
+    "_postman_id": "132294e3-0f0c-4cdb-ab0a-dfab13045235",
+    "name": "Upscale_Payment_Config_Collection",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -47,7 +47,7 @@
                 "{{accountId}}"
                 ,
                 "variables"
-
+                
               ]
             }
           },
@@ -93,13 +93,59 @@
                 "{{accountId}}"
                 ,
                 "variables"
-
+                
               ]
             }
           },
           "response": []
         }
-
+        ,
+        {
+          "name": "Variable_notificationUrl",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":4687,\"sensitive\":false,\"value\":\"{{notificationUrl}}\",\"key\":\"notificationUrl\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}\/variables",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+                ,
+                "variables"
+                
+              ]
+            }
+          },
+          "response": []
+        }
+        
       ],
       "protocolProfileBehavior": {}
     }
@@ -144,13 +190,13 @@
                 "accounts"
                 ,
                 "{{accountId}}"
-
+                
               ]
             }
           },
           "response": []
         }
-
+        
       ],
       "protocolProfileBehavior": {}
     }
@@ -191,13 +237,13 @@
                 "accountgroups"
                 ,
                 "{{accountGroupId}}"
-
+                
               ]
             }
           },
           "response": []
         }
-
+        
       ],
       "protocolProfileBehavior": {}
     }
@@ -211,10 +257,10 @@
             {
               "listen": "test",
               "script": {
-                "id": "e651a809-9088-41a0-8b80-e43a2b91b93d",
+                "id": "957876cd-ad20-4776-9b15-07c53e8164e2",
                 "exec": [
                   "tests[\"Status code is 201\"] = responseCode.code === 201;    \npm.test(\"Location is present\", function () {\n    pm.response.to.have.header(\"Location\");\n    var location=pm.response.headers.get(\"Location\");\n    pm.environment.set(\"authentication_inbound_hmac_outbound_signature_calculation_3170\", location.substring(location.lastIndexOf(\"\/\")+1,location.length));\n});"
-
+                  
                 ],
                 "type": "text/javascript"
               }
@@ -231,7 +277,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"charset\":\"UTF-8\",\"secretBaseEncoding\":\"BASE64\",\"baseEncoding\":\"BASE64\",\"method\":\"HMAC_OUTBOUND_SIGNATURE_CALCULATION\",\"hmacSignatureFlag\":true,\"secretType\":\"SCRIPT\",\"name\":\"Redsys_authentication_export_export_export\",\"secret\":\"<#assign orderId><#if 4-(input.transactionId?length) gt 0><#list 1..(4-(input.transactionId?length)) as t>0<\\\/#list><\\\/#if>${input.transactionId}<\\\/#assign>${functions.encodeMessage('BASE64','UTF-8', functions.encryptMessage('${vars.tradeCode}','DESede', 'CBC','NoPadding','UTF-8','AAAAAAAAAAA=','none','BASE64','${orderId}'))}\",\"source\":\"<#assign orderId><#if 4-(input.transactionId?length) gt 0><#list 1..(4-(input.transactionId?length)) as t>0<\\\/#list><\\\/#if>${input.transactionId}<\\\/#assign>${functions.encodeMessage('BASE64','UTF-8','{\\\"DS_MERCHANT_AMOUNT\\\":\\\"${input.amountInExponent}\\\",\\\"DS_MERCHANT_CURRENCY\\\":\\\"${functions.getCurrencyNumericCode(input.currency)}\\\",\\\"DS_MERCHANT_MERCHANTCODE\\\":\\\"${input.merchantId}\\\",\\\"DS_MERCHANT_MERCHANTURL\\\":\\\"${input.notificationURL}\\\",\\\"DS_MERCHANT_ORDER\\\":\\\"${orderId}\\\",\\\"DS_MERCHANT_TERMINAL\\\":\\\"3\\\",\\\"DS_MERCHANT_TRANSACTIONTYPE\\\":\\\"0\\\",\\\"DS_MERCHANT_URLKO\\\":\\\"${input.resultURL}?result=FAILURE\\\",\\\"DS_MERCHANT_URLOK\\\":\\\"${input.resultURL}?result=SUCCESS\\\",\\\"DS_MERCHANT_MERCHANTDATA\\\":\\\"${input.referenceId}\\\"}')}\",\"id\":3170,\"hmacFields\":{},\"algorithm\":\"HmacSHA256\"}",
+              "raw": "{\"charset\":\"UTF-8\",\"secretBaseEncoding\":\"BASE64\",\"baseEncoding\":\"BASE64\",\"method\":\"HMAC_OUTBOUND_SIGNATURE_CALCULATION\",\"hmacSignatureFlag\":true,\"secretType\":\"SCRIPT\",\"name\":\"Redsys_authentication_export_export_export\",\"secret\":\"<#assign orderId><#if 4-(input.transactionId?length) gt 0><#list 1..(4-(input.transactionId?length)) as t>0<\\\/#list><\\\/#if>${input.transactionId}<\\\/#assign>${functions.encodeMessage('BASE64','UTF-8', functions.encryptMessage('${vars.tradeCode}','DESede', 'CBC','NoPadding','UTF-8','AAAAAAAAAAA=','none','BASE64','${orderId}'))}\",\"source\":\"<#assign orderId><#if 4-(input.transactionId?length) gt 0><#list 1..(4-(input.transactionId?length)) as t>0<\\\/#list><\\\/#if>${input.transactionId}<\\\/#assign>${functions.encodeMessage('BASE64','UTF-8','{\\\"DS_MERCHANT_AMOUNT\\\":\\\"${input.amountInExponent}\\\",\\\"DS_MERCHANT_CURRENCY\\\":\\\"${input.currencyAsNumeric}\\\",\\\"DS_MERCHANT_MERCHANTCODE\\\":\\\"${input.merchantId}\\\",\\\"DS_MERCHANT_MERCHANTURL\\\":\\\"${input.notificationURL}\\\",\\\"DS_MERCHANT_ORDER\\\":\\\"${orderId}\\\",\\\"DS_MERCHANT_TERMINAL\\\":\\\"3\\\",\\\"DS_MERCHANT_TRANSACTIONTYPE\\\":\\\"0\\\",\\\"DS_MERCHANT_URLKO\\\":\\\"${input.resultURL}?result=FAILURE\\\",\\\"DS_MERCHANT_URLOK\\\":\\\"${input.resultURL}?result=SUCCESS\\\",\\\"DS_MERCHANT_MERCHANTDATA\\\":\\\"${input.referenceId}\\\"}')}\",\"id\":3170,\"hmacFields\":{},\"algorithm\":\"HmacSHA256\"}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -249,7 +295,7 @@
                 "gateway"
                 ,
                 "authentications"
-
+                
               ]
             }
           },
@@ -262,10 +308,10 @@
             {
               "listen": "test",
               "script": {
-                "id": "ecd36bf4-eb61-4b10-b1ee-421586f89777",
+                "id": "133a48c3-b1c3-4c0d-917a-b4281e1badd0",
                 "exec": [
                   "tests[\"Status code is 201\"] = responseCode.code === 201;    \npm.test(\"Location is present\", function () {\n    pm.response.to.have.header(\"Location\");\n    var location=pm.response.headers.get(\"Location\");\n    pm.environment.set(\"authentication_inbound_hmac_signature_calculation_3171\", location.substring(location.lastIndexOf(\"\/\")+1,location.length));\n});"
-
+                  
                 ],
                 "type": "text/javascript"
               }
@@ -300,7 +346,7 @@
                 "gateway"
                 ,
                 "authentications"
-
+                
               ]
             }
           },
@@ -313,10 +359,10 @@
             {
               "listen": "test",
               "script": {
-                "id": "5c9cd940-82bc-4f7f-9c6b-3b5e8c05320a",
+                "id": "206ebe10-db4b-4bf5-a3fb-dbae271b48c9",
                 "exec": [
                   "tests[\"Status code is 201\"] = responseCode.code === 201;    \npm.test(\"Location is present\", function () {\n    pm.response.to.have.header(\"Location\");\n    var location=pm.response.headers.get(\"Location\");\n    pm.environment.set(\"authentication_outbound_hmac_outbound_signature_calculation_3169\", location.substring(location.lastIndexOf(\"\/\")+1,location.length));\n});"
-
+                  
                 ],
                 "type": "text/javascript"
               }
@@ -333,7 +379,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"charset\":\"UTF-8\",\"secretBaseEncoding\":\"BASE64\",\"baseEncoding\":\"BASE64\",\"method\":\"HMAC_OUTBOUND_SIGNATURE_CALCULATION\",\"hmacSignatureFlag\":true,\"secretType\":\"SCRIPT\",\"name\":\"Redsys_refund_export_export_export\",\"secret\":\"${functions.encodeMessage('BASE64','UTF-8', functions.encryptMessage('${vars.tradeCode}','DESede', 'CBC','NoPadding','UTF-8','AAAAAAAAAAA=','none','BASE64','${input.authPspReference}'))}\",\"source\":\"${functions.encodeMessage('BASE64','UTF-8','{\\\"DS_MERCHANT_AMOUNT\\\":\\\"${input.amountInExponent}\\\",\\\"DS_MERCHANT_CURRENCY\\\":\\\"${functions.getCurrencyNumericCode(input.currency)}\\\",\\\"DS_MERCHANT_MERCHANTCODE\\\":\\\"${vars.merchantCode}\\\",\\\"DS_MERCHANT_ORDER\\\":\\\"${input.authPspReference}\\\",\\\"DS_MERCHANT_TERMINAL\\\":\\\"3\\\",\\\"DS_MERCHANT_TRANSACTIONTYPE\\\":\\\"3\\\",\\\"DS_MERCHANT_MERCHANTDATA\\\":\\\"${input.id}\\\",\\\"DS_MERCHANT_MERCHANTURL\\\":\\\"${vars.notificationUrl}\\\"}')}\",\"id\":3169,\"hmacFields\":{},\"algorithm\":\"HmacSHA256\"}",
+              "raw": "{\"charset\":\"UTF-8\",\"secretBaseEncoding\":\"BASE64\",\"baseEncoding\":\"BASE64\",\"method\":\"HMAC_OUTBOUND_SIGNATURE_CALCULATION\",\"hmacSignatureFlag\":true,\"secretType\":\"SCRIPT\",\"name\":\"Redsys_refund_export_export_export\",\"secret\":\"${functions.encodeMessage('BASE64','UTF-8', functions.encryptMessage('${vars.tradeCode}','DESede', 'CBC','NoPadding','UTF-8','AAAAAAAAAAA=','none','BASE64','${input.authPspReference}'))}\",\"source\":\"${functions.encodeMessage('BASE64','UTF-8','{\\\"DS_MERCHANT_AMOUNT\\\":\\\"${input.amountInExponent}\\\",\\\"DS_MERCHANT_CURRENCY\\\":\\\"${input.currencyAsNumeric}\\\",\\\"DS_MERCHANT_MERCHANTCODE\\\":\\\"${input.merchantId}\\\",\\\"DS_MERCHANT_ORDER\\\":\\\"${input.authPspReference}\\\",\\\"DS_MERCHANT_TERMINAL\\\":\\\"3\\\",\\\"DS_MERCHANT_TRANSACTIONTYPE\\\":\\\"3\\\",\\\"DS_MERCHANT_MERCHANTDATA\\\":\\\"${input.id}\\\",\\\"DS_MERCHANT_MERCHANTURL\\\":\\\"${vars.notificationUrl}\\\"}')}\",\"id\":3169,\"hmacFields\":{},\"algorithm\":\"HmacSHA256\"}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -351,13 +397,13 @@
                 "gateway"
                 ,
                 "authentications"
-
+                
               ]
             }
           },
           "response": []
         }
-
+        
       ],
       "protocolProfileBehavior": {}
     }
@@ -371,10 +417,10 @@
             {
               "listen": "test",
               "script": {
-                "id": "b441abe7-ae7d-4a45-993d-fc4286e97f9c",
+                "id": "7b2804b0-4bf6-4ed7-9908-ca5a40c1a890",
                 "exec": [
                   "tests[\"Status code is 201\"] = responseCode.code === 201;    \npm.test(\"Location is present\", function () {\n    pm.response.to.have.header(\"Location\");\n    var location=pm.response.headers.get(\"Location\");\n    pm.environment.set(\"preprocessingMethod_Redsys Preprocess_abeff44d-8599-471d-af80-0d2521522c73\", location.substring(location.lastIndexOf(\"\/\")+1,location.length));\n});"
-
+                  
                 ],
                 "type": "text/javascript"
               }
@@ -409,13 +455,13 @@
                 "gateway"
                 ,
                 "preprocessing-methods"
-
+                
               ]
             }
           },
           "response": []
         }
-
+        
       ],
       "protocolProfileBehavior": {}
     }
@@ -462,13 +508,13 @@
                 "{{accountId}}"
                 ,
                 "authorization"
-
+                
               ]
             }
           },
           "response": []
         }
-
+        
       ],
       "protocolProfileBehavior": {}
     }
@@ -515,13 +561,13 @@
                 "{{accountId}}"
                 ,
                 "notification"
-
+                
               ]
             }
           },
           "response": []
         }
-
+        
       ],
       "protocolProfileBehavior": {}
     }
@@ -568,17 +614,17 @@
                 "{{accountId}}"
                 ,
                 "refund"
-
+                
               ]
             }
           },
           "response": []
         }
-
+        
       ],
       "protocolProfileBehavior": {}
     }
-
+    
   ],
   "protocolProfileBehavior": {}
 }
