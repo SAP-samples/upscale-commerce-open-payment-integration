@@ -1,6 +1,6 @@
 {
-  "id": "efcb8213-732a-48d2-9318-52f5335b3827",
-  "name": "Nexi",
+  "id": "cce6c1c7-4044-48e3-b6d1-c09f2c204806",
+  "name": "gatewaystage",
   "values": [
     {
       "key": "token",
@@ -69,7 +69,7 @@
       "value": "978",
       "enabled": true
     }
-
+    
   ],
   "_postman_variable_scope": "environment",
   "_postman_exported_at": "",

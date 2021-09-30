@@ -1,7 +1,7 @@
 {
   "info": {
-    "_postman_id": "63874daf-e474-4e12-8b0a-fb790a0d88aa",
-    "name": "Nexi",
+    "_postman_id": "edcdd903-5777-42a5-8384-07f666837313",
+    "name": "Upscale_Payment_Config_Collection",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -47,7 +47,7 @@
                 "{{accountId}}"
                 ,
                 "variables"
-
+                
               ]
             }
           },
@@ -93,7 +93,7 @@
                 "{{accountId}}"
                 ,
                 "variables"
-
+                
               ]
             }
           },
@@ -139,7 +139,7 @@
                 "{{accountId}}"
                 ,
                 "variables"
-
+                
               ]
             }
           },
@@ -185,7 +185,7 @@
                 "{{accountId}}"
                 ,
                 "variables"
-
+                
               ]
             }
           },
@@ -231,13 +231,13 @@
                 "{{accountId}}"
                 ,
                 "variables"
-
+                
               ]
             }
           },
           "response": []
         }
-
+        
       ],
       "protocolProfileBehavior": {}
     }
@@ -282,13 +282,13 @@
                 "accounts"
                 ,
                 "{{accountId}}"
-
+                
               ]
             }
           },
           "response": []
         }
-
+        
       ],
       "protocolProfileBehavior": {}
     }
@@ -329,13 +329,13 @@
                 "accountgroups"
                 ,
                 "{{accountGroupId}}"
-
+                
               ]
             }
           },
           "response": []
         }
-
+        
       ],
       "protocolProfileBehavior": {}
     }
@@ -344,66 +344,15 @@
       "name": "Authentications",
       "item": [
         {
-          "name": "Hmac_outbound_signature_calculation",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "6404b012-b3be-46cb-8ff5-3fcc3af79ab2",
-                "exec": [
-                  "tests[\"Status code is 201\"] = responseCode.code === 201;    \npm.test(\"Location is present\", function () {\n    pm.response.to.have.header(\"Location\");\n    var location=pm.response.headers.get(\"Location\");\n    pm.environment.set(\"authentication_outbound_hmac_outbound_signature_calculation_132\", location.substring(location.lastIndexOf(\"\/\")+1,location.length));\n});"
-
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{token}}",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"charset\":\"UTF-8\",\"baseEncoding\":\"BASE16_LOWERCASE\",\"method\":\"HMAC_OUTBOUND_SIGNATURE_CALCULATION\",\"hmacSignatureFlag\":false,\"name\":\"Nexi API MAC_export_export\",\"source\":\"apiKey=${vars.alias}codiceTransazione=${input.referenceId}divisa=978importo=${input.amountInExponent}timeStamp=${auth.hmac.hmacFields.timeStamp}${vars.secret}\",\"id\":132,\"hmacFields\":{\"timeStamp\":\"${.now?long?c}\"},\"algorithm\":\"SHA1\"}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "{{rootUrl}}/payment-service\/gateway\/authentications",
-              "host": [
-                "{{rootUrl}}"
-              ],
-              "path": [
-                "payment-service"
-                ,
-                "gateway"
-                ,
-                "authentications"
-
-              ]
-            }
-          },
-          "response": []
-        }
-        ,
-        {
           "name": "Hmac_signature_calculation",
           "event": [
             {
               "listen": "test",
               "script": {
-                "id": "7bba60dd-d842-4c34-a36e-6825e4415fdb",
+                "id": "7c5d2029-bd3c-4137-b4ff-5beb1096ba45",
                 "exec": [
                   "tests[\"Status code is 201\"] = responseCode.code === 201;    \npm.test(\"Location is present\", function () {\n    pm.response.to.have.header(\"Location\");\n    var location=pm.response.headers.get(\"Location\");\n    pm.environment.set(\"authentication_inbound_hmac_signature_calculation_129\", location.substring(location.lastIndexOf(\"\/\")+1,location.length));\n});"
-
+                  
                 ],
                 "type": "text/javascript"
               }
@@ -438,7 +387,7 @@
                 "gateway"
                 ,
                 "authentications"
-
+                
               ]
             }
           },
@@ -451,10 +400,10 @@
             {
               "listen": "test",
               "script": {
-                "id": "c8a1afcd-723f-4ced-8898-b2399b7098b7",
+                "id": "443a6624-aaa7-4f28-af59-bb27425165bc",
                 "exec": [
                   "tests[\"Status code is 201\"] = responseCode.code === 201;    \npm.test(\"Location is present\", function () {\n    pm.response.to.have.header(\"Location\");\n    var location=pm.response.headers.get(\"Location\");\n    pm.environment.set(\"authentication_inbound_hmac_outbound_signature_calculation_130\", location.substring(location.lastIndexOf(\"\/\")+1,location.length));\n});"
-
+                  
                 ],
                 "type": "text/javascript"
               }
@@ -489,7 +438,7 @@
                 "gateway"
                 ,
                 "authentications"
-
+                
               ]
             }
           },
@@ -502,10 +451,10 @@
             {
               "listen": "test",
               "script": {
-                "id": "cb42fdf5-7ec0-456c-b4ba-f37984c94a15",
+                "id": "dade9bb6-cf32-4eca-823b-bca32fbadefa",
                 "exec": [
                   "tests[\"Status code is 201\"] = responseCode.code === 201;    \npm.test(\"Location is present\", function () {\n    pm.response.to.have.header(\"Location\");\n    var location=pm.response.headers.get(\"Location\");\n    pm.environment.set(\"authentication_inbound_hmac_signature_calculation_131\", location.substring(location.lastIndexOf(\"\/\")+1,location.length));\n});"
-
+                  
                 ],
                 "type": "text/javascript"
               }
@@ -540,13 +489,64 @@
                 "gateway"
                 ,
                 "authentications"
-
+                
               ]
             }
           },
           "response": []
         }
-
+        ,
+        {
+          "name": "Hmac_outbound_signature_calculation",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "4d647c84-40fb-4cd0-b75e-549ae134b7aa",
+                "exec": [
+                  "tests[\"Status code is 201\"] = responseCode.code === 201;    \npm.test(\"Location is present\", function () {\n    pm.response.to.have.header(\"Location\");\n    var location=pm.response.headers.get(\"Location\");\n    pm.environment.set(\"authentication_outbound_hmac_outbound_signature_calculation_132\", location.substring(location.lastIndexOf(\"\/\")+1,location.length));\n});"
+                  
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"charset\":\"UTF-8\",\"baseEncoding\":\"BASE16_LOWERCASE\",\"method\":\"HMAC_OUTBOUND_SIGNATURE_CALCULATION\",\"hmacSignatureFlag\":false,\"name\":\"Nexi API MAC_export_export\",\"source\":\"apiKey=${vars.alias}codiceTransazione=${input.referenceId}divisa=${input.currencyAsNumeric}importo=${input.amountInExponent}timeStamp=${auth.hmac.hmacFields.timeStamp}${vars.secret}\",\"id\":132,\"hmacFields\":{\"timeStamp\":\"${.now?long?c}\"},\"algorithm\":\"SHA1\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/gateway\/authentications",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "gateway"
+                ,
+                "authentications"
+                
+              ]
+            }
+          },
+          "response": []
+        }
+        
       ],
       "protocolProfileBehavior": {}
     }
@@ -593,13 +593,13 @@
                 "{{accountId}}"
                 ,
                 "authorization"
-
+                
               ]
             }
           },
           "response": []
         }
-
+        
       ],
       "protocolProfileBehavior": {}
     }
@@ -646,13 +646,13 @@
                 "{{accountId}}"
                 ,
                 "notification"
-
+                
               ]
             }
           },
           "response": []
         }
-
+        
       ],
       "protocolProfileBehavior": {}
     }
@@ -673,7 +673,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"id\":109,\"requestType\":\"REFUND\",\"outboundMappings\":[{\"url\":\"https:\/\/${vars.apiEnv}\/ecomm\/api\/bo\/storna\",\"authenticationIds\":[\"{{authentication_outbound_hmac_outbound_signature_calculation_132}}\"],\"method\":\"POST\",\"requestContentType\":\"application\/json\",\"requestExample\":\"{\\n    \\\"apiKey\\\" : \\\"APIKEY\\\",\\n    \\\"codiceTransazione\\\" : \\\"tx_code\\\",\\n    \\\"importo\\\" : \\\"23000\\\",\\n    \\\"divisa\\\" : \\\"978\\\",\\n    \\\"timeStamp\\\" : \\\"1606740903518\\\",\\n    \\\"mac\\\" : \\\"sig1234\\\"\\n}\",\"responseExample\":\"{\\n   \\\"timeStamp\\\": \\\"1607707701553\\\",\\n  \\\"esito\\\" : \\\"OK\\\",\\n    \\\"idOperazione\\\": \\\"1866937\\\",\\n    \\\"errore\\\": {\\n        \\\"messaggio\\\": \\\"Mac non valido\\\",\\n        \\\"codice\\\": 3\\n    },\\n    \\\"mac\\\": \\\"7481f6a33076d228e896f71de86779a3f5c32843\\\"\\n}\",\"requestMappingFields\":{\"mappings\":[{\"from\":\"$.timeStamp\",\"to\":\"${auth.hmac.hmacFields.timeStamp}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isObject\":false,\"isScript\":false},{\"from\":\"$.codiceTransazione\",\"to\":\"${input.referenceId}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.apiKey\",\"to\":\"${vars.alias}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.divisa\",\"to\":\"${input.currency}\",\"map\":{\"EUR\":\"978\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.importo\",\"to\":\"${input.amountInExponent}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.mac\",\"to\":\"${auth.hmac.digest}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isObject\":false,\"isScript\":false}]},\"responseMappingFields\":{\"mappings\":[{\"from\":\"errore.messaggio\",\"to\":\"errorCode\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"idOperazione\",\"to\":\"pspReference\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"esito\",\"to\":\"transactionStatus\",\"map\":{\"KO\":\"REJECTED\",\"OK\":\"ACCEPTED\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"timeStamp\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"errore.codice\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"mac\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false}]},\"responseContentType\":\"application\/json\",\"headers\":{},\"formArrayIndicator\":null}]}",
+              "raw": "{\"id\":109,\"requestType\":\"REFUND\",\"outboundMappings\":[{\"url\":\"https:\/\/${vars.apiEnv}\/ecomm\/api\/bo\/storna\",\"authenticationIds\":[\"{{authentication_outbound_hmac_outbound_signature_calculation_132}}\"],\"method\":\"POST\",\"requestContentType\":\"application\/json\",\"requestExample\":\"{\\n    \\\"apiKey\\\" : \\\"APIKEY\\\",\\n    \\\"codiceTransazione\\\" : \\\"tx_code\\\",\\n    \\\"importo\\\" : \\\"23000\\\",\\n    \\\"divisa\\\" : \\\"978\\\",\\n    \\\"timeStamp\\\" : \\\"1606740903518\\\",\\n    \\\"mac\\\" : \\\"sig1234\\\"\\n}\",\"responseExample\":\"{\\n   \\\"timeStamp\\\": \\\"1607707701553\\\",\\n  \\\"esito\\\" : \\\"OK\\\",\\n    \\\"idOperazione\\\": \\\"1866937\\\",\\n    \\\"errore\\\": {\\n        \\\"messaggio\\\": \\\"Mac non valido\\\",\\n        \\\"codice\\\": 3\\n    },\\n    \\\"mac\\\": \\\"7481f6a33076d228e896f71de86779a3f5c32843\\\"\\n}\",\"requestMappingFields\":{\"mappings\":[{\"from\":\"$.apiKey\",\"to\":\"${vars.alias}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.timeStamp\",\"to\":\"${auth.hmac.hmacFields.timeStamp}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isObject\":false,\"isScript\":false},{\"from\":\"$.codiceTransazione\",\"to\":\"${input.referenceId}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.divisa\",\"to\":\"${input.currencyAsNumeric}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.importo\",\"to\":\"${input.amountInExponent}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.mac\",\"to\":\"${auth.hmac.digest}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isObject\":false,\"isScript\":false}]},\"responseMappingFields\":{\"mappings\":[{\"from\":\"errore.messaggio\",\"to\":\"errorCode\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"idOperazione\",\"to\":\"pspReference\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"esito\",\"to\":\"transactionStatus\",\"map\":{\"KO\":\"REJECTED\",\"OK\":\"ACCEPTED\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"timeStamp\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"errore.codice\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"mac\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"errore.#object\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":true,\"isScript\":false},{\"from\":\"#object\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":true,\"isScript\":false}]},\"responseContentType\":\"application\/json\",\"headers\":{},\"formArrayIndicator\":null}]}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -699,17 +699,17 @@
                 "{{accountId}}"
                 ,
                 "refund"
-
+                
               ]
             }
           },
           "response": []
         }
-
+        
       ],
       "protocolProfileBehavior": {}
     }
-
+    
   ],
   "protocolProfileBehavior": {}
 }
