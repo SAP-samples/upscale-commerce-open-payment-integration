@@ -1,6 +1,6 @@
 {
-  "id": "81ec1a44-fe84-483c-af9e-34dd77a700c0",
-  "name": "gatewaystage",
+  "id": "e1bf5519-926e-45f8-8d22-1b9d170e30ff",
+  "name": "Stripe Checkout Deferred Capture",
   "values": [
     {
       "key": "token",
@@ -75,7 +75,13 @@
       "value": "v1",
       "enabled": true
     }
-    
+    ,
+    {
+      "key": "checkoutLineItemName",
+      "value": "Upscale Deferred Capture Order",
+      "enabled": true
+    }
+
   ],
   "_postman_variable_scope": "environment",
   "_postman_exported_at": "",
