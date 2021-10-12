@@ -1,5 +1,5 @@
 {
-  "id": "d127eba7-cad5-406d-8e10-a0fde39a2c06",
+  "id": "edcaa509-8f8c-4305-a0fa-2a4179008e16",
   "name": "Stripe Hosted Fields",
   "values": [
     {
@@ -9,46 +9,46 @@
     },
     {
       "key": "rootUrl",
-      "value": "https://tenant-approuter-caas2-sap.cfapps.us10.hana.ondemand.com",
+      "value": "https:\/\/tenant-approuter-caas2-sap.cfapps.us10.hana.ondemand.com",
       "enabled": true
     },
     {
       "key": "accountGroupId",
-      "value": "143603",
+      "value": "150206",
       "enabled": true
     },
     {
       "key": "accountId",
-      "value": "153504",
+      "value": "158461",
       "enabled": true
     },
     {
-      "key": "authentication_outbound_basic_auth_username_export_4027",
-      "value": "Stripe Private Key_export_export_username",
+      "key": "authentication_inbound_hmac_signature_calculation_secret_export_4692",
+      "value": "Stripe Notification authentication_export_export_export",
       "enabled": true
     }
     ,
     {
-      "key": "authentication_outbound_basic_auth_password_export_4027",
-      "value": "Stripe Private Key_export_export_password",
+      "key": "authentication_outbound_basic_auth_username_export_4693",
+      "value": "Stripe Private Key_export_export_export_username",
       "enabled": true
     }
     ,
     {
-      "key": "authentication_outbound_basic_auth_username_export_4259",
-      "value": "Stripe Private Key_export_export_username",
+      "key": "authentication_outbound_basic_auth_password_export_4693",
+      "value": "Stripe Private Key_export_export_export_password",
       "enabled": true
     }
     ,
     {
-      "key": "authentication_outbound_basic_auth_password_export_4259",
-      "value": "Stripe Private Key_export_export_password",
+      "key": "authentication_outbound_basic_auth_username_export_4694",
+      "value": "Stripe Private Key_export_export_export_username",
       "enabled": true
     }
     ,
     {
-      "key": "authentication_inbound_hmac_signature_calculation_secret_export_4258",
-      "value": "Stripe Notification authentication_export_export",
+      "key": "authentication_outbound_basic_auth_password_export_4694",
+      "value": "Stripe Private Key_export_export_export_password",
       "enabled": true
     }
     ,
@@ -71,6 +71,12 @@
     }
     ,
     {
+      "key": "payButtonLabel",
+      "value": "Submit Payment",
+      "enabled": true
+    }
+    ,
+    {
       "key": "cardColor",
       "value": "#32325d",
       "enabled": true
@@ -87,6 +93,7 @@
       "value": "Upscale Order",
       "enabled": true
     }
+    
   ],
   "_postman_variable_scope": "environment",
   "_postman_exported_at": "",
