@@ -20,6 +20,8 @@
     "@angular/platform-browser": "~11.2.14",
     "@angular/platform-browser-dynamic": "~11.2.14",
     "@angular/router": "~11.2.14",
+    "@upscale/service-client-angular": "file:../../../../../Downloads/caas2-webapp/libs/upscale-service-client-angular-0.10.4.tgz",
+    "@upscale/web-storefront-sdk": "file:../../../../../Downloads/caas2-webapp/libs/upscale-web-storefront-sdk-0.0.1-BETA.12.tgz",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
@@ -45,7 +47,7 @@
     "typescript": "~4.1.5"
   },
   "peerDependencies": {
-    "@caas/service-client-angular": "~0.8.177",
+    "@upscale/service-client-angular": "~0.10.0",
     "@upscale/web-storefront-sdk": "~0.0.1-BETA.4"
   }
 }
