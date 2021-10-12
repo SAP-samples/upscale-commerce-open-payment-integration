@@ -7,7 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "package": "npm run build",
+    "package": "npm run build -- --configuration=production",
     "postpackage": "npm pack ./dist/klarna-checkout"
   },
   "private": true,
