@@ -1,0 +1,412 @@
+{
+  "info": {
+    "_postman_id": "29db367f-3683-4a56-8938-f333f0e56628",
+    "name": "Upscale_Payment_Config_Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Variable",
+      "item": [
+        {
+          "name": "Variable_authorizeApi",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":1199,\"sensitive\":false,\"value\":\"{{authorizeApi}}\",\"key\":\"authorizeApi\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}\/variables",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+                ,
+                "variables"
+                
+              ]
+            }
+          },
+          "response": []
+        }
+        ,
+        {
+          "name": "Variable_settleApi",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":1200,\"sensitive\":false,\"value\":\"{{settleApi}}\",\"key\":\"settleApi\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}\/variables",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+                ,
+                "variables"
+                
+              ]
+            }
+          },
+          "response": []
+        }
+        ,
+        {
+          "name": "Variable_refundApi",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":1201,\"sensitive\":false,\"value\":\"{{refundApi}}\",\"key\":\"refundApi\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}\/variables",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+                ,
+                "variables"
+                
+              ]
+            }
+          },
+          "response": []
+        }
+        
+      ],
+      "protocolProfileBehavior": {}
+    }
+    ,
+    {
+      "name": "Account",
+      "item": [
+        {
+          "name": "Account Patch",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"settlementInitiationType\":\"{{settlementInitiationType}}\",\"capturePattern\":\"{{capturePattern}}\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+                
+              ]
+            }
+          },
+          "response": []
+        }
+        
+      ],
+      "protocolProfileBehavior": {}
+    }
+    ,
+    {
+      "name": "AccountGroup",
+      "item": [
+        {
+          "name": "Account Group Patch",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"authorizationTimeoutDays\":{{authorizationTimeoutDays}}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                
+              ]
+            }
+          },
+          "response": []
+        }
+        
+      ],
+      "protocolProfileBehavior": {}
+    }
+    ,
+    {
+      "name": "Authorization",
+      "item": [
+        {
+          "name": "Authorization",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":1065,\"pattern\":\"HOSTED_FIELDS\",\"requestType\":\"AUTHORIZATION\",\"outboundMappings\":[{\"url\":\"https:\/\/${vars.authorizeApi}\",\"authenticationIds\":[],\"method\":\"POST\",\"requestContentType\":\"application\/json\",\"requestExample\":\"{\\n  \\\"order\\\" : \\\"12345\\\",\\n  \\\"amount\\\" : \\\"123.33\\\",\\n  \\\"reference\\\" : \\\"1234\\\",\\n  \\\"type\\\" : \\\"auth\\\",\\n  \\\"method\\\" : \\\"bank-transfer\\\"\\n}\",\"responseExample\":\"{ \\\"success\\\": true, \\\"type\\\" : \\\"cash-on-delivery\\\" }\",\"requestMappingFields\":{\"mappings\":[{\"from\":\"$.reference\",\"to\":\"${input.referenceId}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.amount\",\"to\":\"${input.amount}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.method\",\"to\":\"cash-on-delivery\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isObject\":false,\"isScript\":false},{\"from\":\"$.type\",\"to\":\"auth\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isObject\":false,\"isScript\":false},{\"from\":\"$.order\",\"to\":\"${input.orderId}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false}]},\"responseMappingFields\":{\"mappings\":[{\"from\":\"type\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"success\",\"to\":\"transactionStatus\",\"map\":{\"true\":\"ACCEPTED\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false}]},\"responseContentType\":\"application\/json\",\"headers\":null,\"formArrayIndicator\":null}],\"dynamicScript\":{\"cssUrl\":null,\"jsUrl\":null,\"html\":\"<div id=\\\"opf-payment-button\\\">\\n    <style type=\\\"text\/css\\\" scoped>\\n        .pay_button {\\n          \\tcursor: pointer;\\n    \\t  \\tuser-select: none;\\n    \\t  \\tbackground-color: black;\\n    \\t\\tborder: 0;\\n    \\t\\tborder-radius: 4px;\\n    \\t\\tcolor: white;\\n    \\t\\tfont-size: 16px;\\n            font-family: Roboto;\\n            padding: 0;\\n            width: 100%;\\n            height: 50px;\\n            display: flex;\\n            align-items: center;\\n            justify-content: center;\\n            font-weight: 500;  \\n            appearance: button;\\n            -webkit-writing-mode: horizontal-tb !important;\\n            text-rendering: auto;\\n            letter-spacing: normal;\\n            word-spacing: normal;\\n            text-transform: none;\\n            text-indent: 0px;\\n            text-shadow: none;\\n            text-align: center;\\n            box-sizing: border-box;\\n            margin: 0em;\\n       }\\n    <\/style>\\n  \\n    <button  id=\\\"checkout-button\\\" class=\\\"pay_button\\\"  onclick=\\\"makePayment()\\\" >Submit Order<\/button>\\n<\/div>\\n\\n\\n<script>\\n    \\n\\n    function submitSuccess(response) {\\n    }\\n\\n    function submitPending(response) {\\n      \\twindow.alert('payment pending' + response);\\n\\n    }\\n\\n    function submitFail(error) {\\n\\t\\twindow.alert('payment error' + error);\\n    }\\n\\n    function makePayment() {\\n        \\n    \\tvar additionalData = [\\n        \\t{ 'key': 'paymentMethod', 'value': 'cash-on-delivery' }\\n       \\t];\\n       \\tvar submitBody = {\\n                'additionalData': additionalData,\\n                'submitSuccess': submitSuccess,\\n                'submitPending': submitPending,\\n                'submitFail': submitFail,\\n          \\t\\t'paymentMethod': 'cash-on-delivery',\\n      \\t}\\n      \\twindow.Upscale.payments.submit(submitBody);\\n    }\\n    \\n<\/script>\",\"afterRedirectHtml\":null},\"remoteApiOutboundMappings\":[{\"url\":\"https:\/\/${vars.authorizeApi}\/initiate\",\"authenticationIds\":[],\"method\":\"POST\",\"requestContentType\":\"application\/json\",\"requestExample\":\"{\\n  \\\"order\\\" : \\\"12345\\\",\\n  \\\"amount\\\" : \\\"123.33\\\",\\n  \\\"reference\\\" : \\\"1234\\\",\\n  \\\"type\\\" : \\\"auth\\\",\\n  \\\"method\\\" : \\\"cash-on-delivery\\\"\\n}\",\"responseExample\":\"{ \\\"success\\\": true, \\\"type\\\" : \\\"cash-on-delivery\\\" }\",\"requestMappingFields\":{\"mappings\":[{\"from\":\"$.reference\",\"to\":\"${input.orderId}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.amount\",\"to\":\"${input.amount}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.method\",\"to\":\"cash-on-delivery\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isObject\":false,\"isScript\":false},{\"from\":\"$.type\",\"to\":\"initiate\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isObject\":false,\"isScript\":false},{\"from\":\"$.order\",\"to\":\"${input.orderId}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false}]},\"responseMappingFields\":{\"mappings\":[{\"from\":\"success\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"type\",\"to\":null,\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false}]},\"responseContentType\":\"application\/json\",\"headers\":{},\"formArrayIndicator\":null}]}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}\/authorization",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+                ,
+                "authorization"
+                
+              ]
+            }
+          },
+          "response": []
+        }
+        
+      ],
+      "protocolProfileBehavior": {}
+    }
+    ,
+    {
+      "name": "Refund",
+      "item": [
+        {
+          "name": "Refund",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":1066,\"requestType\":\"REFUND\",\"outboundMappings\":[{\"url\":\"https:\/\/${vars.refundApi}\",\"authenticationIds\":[],\"method\":\"POST\",\"requestContentType\":\"application\/json\",\"requestExample\":\"{\\n  \\\"order\\\" : \\\"12345\\\",\\n  \\\"amount\\\" : \\\"123.33\\\",\\n  \\\"reference\\\" : \\\"1234\\\",\\n  \\\"type\\\" : \\\"refund\\\"\\n}\",\"responseExample\":null,\"requestMappingFields\":{\"mappings\":[{\"from\":\"$.reference\",\"to\":\"${input.referenceId}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.amount\",\"to\":\"${input.amount}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.type\",\"to\":\"refund\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isObject\":false,\"isScript\":false},{\"from\":\"$.order\",\"to\":\"${input.orderId}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false}]},\"responseMappingFields\":{\"mappings\":[]},\"responseContentType\":\"application\/json\",\"headers\":null,\"formArrayIndicator\":null}]}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}\/refund",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+                ,
+                "refund"
+                
+              ]
+            }
+          },
+          "response": []
+        }
+        
+      ],
+      "protocolProfileBehavior": {}
+    }
+    ,
+    {
+      "name": "Settlement",
+      "item": [
+        {
+          "name": "Settlement",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{token}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"id\":1067,\"requestType\":\"SETTLEMENT\",\"outboundMappings\":[{\"url\":\"https:\/\/${vars.settleApi}\",\"authenticationIds\":[],\"method\":\"POST\",\"requestContentType\":\"application\/json\",\"requestExample\":\"{\\n  \\\"order\\\" : \\\"12345\\\",\\n  \\\"amount\\\" : \\\"123.33\\\",\\n  \\\"reference\\\" : \\\"1234\\\",\\n  \\\"type\\\" : \\\"settlement\\\"\\n}\",\"responseExample\":null,\"requestMappingFields\":{\"mappings\":[{\"from\":\"$.reference\",\"to\":\"${input.referenceId}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.amount\",\"to\":\"${input.amount}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.type\",\"to\":\"settlement\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isObject\":false,\"isScript\":false},{\"from\":\"$.order\",\"to\":\"${input.orderId}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false}]},\"responseMappingFields\":{\"mappings\":[]},\"responseContentType\":\"application\/json\",\"headers\":null,\"formArrayIndicator\":null}]}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}\/settlement",
+              "host": [
+                "{{rootUrl}}"
+              ],
+              "path": [
+                "payment-service"
+                ,
+                "merchant"
+                ,
+                "accountgroups"
+                ,
+                "{{accountGroupId}}"
+                ,
+                "accounts"
+                ,
+                "{{accountId}}"
+                ,
+                "settlement"
+                
+              ]
+            }
+          },
+          "response": []
+        }
+        
+      ],
+      "protocolProfileBehavior": {}
+    }
+    
+  ],
+  "protocolProfileBehavior": {}
+}
