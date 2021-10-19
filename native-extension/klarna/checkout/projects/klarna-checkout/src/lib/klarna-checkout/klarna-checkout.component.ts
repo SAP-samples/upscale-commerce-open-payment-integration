@@ -9,7 +9,7 @@ import {
   OrdersService,
   PaymentService,
   SupportedLocale,
-} from "@caas/service-client-angular";
+} from "@upscale/service-client-angular";
 import {
   AppConfiguration,
   AppConfigurationService,
