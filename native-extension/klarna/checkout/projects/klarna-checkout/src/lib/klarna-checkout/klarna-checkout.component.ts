@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import {
   ActiveConfiguration,
+  AppLoggerService,
   CalculatedCostForOrder,
   Channel,
   ConsentType,
@@ -39,7 +40,7 @@ export class KlarnaCheckoutComponent implements OnInit {
   @ViewChild("paymentMethodContainer", { static: false })
   paymentMethodContainer: ElementRef;
 
-  appData: AppConfiguration;
+  appData: AppConfiguration | undefined;
   paymentConfigs: Array<ActiveConfiguration>;
   draftOrder: Order;
   upscalePaymentSessionID: string;
@@ -53,7 +54,8 @@ export class KlarnaCheckoutComponent implements OnInit {
     private openPaymentService: OpenPaymentService,
     private consentService: ConsentService,
     private orderBrokerService: OrdersService,
-    private localeService: ApplicationLocaleService
+    private localeService: ApplicationLocaleService,
+    private appLogger: AppLoggerService
   ) {}
 
   ngOnInit(): void {
@@ -164,7 +166,16 @@ export class KlarnaCheckoutComponent implements OnInit {
           )
         ),
         catchError((error: Error) => {
-          return throwError(`PAYMENT_INIT_FAILED: ${error?.message}`);
+          globalThis.window?.alert(this.appData?.languagePack['general.errors.unknown']);
+
+          this.log({
+            description: "Klarna Checkout could not be initialized.",
+            error,
+          });
+
+          return from(this.router.navigate([this.localeString, "cart"])).pipe(
+            concatMapTo(throwError(`PAYMENT_INIT_FAILED: ${error?.message}`))
+          );
         })
       )
       .subscribe();
@@ -192,4 +203,27 @@ export class KlarnaCheckoutComponent implements OnInit {
     }
     return calculateCostRequest;
   }
+
+  private log(content: Object | string): void {
+    let contentString: string;
+    if (typeof content === 'object') {
+      contentString = JSON.stringify(content, this.getCircularReplacer());
+    } else {
+      contentString = content;
+    }
+    this.appLogger.debugLog(contentString).subscribe({ error: () => {} });
+	}
+
+	private getCircularReplacer(): ((this: any, key: string, value: any) => any) | undefined {
+		const seen = new WeakSet();
+		return (_, value): string | undefined => {
+			if (typeof value === 'object' && value !== null) {
+				if (seen.has(value)) {
+					return;
+				}
+				seen.add(value);
+			}
+			return value;
+		};
+	}
 }

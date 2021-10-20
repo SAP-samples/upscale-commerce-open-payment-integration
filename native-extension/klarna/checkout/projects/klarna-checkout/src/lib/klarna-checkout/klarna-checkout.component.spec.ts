@@ -1,7 +1,26 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
-import { createMockExperience, createMockOrder, MockOrdersService, MockPaymentService, OrdersService, PaymentProvider, PaymentService, SupportedLocale } from '@upscale/service-client-angular';
-import { AppConfiguration, AppConfigurationService, ApplicationLocaleService, ConsentService, OpenPaymentService, ShoppingCartService, Templates } from '@upscale/web-storefront-sdk';
+import {
+	AppLoggerService,
+	createMockExperience,
+	createMockOrder,
+	MockAppLoggerService,
+	MockOrdersService,
+	MockPaymentService,
+	OrdersService,
+	PaymentProvider,
+	PaymentService,
+	SupportedLocale,
+} from '@upscale/service-client-angular';
+import {
+	AppConfiguration,
+	AppConfigurationService,
+	ApplicationLocaleService,
+	ConsentService,
+	OpenPaymentService,
+	ShoppingCartService,
+	Templates,
+} from '@upscale/web-storefront-sdk';
 import { of } from 'rxjs';
 
 import { KlarnaCheckoutComponent } from './klarna-checkout.component';
@@ -28,6 +47,7 @@ describe('KlarnaCheckoutComponent', () => {
 			declarations: [ KlarnaCheckoutComponent ],
 			providers: [
 				{ provide: AppConfigurationService, useValue: mockAppConfigurationService },
+				{ provide: AppLoggerService, useClass: MockAppLoggerService }, 
 				{ provide: ApplicationLocaleService, useValue: mockApplicationLocaleService },
 				{ provide: ConsentService, useValue: mockConsentService },
 				{ provide: OpenPaymentService, useValue: mockOpenPaymentService },
