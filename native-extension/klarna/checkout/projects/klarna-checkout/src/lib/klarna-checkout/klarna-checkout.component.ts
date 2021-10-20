@@ -178,7 +178,9 @@ export class KlarnaCheckoutComponent implements OnInit {
           );
         })
       )
-      .subscribe();
+      .subscribe({
+        error: () => {}
+      });
   }
 
   private conditionalCalculateCost(): Observable<void | CalculatedCostForOrder> {
