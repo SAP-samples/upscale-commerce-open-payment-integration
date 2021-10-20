@@ -42,19 +42,19 @@
     ,
     {
       "key": "authorizeApi",
-      "value": "cc1c66abdee6fa0cf4874222442ecd2f.m.pipedream.net",
+      "value": "<yourendpoint>.m.pipedream.net",
       "enabled": true
     }
     ,
     {
       "key": "settleApi",
-      "value": "cc1c66abdee6fa0cf4874222442ecd2f.m.pipedream.net",
+      "value": "<yourendpoint>.m.pipedream.net",
       "enabled": true
     }
     ,
     {
       "key": "refundApi",
-      "value": "cc1c66abdee6fa0cf4874222442ecd2f.m.pipedream.net",
+      "value": "<youendpoint>.m.pipedream.net",
       "enabled": true
     }
     
