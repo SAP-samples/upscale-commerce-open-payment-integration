@@ -5,6 +5,7 @@ import {
   CalculatedCostForOrder,
   Channel,
   ConsentType,
+  ErrorSchema,
   InitOpenPaymentResponse,
   Order,
   OrdersService,
@@ -20,16 +21,16 @@ import {
   ShoppingCartService,
 } from "@upscale/web-storefront-sdk";
 import {
-  catchError,
   concatMap,
   concatMapTo,
   filter,
+  map,
   mapTo,
   take,
   tap,
 } from "rxjs/operators";
 import { Router } from "@angular/router";
-import { from, Observable, of, throwError } from "rxjs";
+import { from, Observable, of } from "rxjs";
 
 @Component({
   selector: "lib-klarna-checkout",
@@ -157,29 +158,33 @@ export class KlarnaCheckoutComponent implements OnInit {
               scripts: initResponse.dynamicScript?.jsUrls,
               styles: initResponse.dynamicScript?.cssUrls,
             })
-            .pipe(mapTo(initResponse))
-        ),
-        tap((initResponse) =>
-          this.openPaymentService.renderHtml(
-            this.paymentMethodContainer,
-            initResponse.dynamicScript?.html
-          )
-        ),
-        catchError((error: Error) => {
+            .pipe(
+              map(() => {
+                this.openPaymentService.renderHtml(
+                  this.paymentMethodContainer,
+                  initResponse.dynamicScript?.html
+                );
+                return initResponse;
+              })
+            )
+        )
+      )
+      .subscribe({
+        error: (error: Error | ErrorSchema) => {
           globalThis.window?.alert(this.appData?.languagePack['general.errors.unknown']);
 
           this.log({
             description: "Klarna Checkout could not be initialized.",
-            error,
+            error: {
+              message: error.message,
+              status: error['status']
+            },
           });
 
-          return from(this.router.navigate([this.localeString, "cart"])).pipe(
-            concatMapTo(throwError(`PAYMENT_INIT_FAILED: ${error?.message}`))
-          );
-        })
-      )
-      .subscribe({
-        error: () => {}
+          console.error(`PAYMENT_INIT_FAILED: ${error?.message}`);
+
+          this.router.navigate([this.localeString, "cart"]);
+        }
       });
   }
 

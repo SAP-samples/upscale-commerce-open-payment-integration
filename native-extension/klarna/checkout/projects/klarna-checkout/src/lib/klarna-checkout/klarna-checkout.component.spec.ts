@@ -1,12 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import {
-	ActiveConfiguration,
 	AppLoggerService,
 	createMockExperience,
 	createMockOrder,
 	ErrorSchema,
-	InitOpenPaymentResponse,
 	MockAppLoggerService,
 	MockOrdersService,
 	MockPaymentService,
@@ -131,7 +129,10 @@ describe('KlarnaCheckoutComponent', () => {
 			JSON.stringify(
 				{
 					description: 'Klarna Checkout could not be initialized.',
-					error,
+					error: {
+						message: '',
+						status: 500,
+					},
 				}
 			)
 		);
@@ -160,7 +161,10 @@ describe('KlarnaCheckoutComponent', () => {
 			JSON.stringify(
 				{
 					description: 'Klarna Checkout could not be initialized.',
-					error,
+					error: {
+						message: '',
+						status: 500,
+					},
 				}
 			)
 		);
@@ -190,7 +194,10 @@ describe('KlarnaCheckoutComponent', () => {
 			JSON.stringify(
 				{
 					description: 'Klarna Checkout could not be initialized.',
-					error,
+					error: {
+						message: '',
+						status: 500,
+					},
 				}
 			)
 		);
@@ -237,7 +244,10 @@ describe('KlarnaCheckoutComponent', () => {
 			JSON.stringify(
 				{
 					description: 'Klarna Checkout could not be initialized.',
-					error,
+					error: {
+						message: '',
+						status: 500,
+					},
 				}
 			)
 		);
