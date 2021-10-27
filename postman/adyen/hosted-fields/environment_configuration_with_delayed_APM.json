@@ -1,6 +1,6 @@
 {
   "id": "3f077257-3466-4ae2-9769-8bab33833b35",
-  "name": "gatewaystage",
+  "name": "Adyen Hosted Fields",
   "values": [
     {
       "key": "token",
