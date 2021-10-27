@@ -1,15 +1,17 @@
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import {
   ActiveConfiguration,
+  AppLoggerService,
   CalculatedCostForOrder,
   Channel,
   ConsentType,
+  ErrorSchema,
   InitOpenPaymentResponse,
   Order,
   OrdersService,
   PaymentService,
   SupportedLocale,
-} from "@caas/service-client-angular";
+} from "@upscale/service-client-angular";
 import {
   AppConfiguration,
   AppConfigurationService,
@@ -19,16 +21,16 @@ import {
   ShoppingCartService,
 } from "@upscale/web-storefront-sdk";
 import {
-  catchError,
   concatMap,
   concatMapTo,
   filter,
+  map,
   mapTo,
   take,
   tap,
 } from "rxjs/operators";
 import { Router } from "@angular/router";
-import { from, Observable, of, throwError } from "rxjs";
+import { from, Observable, of } from "rxjs";
 
 @Component({
   selector: "lib-klarna-checkout",
@@ -39,7 +41,7 @@ export class KlarnaCheckoutComponent implements OnInit {
   @ViewChild("paymentMethodContainer", { static: false })
   paymentMethodContainer: ElementRef;
 
-  appData: AppConfiguration;
+  appData: AppConfiguration | undefined;
   paymentConfigs: Array<ActiveConfiguration>;
   draftOrder: Order;
   upscalePaymentSessionID: string;
@@ -53,7 +55,8 @@ export class KlarnaCheckoutComponent implements OnInit {
     private openPaymentService: OpenPaymentService,
     private consentService: ConsentService,
     private orderBrokerService: OrdersService,
-    private localeService: ApplicationLocaleService
+    private localeService: ApplicationLocaleService,
+    private appLogger: AppLoggerService
   ) {}
 
   ngOnInit(): void {
@@ -155,19 +158,34 @@ export class KlarnaCheckoutComponent implements OnInit {
               scripts: initResponse.dynamicScript?.jsUrls,
               styles: initResponse.dynamicScript?.cssUrls,
             })
-            .pipe(mapTo(initResponse))
-        ),
-        tap((initResponse) =>
-          this.openPaymentService.renderHtml(
-            this.paymentMethodContainer,
-            initResponse.dynamicScript?.html
-          )
-        ),
-        catchError((error: Error) => {
-          return throwError(`PAYMENT_INIT_FAILED: ${error?.message}`);
-        })
+            .pipe(
+              map(() => {
+                this.openPaymentService.renderHtml(
+                  this.paymentMethodContainer,
+                  initResponse.dynamicScript?.html
+                );
+                return initResponse;
+              })
+            )
+        )
       )
-      .subscribe();
+      .subscribe({
+        error: (error: Error | ErrorSchema) => {
+          globalThis.window?.alert(this.appData?.languagePack['general.errors.unknown']);
+
+          this.log({
+            description: "Klarna Checkout could not be initialized.",
+            error: {
+              message: error.message,
+              status: error['status']
+            },
+          });
+
+          console.error(`PAYMENT_INIT_FAILED: ${error?.message}`);
+
+          this.router.navigate([this.localeString, "cart"]);
+        }
+      });
   }
 
   private conditionalCalculateCost(): Observable<void | CalculatedCostForOrder> {
@@ -192,4 +210,27 @@ export class KlarnaCheckoutComponent implements OnInit {
     }
     return calculateCostRequest;
   }
+
+  private log(content: Object | string): void {
+    let contentString: string;
+    if (typeof content === 'object') {
+      contentString = JSON.stringify(content, this.getCircularReplacer());
+    } else {
+      contentString = content;
+    }
+    this.appLogger.debugLog(contentString).subscribe({ error: () => {} });
+	}
+
+	private getCircularReplacer(): ((this: any, key: string, value: any) => any) | undefined {
+		const seen = new WeakSet();
+		return (_, value): string | undefined => {
+			if (typeof value === 'object' && value !== null) {
+				if (seen.has(value)) {
+					return;
+				}
+				seen.add(value);
+			}
+			return value;
+		};
+	}
 }
