@@ -20,7 +20,7 @@
 6. Copy notification URL.
 ![copy notification URL](./documentation/images/copy_notificationURL.png)
 7. Note down the Account Group ID and the Account ID, it's in the URL of the merchant account you just created for the mock gateway, they will be used in later steps when importing postman collection to the system. 
-
+![copy notification URL](./documentation/images/groupID.png)
 
 ## Edit and Execute the Postman Collection 
 
