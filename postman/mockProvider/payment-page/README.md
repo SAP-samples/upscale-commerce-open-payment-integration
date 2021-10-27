@@ -6,22 +6,19 @@
 ## Download Postman Collection from Github Repository 
 
 1. Download the postman collection Zip file of mock provider from [Postman Collection scripts](https://github.com/SAP-samples/upscale-commerce-open-payment-integration/tree/main/postman/mockProvider/payment-page).
-2. unzip the file.
+2. Unzip the file.
 
 
 ## Create Merchant Account in Target Tenant
 1. Log on to the target tenant.
 2. Create a merchant account.
 ![create merchant account](./documentation/images/create_merchant_account.png)
-
 3. In the new quick creation page above, make sure the Payment Integration is set to Open payment framework – gateway.
 4. Assign the division.
 5. Save the Merchant ID in Payments, You can provide a random number for Merchant ID field. It will be updated when run postman collection configuration.
 ![save merchant ID](./documentation/images/save_merchantID.png)
-
 6. Copy notification URL.
 ![copy notification URL](./documentation/images/copy_notificationURL.png)
-
 7. Note down the Account Group ID and the Account ID, it's in the URL of the merchant account you just created for the mock gateway, they will be used in later steps when importing postman collection to the system. 
 
 
