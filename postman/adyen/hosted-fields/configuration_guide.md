@@ -2,29 +2,6 @@
 
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/upscale-commerce-open-payment-integration)](https://api.reuse.software/info/github.com/SAP-samples/upscale-commerce-open-payment-integration)
 
-## Purpose of this document
-This document can be used for configuring Adyen Hosted Fields with APM.
-
-The postman collection source is Gateway Stage system，and the target could be stage environment or other tenants.
-
-
-## Set up Adyen Gateway
-Follow the instructions in the Help Center to set up the gateway.
-
-[Setting Up Gateway - SAP Help Portal](https://help.sap.com/viewer/a99d6fa0606f4f3cbf251e4e61f35feb/SHIP/en-US/c531853888f24325a7fb1a5b1b8f404e.html) 
-
-
-## Export postman collection from Source System (Stage)
-
-### Overview
-After development implementation, the merchant account configuration is done in the gateway stage system. You can then export the postman collection scripts from the gateway stage system, and adjust them with the correct parameter values, and import them to the target tenant environment.
-
-### Download Postman Collection Steps (optional)
-1. In the gateway stage environment, go to Settings ->Payment.
-2. Open the merchant account Adyen Hosted Field APM.
-3. Export the postman collection from the gateway stage system.
-4. A zip file with the name Upscale_Payment_Mapping_Configuration.zip will be exported.
-
 ### Directly copy the Postman Collection files to your local drive
 
 [Postman Collection scripts](https://github.com/SAP-samples/upscale-commerce-open-payment-integration/tree/main/postman/adyen/hosted-fields) 
