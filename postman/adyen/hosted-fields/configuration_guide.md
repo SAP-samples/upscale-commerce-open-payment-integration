@@ -69,7 +69,7 @@ Note: To get the Merchant account, log in to Adyen Portal and get the merchant A
    ![add standard notification](./documentation/images/add_standard_notification.png) 
    - Enter the URL that receives the notifications. To get the URL, log on to Upscale, go to the Notification General section of your merchant account, copy the URL for notification as shown below.
     ![enter notification url](./documentation/images/enter-notification_url.png) 
-    ![notification url in upscale](./images/notification_url_in_upscale.png) 
+    ![notification url in upscale](./documentation/images/notification_url_in_upscale.png) 
    - Set up the basic authentication, and note down the basic authentication user name, password, which will be used in postman collection.  be sure to void space to the user name. 
    ![set up basic authentication](./documentation/images/setup_base_auth.png) 
    - Generate the HMAC key, you should note it down right at the time you generate the key, which will be used as an input in Postman collection environment variable. 
