@@ -35,9 +35,9 @@ Take PayPal as an example, the following needs to be done：
      [Set up the PayPal payment method on Adyen side] (https://docs.adyen.com/payment-methods/paypal/web-component?tab=3rd-party-access-test_1#add-paypal) 
 [Set up third party API access on your PayPal account](https://docs.adyen.com/payment-methods/paypal/web-component?tab=3rd-party-access-test_1#grant-api-access) 
 
-[Making Authorized API Calls](https://help.sap.com/viewer/DRAFT/7a1f60b8170f40cfb8313c49bdc7fd13/DEV/en-US/446a3d417aac4bd8a301464670995ed3.html) 
+[Get your PayPal Merchant ID](https://docs.adyen.com/payment-methods/paypal/web-component?tab=3rd-party-access-test_1#paypal-merchant-id) 
 
-[Making Authorized API Calls](https://help.sap.com/viewer/DRAFT/7a1f60b8170f40cfb8313c49bdc7fd13/DEV/en-US/446a3d417aac4bd8a301464670995ed3.html)  
+[Set up third party API access on your PayPal account](https://docs.adyen.com/payment-methods/paypal/web-component?tab=3rd-party-access-test_1#add-paypal)  
 
 2. Then, navigate to Settings ->Payment in Upscale Workbench.
 3. Go the Alternative Payment Method tab, and create an Alternative payment method (APM).
