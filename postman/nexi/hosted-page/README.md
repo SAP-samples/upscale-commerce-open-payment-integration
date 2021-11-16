@@ -26,7 +26,7 @@ For Test mode all details can be obtained from: https://ecommerce.nexi.it/area-t
 Obtain Creds from Pagamenti E-commerce
 ![Obtain Creds from Pagamenti E-commerce](documentation/images/nexi-creds.png?raw=true "Obtain Creds from Pagamenti E-commerce")
 
-Enable Immediate collection and Server to Server
+Further down the page, Enable Immediate collection and Server to Server. It is also recommended to have communications sent to a service email account.
 ![Enable Immediate collection and Server to Server](documentation/images/next-toggles.png?raw=true "Enable Immediate collection and Server to Server")
   
 Test cards can also be found in area-test.
