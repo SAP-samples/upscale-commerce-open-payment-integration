@@ -36,4 +36,5 @@ Login Details for [Test Merchant Backoffice](https://int-ecommerce.nexi.it/ecomm
   
 *For Live, it may be necessary to Have Nexi Allowlist the calling PWA domain for Hosted Page to Work.*
   
-  
+## License
+Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.  
