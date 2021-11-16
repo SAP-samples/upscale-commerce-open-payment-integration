@@ -32,7 +32,7 @@ Further down the page, Enable Immediate collection and Server to Server. It is a
   
 Test cards can also be found in area-test.
   
-Login Details for [Test Merchant Backoffice](https://int-ecommerce.nexi.it/ecomm/web/reporting/ReportLogin.jsp) can be found also on this page. 
+Login Details for [Test Merchant Backoffice](https://int-ecommerce.nexi.it/ecomm/web/reporting/ReportLogin.jsp) can be found in area-test. 
   
 *For Live, it may be necessary to Have Nexi Allowlist the calling PWA domain for Hosted Page to Work.*
   
