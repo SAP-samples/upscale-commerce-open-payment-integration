@@ -30,7 +30,14 @@ Obtain Creds from Pagamenti E-commerce
 Further down the page, Enable Immediate collection and Server to Server. It is also recommended to have communications sent to a service email account.
 ![Enable Immediate collection and Server to Server](documentation/images/next-toggles.png?raw=true "Enable Immediate collection and Server to Server")
   
-Test cards can also be found in area-test.
+Test cards can also be found in area-test, please verify there if below do not work.
+
+| Circuito | Numero carta | Scadenza | CVV2* |	Esito  Atteso	| Messaggio  Errore |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | 
+| VISA | 4539970000000006 (EUR)	| 12/2030	 | 123	| Pagamento accettato	| Message  Ok |
+| VISA | 4539970000000014 (EUR)	| 12/2030	| 123	| Pagamento rifiutato	Auth. | Denied |
+| MASTERCARD | 5255000000000001 (EUR)	| 12/2030	| 123	|Pagamento accettato	| Message Ok |
+| MASTERCARD | 5255000000000019 (EUR)	| 12/2030	| 123	| Pagamento rifiutato	Auth. | Denied |
   
 Login Details for [Test Merchant Backoffice](https://int-ecommerce.nexi.it/ecomm/web/reporting/ReportLogin.jsp) can be found in area-test. 
   
