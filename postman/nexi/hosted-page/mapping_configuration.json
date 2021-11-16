@@ -1,7 +1,7 @@
 {
   "info": {
-    "_postman_id": "edcdd903-5777-42a5-8384-07f666837313",
-    "name": "Upscale_Payment_Config_Collection",
+    "_postman_id": "78132580-bb6f-4de3-a3ba-917a62186afd",
+    "name": "NEXI",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -47,7 +47,7 @@
                 "{{accountId}}"
                 ,
                 "variables"
-                
+
               ]
             }
           },
@@ -93,7 +93,7 @@
                 "{{accountId}}"
                 ,
                 "variables"
-                
+
               ]
             }
           },
@@ -139,7 +139,7 @@
                 "{{accountId}}"
                 ,
                 "variables"
-                
+
               ]
             }
           },
@@ -185,59 +185,13 @@
                 "{{accountId}}"
                 ,
                 "variables"
-                
+
               ]
             }
           },
           "response": []
         }
-        ,
-        {
-          "name": "Variable_EUR",
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{token}}",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"id\":130,\"sensitive\":false,\"value\":\"{{EUR}}\",\"key\":\"EUR\"}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "{{rootUrl}}/payment-service\/merchant\/accountgroups\/{{accountGroupId}}\/accounts\/{{accountId}}\/variables",
-              "host": [
-                "{{rootUrl}}"
-              ],
-              "path": [
-                "payment-service"
-                ,
-                "merchant"
-                ,
-                "accountgroups"
-                ,
-                "{{accountGroupId}}"
-                ,
-                "accounts"
-                ,
-                "{{accountId}}"
-                ,
-                "variables"
-                
-              ]
-            }
-          },
-          "response": []
-        }
-        
+
       ],
       "protocolProfileBehavior": {}
     }
@@ -282,13 +236,13 @@
                 "accounts"
                 ,
                 "{{accountId}}"
-                
+
               ]
             }
           },
           "response": []
         }
-        
+
       ],
       "protocolProfileBehavior": {}
     }
@@ -329,13 +283,13 @@
                 "accountgroups"
                 ,
                 "{{accountGroupId}}"
-                
+
               ]
             }
           },
           "response": []
         }
-        
+
       ],
       "protocolProfileBehavior": {}
     }
@@ -349,10 +303,10 @@
             {
               "listen": "test",
               "script": {
-                "id": "7c5d2029-bd3c-4137-b4ff-5beb1096ba45",
+                "id": "4251e1d9-6bd7-443e-b34e-09e7a599ee1c",
                 "exec": [
                   "tests[\"Status code is 201\"] = responseCode.code === 201;    \npm.test(\"Location is present\", function () {\n    pm.response.to.have.header(\"Location\");\n    var location=pm.response.headers.get(\"Location\");\n    pm.environment.set(\"authentication_inbound_hmac_signature_calculation_129\", location.substring(location.lastIndexOf(\"\/\")+1,location.length));\n});"
-                  
+
                 ],
                 "type": "text/javascript"
               }
@@ -387,7 +341,7 @@
                 "gateway"
                 ,
                 "authentications"
-                
+
               ]
             }
           },
@@ -400,10 +354,10 @@
             {
               "listen": "test",
               "script": {
-                "id": "443a6624-aaa7-4f28-af59-bb27425165bc",
+                "id": "ad3b7e43-a4be-4408-8996-7d8dbe90f76e",
                 "exec": [
                   "tests[\"Status code is 201\"] = responseCode.code === 201;    \npm.test(\"Location is present\", function () {\n    pm.response.to.have.header(\"Location\");\n    var location=pm.response.headers.get(\"Location\");\n    pm.environment.set(\"authentication_inbound_hmac_outbound_signature_calculation_130\", location.substring(location.lastIndexOf(\"\/\")+1,location.length));\n});"
-                  
+
                 ],
                 "type": "text/javascript"
               }
@@ -438,7 +392,7 @@
                 "gateway"
                 ,
                 "authentications"
-                
+
               ]
             }
           },
@@ -451,10 +405,10 @@
             {
               "listen": "test",
               "script": {
-                "id": "dade9bb6-cf32-4eca-823b-bca32fbadefa",
+                "id": "3b574db8-7aa8-469c-863e-8f9d46091250",
                 "exec": [
                   "tests[\"Status code is 201\"] = responseCode.code === 201;    \npm.test(\"Location is present\", function () {\n    pm.response.to.have.header(\"Location\");\n    var location=pm.response.headers.get(\"Location\");\n    pm.environment.set(\"authentication_inbound_hmac_signature_calculation_131\", location.substring(location.lastIndexOf(\"\/\")+1,location.length));\n});"
-                  
+
                 ],
                 "type": "text/javascript"
               }
@@ -489,7 +443,7 @@
                 "gateway"
                 ,
                 "authentications"
-                
+
               ]
             }
           },
@@ -502,10 +456,10 @@
             {
               "listen": "test",
               "script": {
-                "id": "4d647c84-40fb-4cd0-b75e-549ae134b7aa",
+                "id": "3288d698-9b9e-4be2-beb1-7537b26d4484",
                 "exec": [
                   "tests[\"Status code is 201\"] = responseCode.code === 201;    \npm.test(\"Location is present\", function () {\n    pm.response.to.have.header(\"Location\");\n    var location=pm.response.headers.get(\"Location\");\n    pm.environment.set(\"authentication_outbound_hmac_outbound_signature_calculation_132\", location.substring(location.lastIndexOf(\"\/\")+1,location.length));\n});"
-                  
+
                 ],
                 "type": "text/javascript"
               }
@@ -540,13 +494,13 @@
                 "gateway"
                 ,
                 "authentications"
-                
+
               ]
             }
           },
           "response": []
         }
-        
+
       ],
       "protocolProfileBehavior": {}
     }
@@ -567,7 +521,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"id\":107,\"pattern\":\"FULL_PAGE\",\"requestType\":\"AUTHORIZATION\",\"destination\":{\"url\":\"https:\/${vars.apiEnv}\/ecomm\/ecomm\/DispatcherServlet\",\"method\":\"POST\",\"contentType\":\"application\/x-www-form-urlencoded\",\"body\":null,\"authenticationIds\":[\"{{authentication_inbound_hmac_outbound_signature_calculation_130}}\"],\"form\":[{\"name\":\"divisa\",\"value\":\"${input.currency}\"},{\"name\":\"urlpost\",\"value\":\"${input.notificationURL}\"},{\"name\":\"mail\",\"value\":\"${input.emailAddress}\"},{\"name\":\"TCONTAB\",\"value\":\"${vars.TCONTAB}\"},{\"name\":\"url\",\"value\":\"${input.resultURL}\"},{\"name\":\"codTrans\",\"value\":\"${auth.hmac.hmacFields.codTrans}\"},{\"name\":\"url_back\",\"value\":\"${input.cancelURL}\"},{\"name\":\"mac\",\"value\":\"${auth.hmac.digest}\"},{\"name\":\"alias\",\"value\":\"${vars.alias}\"},{\"name\":\"importo\",\"value\":\"${input.amountInExponent}\"}]},\"verify\":{\"localVerifyMapping\":{\"mappings\":[{\"from\":\"esito\",\"to\":\"result\",\"map\":{\"OK\":\"AUTHORIZED\",\"KO\":\"UNAUTHORIZED\",\"ANNULLO\":\"CANCELLED\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false}]},\"localVerifyAuthenticationId\":\"{{authentication_inbound_hmac_signature_calculation_129}}\"}}",
+              "raw": "{\"id\":107,\"pattern\":\"FULL_PAGE\",\"requestType\":\"AUTHORIZATION\",\"destination\":{\"url\":\"https:\/\/${vars.apiEnv}\/ecomm\/ecomm\/DispatcherServlet\",\"method\":\"POST\",\"contentType\":\"application\/x-www-form-urlencoded\",\"body\":null,\"authenticationIds\":[\"{{authentication_inbound_hmac_outbound_signature_calculation_130}}\"],\"form\":[{\"name\":\"divisa\",\"value\":\"${input.currency}\"},{\"name\":\"urlpost\",\"value\":\"${input.notificationURL}\"},{\"name\":\"mail\",\"value\":\"${input.emailAddress}\"},{\"name\":\"TCONTAB\",\"value\":\"${vars.TCONTAB}\"},{\"name\":\"url\",\"value\":\"${input.resultURL}\"},{\"name\":\"codTrans\",\"value\":\"${auth.hmac.hmacFields.codTrans}\"},{\"name\":\"url_back\",\"value\":\"${input.cancelURL}\"},{\"name\":\"mac\",\"value\":\"${auth.hmac.digest}\"},{\"name\":\"alias\",\"value\":\"${vars.alias}\"},{\"name\":\"importo\",\"value\":\"${input.amountInExponent}\"}]},\"verify\":{\"localVerifyMapping\":{\"mappings\":[{\"from\":\"esito\",\"to\":\"result\",\"map\":{\"OK\":\"AUTHORIZED\",\"KO\":\"UNAUTHORIZED\",\"ANNULLO\":\"CANCELLED\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":true,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false}]},\"localVerifyAuthenticationId\":\"{{authentication_inbound_hmac_signature_calculation_129}}\"}}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -593,13 +547,13 @@
                 "{{accountId}}"
                 ,
                 "authorization"
-                
+
               ]
             }
           },
           "response": []
         }
-        
+
       ],
       "protocolProfileBehavior": {}
     }
@@ -646,13 +600,13 @@
                 "{{accountId}}"
                 ,
                 "notification"
-                
+
               ]
             }
           },
           "response": []
         }
-        
+
       ],
       "protocolProfileBehavior": {}
     }
@@ -699,17 +653,17 @@
                 "{{accountId}}"
                 ,
                 "refund"
-                
+
               ]
             }
           },
           "response": []
         }
-        
+
       ],
       "protocolProfileBehavior": {}
     }
-    
+
   ],
   "protocolProfileBehavior": {}
 }
