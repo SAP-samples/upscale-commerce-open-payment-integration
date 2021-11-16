@@ -41,7 +41,7 @@ Test cards can also be found in area-test, please verify there if below do not w
 
 *CVV any 3 numbers
   
-Login Details for [Test Merchant Backoffice](https://int-ecommerce.nexi.it/ecomm/web/reporting/ReportLogin.jsp) can be found in area-test. 
+Login Details for [Test Merchant Backoffice](https://int-ecommerce.nexi.it/ecomm/web/reporting/ReportLogin.jsp) can be found in area-test. Here you can verify transactions received correctly from Upscale and also check Notification logs.
   
 *For Live, it may be necessary to Have Nexi Allowlist the calling PWA domain for Hosted Page to Work.*
   
