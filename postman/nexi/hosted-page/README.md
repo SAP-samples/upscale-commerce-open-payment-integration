@@ -18,7 +18,7 @@ For Test mode all details can be obtained from: https://ecommerce.nexi.it/area-t
 | Upscale Value | Nexi Value | Description |
 | ------------- | ------------- | ------------- |
 | Merchant ID   | Terminale | Merchant ID |
-| alias  | Alias format ALIAS_WEB_<Terminale> | API Identifier | 
+| alias  | Alias format ALIAS_WEB_{{Terminale}} | API Identifier | 
 | secret | Chiave per il calcolo mac| Secret for HMAC used to authenticate api and payment page |
 | TCONTAB | TCONTAB | Indicator for capture mode (currently must be C) |
 | apiEnv | [Documented Here](https://ecommerce.nexi.it/specifiche-tecniche/servertoserver/introduzione.html) | API endpoint for Test or Live System | 
