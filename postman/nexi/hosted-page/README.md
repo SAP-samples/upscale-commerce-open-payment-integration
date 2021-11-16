@@ -6,6 +6,9 @@
 * Auto Capture
 * Refunds
 
+## Needs Work
+* Delayed Capture
+* Recurring Payments
 
 ## Setup
 
