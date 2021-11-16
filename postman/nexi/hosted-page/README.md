@@ -15,7 +15,7 @@
 For Test mode all details can be obtained from: https://ecommerce.nexi.it/area-test. This includes sign-up for a test account.
 
 
-| Upscale Value | Nexi Value | Description |
+| Upscale Field | Nexi Field | Description |
 | ------------- | ------------- | ------------- |
 | Merchant ID   | Terminale | Merchant ID |
 | alias  | Alias format ALIAS_WEB_{{Terminale}} | API Identifier | 
