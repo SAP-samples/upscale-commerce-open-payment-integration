@@ -82,6 +82,37 @@
           }
         }
       }
+    },
+    "klarna-checkout-root": {
+      "projectType": "library",
+      "root": "projects/klarna-checkout-root",
+      "sourceRoot": "projects/klarna-checkout-root/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/klarna-checkout-root/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/klarna-checkout-root/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/klarna-checkout-root/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/klarna-checkout-root/src/test.ts",
+            "tsConfig": "projects/klarna-checkout-root/tsconfig.spec.json",
+            "karmaConfig": "projects/klarna-checkout-root/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "klarna-checkout"

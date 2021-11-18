@@ -1,17 +1,19 @@
 import { NgModule } from "@angular/core";
-import { RegistrationService } from "@upscale/web-storefront-sdk";
+import { provideDefaultConfig } from "@spartacus/core";
+
 import { KlarnaCheckoutComponent } from "./klarna-checkout.component";
 
 @NgModule({
   declarations: [KlarnaCheckoutComponent],
   exports: [KlarnaCheckoutComponent],
+  // providers: [
+  //   provideDefaultConfig({
+  //     cmsComponents: {
+  //       "klarna-checkout-component": {
+  //         component: KlarnaCheckoutComponent
+  //       },
+  //     },
+  //   }),
+  // ]
 })
-
-export class UpscaleExtensionModule {
-  constructor(private registrationService: RegistrationService) {
-    this.registrationService.register(
-      "klarna-checkout",
-      KlarnaCheckoutComponent
-    );
-  }
-}
+export class UpscaleExtensionModule {}

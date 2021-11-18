@@ -14,6 +14,10 @@
       "klarna-checkout": [
         "dist/klarna-checkout/klarna-checkout",
         "dist/klarna-checkout"
+      ],
+      "klarna-checkout-root": [
+        "dist/klarna-checkout-root/klarna-checkout-root",
+        "dist/klarna-checkout-root"
       ]
     },
     "target": "es2015",
@@ -25,6 +29,5 @@
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
-    "enableIvy": false
   }
 }

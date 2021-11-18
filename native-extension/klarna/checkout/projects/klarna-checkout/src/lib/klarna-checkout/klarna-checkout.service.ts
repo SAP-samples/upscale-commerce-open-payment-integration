@@ -5,5 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class KlarnaCheckoutService {
 
-  constructor() { }
+  constructor() {
+    console.log("KLARNA CHECKOUT SERVICE EAGERLY INJECTED")
+  }
 }

@@ -1,0 +1,1 @@
+export * from "./klarna-checkout-root.module";
