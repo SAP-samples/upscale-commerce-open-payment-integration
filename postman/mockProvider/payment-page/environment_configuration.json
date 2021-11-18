@@ -1,71 +1,64 @@
 {
-  "id": "79a80dc3-631c-42ba-a7ad-725ee11bdeda",
-  "name": "Mock Provider",
-  "values": [
-    {
-      "key": "token",
-      "value": "",
-      "enabled": true
-    },
-    {
-      "key": "rootUrl",
-      "value": "https:\/\/gatewaystage.approuter.stage-use1.js-stage.shoot.live.k8s-hana.ondemand.com",
-      "enabled": true
-    },
-    {
-      "key": "accountGroupId",
-      "value": "102401",
-      "enabled": true
-    },
-    {
-      "key": "accountId",
-      "value": "113901",
-      "enabled": true
-    },
-    {
-      "key": "authentication_inbound_basic_auth_username_export_2844",
-      "value": "mock-provider-basic-auth_export_username",
-      "enabled": true
-    }
-    ,
-    {
-      "key": "authentication_inbound_basic_auth_password_export_2844",
-      "value": "mock-provider-basic-auth_export_password",
-      "enabled": true
-    }
-    ,
-    {
-      "key": "capturePattern",
-      "value": "CAPTURE_PER_SHIPMENT",
-      "enabled": true
-    }
-    ,
-    {
-      "key": "settlementInitiationType",
-      "value": "AFTER_SHIPMENT",
-      "enabled": true
-    }
-    ,
-    {
-      "key": "authorizationTimeoutDays",
-      "value": "7",
-      "enabled": true
-    }
-    ,
-    {
-      "key": "apiKey",
-      "value": "98ORd+S2YHBspef\/ahncAxiLIHKyoe88sRfTMPP5ngQ=",
-      "enabled": true
-    }
-    ,
-    {
-      "key": "host",
-      "value": "cybermock-caas2-sap-stage.cfapps.us10.hana.ondemand.com",
-      "enabled": true
-    }
-
-  ],
-  "_postman_variable_scope": "environment",
-  "_postman_exported_at": "",
-  "_postman_exported_using": "Postman\/7.35.0"
+	"id": "935475ff-e0ca-41c6-a91e-36603b00eae5",
+	"name": "Mock provider",
+	"values": [
+		{
+			"key": "token",
+			"value": "",
+			"enabled": true
+		},
+		{
+			"key": "rootUrl",
+			"value": "https://gatewaytest-approuter-caas2-sap-test.cfapps.us10.hana.ondemand.com",
+			"enabled": true
+		},
+		{
+			"key": "accountGroupId",
+			"value": "141950",
+			"enabled": true
+		},
+		{
+			"key": "accountId",
+			"value": "148250",
+			"enabled": true
+		},
+		{
+			"key": "authentication_inbound_basic_auth_username",
+			"value": "upscale",
+			"enabled": true
+		},
+		{
+			"key": "authentication_inbound_basic_auth_password",
+			"value": "upscale",
+			"enabled": true
+		},
+		{
+			"key": "capturePattern",
+			"value": "CAPTURE_PER_SHIPMENT",
+			"enabled": true
+		},
+		{
+			"key": "settlementInitiationType",
+			"value": "AFTER_SHIPMENT",
+			"enabled": true
+		},
+		{
+			"key": "authorizationTimeoutDays",
+			"value": "7",
+			"enabled": true
+		},
+		{
+			"key": "host",
+			"value": "cybermock-caas2-sap-test.cfapps.us10.hana.ondemand.com",
+			"enabled": true
+		},
+		{
+			"key": "notificationUrl",
+			"value": "https://gateway-approuter-caas2-sap-test.cfapps.us10.hana.ondemand.com/consumer/payment-service/gateway/notifications/11250",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2021-11-18T03:34:11.780Z",
+	"_postman_exported_using": "Postman/7.36.5"
 }
