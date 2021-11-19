@@ -1,8 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CmsConfig, provideDefaultConfig, provideDefaultConfigFactory } from "@spartacus/core";
-import { KlarnaCheckoutComponent } from "klarna-checkout";
-
-import { KlarnaCheckoutService } from "../klarna-checkout/klarna-checkout.service";
+import { UpscaleExtensionModule } from "../klarna-checkout/klarna-checkout.module";
+import { KlarnaCheckoutService } from "./klarna-checkout.service";
 
 export function defaultKlarnaCheckoutConfig(): CmsConfig {
   const config: CmsConfig = {
@@ -17,6 +16,12 @@ export function defaultKlarnaCheckoutConfig(): CmsConfig {
 
 
 @NgModule({
+    imports: [
+        UpscaleExtensionModule,
+    ],
+    exports: [
+        UpscaleExtensionModule,
+    ],
     providers: [
         // If configFactory doesn't work, may want to try this? Also would not require cmsConfig in klarna-checkout.module:
         // provideDefaultConfig({
@@ -27,8 +32,6 @@ export function defaultKlarnaCheckoutConfig(): CmsConfig {
         //     },
         //   }),
         provideDefaultConfigFactory(defaultKlarnaCheckoutConfig),
-        // If klarna-checkout.service log not shown:
-        // KlarnaCheckoutService
     ],
 })
 export class KlarnaCheckoutRootModule {}

@@ -6,14 +6,14 @@ import { KlarnaCheckoutComponent } from "./klarna-checkout.component";
 @NgModule({
   declarations: [KlarnaCheckoutComponent],
   exports: [KlarnaCheckoutComponent],
-  // providers: [
-  //   provideDefaultConfig({
-  //     cmsComponents: {
-  //       "klarna-checkout-component": {
-  //         component: KlarnaCheckoutComponent
-  //       },
-  //     },
-  //   }),
-  // ]
+  providers: [
+    provideDefaultConfig({
+      cmsComponents: {
+        "klarna-checkout-component": {
+          component: KlarnaCheckoutComponent
+        },
+      },
+    }),
+  ]
 })
 export class UpscaleExtensionModule {}

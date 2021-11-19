@@ -3,3 +3,4 @@
  */
 
 export * from "./lib/klarna-checkout";
+export * from "./lib/klarna-checkout-root";
