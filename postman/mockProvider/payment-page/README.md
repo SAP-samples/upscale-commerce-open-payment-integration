@@ -44,8 +44,9 @@ Variables that need value update:
    - Account ID
    - host: Cybermock host
      Such as:
-     - test env: cybermock-caas2-sap-test.cfapps.us10.hana.ondemand.com
-     - Stage env: cybermock-caas2-sap-stage.cfapps.us10.hana.ondemand.com
+     - test env: cybermock.dev-use1.js-dev.shoot.live.k8s-hana.ondemand.com
+     - Stage env: cybermock.stage-use1.js-stage.shoot.live.k8s-hana.ondemand.com
+	 - Prod env: cybermock.prod-use1.js-prod.shoot.live.k8s-hana.ondemand.com
 
 5. Save and run the Postman Collection.
 

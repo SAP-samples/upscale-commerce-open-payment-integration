@@ -1,8 +1,8 @@
 {
 	"info": {
-		"_postman_id": "991e70e0-7613-4f1b-8e39-d9458ee7efae",
+		"_postman_id": "3eb22c1d-4aee-4001-9ee9-d2c0f802e242",
 		"name": "Mock Provider",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -30,7 +30,26 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"url": "https://{{host}}/configuration/merchants"
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"enableOverCapture\":false,\n    \"overCapturePercentage\":0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{host}}/configuration/merchants",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"configuration",
+								"merchants"
+							]
+						}
 					},
 					"response": []
 				},
@@ -59,7 +78,17 @@
 								}
 							}
 						},
-						"url": "https://{{host}}/configuration/notifications"
+						"url": {
+							"raw": "https://{{host}}/configuration/notifications",
+							"protocol": "https",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"configuration",
+								"notifications"
+							]
+						}
 					},
 					"response": []
 				}
@@ -88,7 +117,21 @@
 								}
 							}
 						},
-						"url": "{{rootUrl}}/payment-service/merchant/accountgroups/{{accountGroupId}}/accounts/{{accountId}}/variables"
+						"url": {
+							"raw": "{{rootUrl}}/payment-service/merchant/accountgroups/{{accountGroupId}}/accounts/{{accountId}}/variables",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"payment-service",
+								"merchant",
+								"accountgroups",
+								"{{accountGroupId}}",
+								"accounts",
+								"{{accountId}}",
+								"variables"
+							]
+						}
 					},
 					"response": []
 				},
@@ -112,7 +155,21 @@
 								}
 							}
 						},
-						"url": "{{rootUrl}}/payment-service/merchant/accountgroups/{{accountGroupId}}/accounts/{{accountId}}/variables"
+						"url": {
+							"raw": "{{rootUrl}}/payment-service/merchant/accountgroups/{{accountGroupId}}/accounts/{{accountId}}/variables",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"payment-service",
+								"merchant",
+								"accountgroups",
+								"{{accountGroupId}}",
+								"accounts",
+								"{{accountId}}",
+								"variables"
+							]
+						}
 					},
 					"response": []
 				}
@@ -141,7 +198,20 @@
 								}
 							}
 						},
-						"url": "{{rootUrl}}/payment-service/merchant/accountgroups/{{accountGroupId}}/accounts/{{accountId}}"
+						"url": {
+							"raw": "{{rootUrl}}/payment-service/merchant/accountgroups/{{accountGroupId}}/accounts/{{accountId}}",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"payment-service",
+								"merchant",
+								"accountgroups",
+								"{{accountGroupId}}",
+								"accounts",
+								"{{accountId}}"
+							]
+						}
 					},
 					"response": []
 				}
@@ -170,7 +240,18 @@
 								}
 							}
 						},
-						"url": "{{rootUrl}}/payment-service/merchant/accountgroups/{{accountGroupId}}"
+						"url": {
+							"raw": "{{rootUrl}}/payment-service/merchant/accountgroups/{{accountGroupId}}",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"payment-service",
+								"merchant",
+								"accountgroups",
+								"{{accountGroupId}}"
+							]
+						}
 					},
 					"response": []
 				}
@@ -215,7 +296,17 @@
 								}
 							}
 						},
-						"url": "{{rootUrl}}/payment-service/gateway/authentications"
+						"url": {
+							"raw": "{{rootUrl}}/payment-service/gateway/authentications",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"payment-service",
+								"gateway",
+								"authentications"
+							]
+						}
 					},
 					"response": []
 				}
@@ -237,14 +328,28 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"id\":3435,\"pattern\":\"FULL_PAGE\",\"requestType\":\"AUTHORIZATION\",\"destination\":{\"url\":\"${input.redirectUrl}&resURL=${functions.encodeURL(input.resultURL)}&cancelURL=${functions.encodeURL(input.cancelURL)}\",\"method\":\"GET\",\"contentType\":\"application/xml\",\"body\":null,\"authenticationIds\":[],\"form\":[]},\"remoteApiOutboundMappings\":[{\"url\":\"https://${vars.host}/sessions\",\"authenticationIds\":[],\"method\":\"POST\",\"requestContentType\":\"application/json\",\"requestExample\":\"{\\n  \\\"merchantId\\\": \\\"2226af1f-f89c-4134-95ea-d3bc8e5181a0\\\",\\n  \\\"apiKey\\\": \\\"uBucbJJSyRhQ93hTdaSkm6M/cfSIWSbI1MD69fFkSWQ=\\\",\\n  \\\"referenceId\\\": \\\"4724495249_1603693057441\\\",\\n  \\\"amount\\\": 123.45,\\n  \\\"currency\\\": \\\"USD\\\",\\n  \\\"shopperEmailAddress\\\": \\\"xxx@gmail.com\\\"\\n}\",\"responseExample\":\"{\\n  \\\"sessionId\\\": \\\"4926c8e7ba790ec2ddfde0094ad7ee03\\\",\\n  \\\"redirectUrl\\\": \\\"https://cybermock-caas2-sap.cfapps.us10.hana.ondemand.com/pay.html?merchantId=171cc5b7-a068-44e2-84df-11d8c3631590&apiKey=KIH3m+GgU+e7fc5asJOXN8Gp2dXlQ3wzDz3CF3g3j48%3D&amount=123.45&currency=USD&referenceId=4926c8e7ba790ec2ddfde0094ad7ee03&referenceId\\\"\\n}\",\"requestMappingFields\":{\"mappings\":[{\"from\":\"$.currency\",\"to\":\"${input.currency}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.shopperEmailAddress\",\"to\":\"${input.emailAddress}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.referenceId\",\"to\":\"${input.referenceId}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.amount\",\"to\":\"${input.amount}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.apiKey\",\"to\":\"${vars.apiKey}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.merchantId\",\"to\":\"${input.merchantId}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false}]},\"responseMappingFields\":{\"mappings\":[{\"from\":\"sessionId\",\"to\":\"pspReference\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"redirectUrl\",\"to\":\"redirectUrl\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false}]},\"responseContentType\":\"application/json\",\"headers\":null,\"formArrayIndicator\":null}],\"verify\":{\"localVerifyMapping\":{\"mappings\":[{\"from\":\"success\",\"to\":\"result\",\"map\":{\"true\":\"AUTHORIZED\",\"false\":\"UNAUTHORIZED\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false}]},\"localVerifyAuthenticationId\":null}}",
+							"raw": "{\"id\":3435,\"pattern\":\"FULL_PAGE\",\"requestType\":\"AUTHORIZATION\",\"destination\":{\"url\":\"${input.redirectUrl}&resURL=${functions.encodeURL(input.resultURL)}&cancelURL=${functions.encodeURL(input.cancelURL)}\",\"method\":\"GET\",\"contentType\":\"application/xml\",\"body\":null,\"authenticationIds\":[],\"form\":[]},\"remoteApiOutboundMappings\":[{\"url\":\"https://${vars.host}/sessions\",\"authenticationIds\":[],\"method\":\"POST\",\"requestContentType\":\"application/json\",\"requestExample\":\"{\\n  \\\"merchantId\\\": \\\"2226af1f-f89c-4134-95ea-d3bc8e5181a0\\\",\\n  \\\"apiKey\\\": \\\"uBucbJJSyRhQ93hTdaSkm6M/cfSIWSbI1MD69fFkSWQ=\\\",\\n  \\\"referenceId\\\": \\\"4724495249_1603693057441\\\",\\n  \\\"amount\\\": 123.45,\\n  \\\"currency\\\": \\\"USD\\\",\\n  \\\"shopperEmailAddress\\\": \\\"xxx@gmail.com\\\"\\n}\",\"responseExample\":\"{\\n  \\\"sessionId\\\": \\\"4926c8e7ba790ec2ddfde0094ad7ee03\\\",\\n  \\\"redirectUrl\\\": \\\"https://${vars.host}/pay.html?merchantId=171cc5b7-a068-44e2-84df-11d8c3631590&apiKey=KIH3m+GgU+e7fc5asJOXN8Gp2dXlQ3wzDz3CF3g3j48%3D&amount=123.45&currency=USD&referenceId=4926c8e7ba790ec2ddfde0094ad7ee03&referenceId\\\"\\n}\",\"requestMappingFields\":{\"mappings\":[{\"from\":\"$.currency\",\"to\":\"${input.currency}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.shopperEmailAddress\",\"to\":\"${input.emailAddress}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.referenceId\",\"to\":\"${input.referenceId}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.amount\",\"to\":\"${input.amount}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.apiKey\",\"to\":\"${vars.apiKey}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"$.merchantId\",\"to\":\"${input.merchantId}\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isObject\":false,\"isScript\":false}]},\"responseMappingFields\":{\"mappings\":[{\"from\":\"sessionId\",\"to\":\"pspReference\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false},{\"from\":\"redirectUrl\",\"to\":\"redirectUrl\",\"map\":null,\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false}]},\"responseContentType\":\"application/json\",\"headers\":null,\"formArrayIndicator\":null}],\"verify\":{\"localVerifyMapping\":{\"mappings\":[{\"from\":\"success\",\"to\":\"result\",\"map\":{\"true\":\"AUTHORIZED\",\"false\":\"UNAUTHORIZED\"},\"arrayPath\":null,\"arrayMapping\":false,\"fixed\":false,\"isCustom\":false,\"persistCustomField\":false,\"isObject\":false,\"isScript\":false}]},\"localVerifyAuthenticationId\":null}}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{rootUrl}}/payment-service/merchant/accountgroups/{{accountGroupId}}/accounts/{{accountId}}/authorization"
+						"url": {
+							"raw": "{{rootUrl}}/payment-service/merchant/accountgroups/{{accountGroupId}}/accounts/{{accountId}}/authorization",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"payment-service",
+								"merchant",
+								"accountgroups",
+								"{{accountGroupId}}",
+								"accounts",
+								"{{accountId}}",
+								"authorization"
+							]
+						}
 					},
 					"response": []
 				}
@@ -273,7 +378,21 @@
 								}
 							}
 						},
-						"url": "{{rootUrl}}/payment-service/merchant/accountgroups/{{accountGroupId}}/accounts/{{accountId}}/notification"
+						"url": {
+							"raw": "{{rootUrl}}/payment-service/merchant/accountgroups/{{accountGroupId}}/accounts/{{accountId}}/notification",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"payment-service",
+								"merchant",
+								"accountgroups",
+								"{{accountGroupId}}",
+								"accounts",
+								"{{accountId}}",
+								"notification"
+							]
+						}
 					},
 					"response": []
 				}
@@ -302,7 +421,21 @@
 								}
 							}
 						},
-						"url": "{{rootUrl}}/payment-service/merchant/accountgroups/{{accountGroupId}}/accounts/{{accountId}}/recurrent_authorization"
+						"url": {
+							"raw": "{{rootUrl}}/payment-service/merchant/accountgroups/{{accountGroupId}}/accounts/{{accountId}}/recurrent_authorization",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"payment-service",
+								"merchant",
+								"accountgroups",
+								"{{accountGroupId}}",
+								"accounts",
+								"{{accountId}}",
+								"recurrent_authorization"
+							]
+						}
 					},
 					"response": []
 				}
@@ -331,7 +464,21 @@
 								}
 							}
 						},
-						"url": "{{rootUrl}}/payment-service/merchant/accountgroups/{{accountGroupId}}/accounts/{{accountId}}/refund"
+						"url": {
+							"raw": "{{rootUrl}}/payment-service/merchant/accountgroups/{{accountGroupId}}/accounts/{{accountId}}/refund",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"payment-service",
+								"merchant",
+								"accountgroups",
+								"{{accountGroupId}}",
+								"accounts",
+								"{{accountId}}",
+								"refund"
+							]
+						}
 					},
 					"response": []
 				}
@@ -360,7 +507,21 @@
 								}
 							}
 						},
-						"url": "{{rootUrl}}/payment-service/merchant/accountgroups/{{accountGroupId}}/accounts/{{accountId}}/settlement"
+						"url": {
+							"raw": "{{rootUrl}}/payment-service/merchant/accountgroups/{{accountGroupId}}/accounts/{{accountId}}/settlement",
+							"host": [
+								"{{rootUrl}}"
+							],
+							"path": [
+								"payment-service",
+								"merchant",
+								"accountgroups",
+								"{{accountGroupId}}",
+								"accounts",
+								"{{accountId}}",
+								"settlement"
+							]
+						}
 					},
 					"response": []
 				}

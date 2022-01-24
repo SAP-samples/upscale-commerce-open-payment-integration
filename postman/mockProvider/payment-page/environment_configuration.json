@@ -49,12 +49,22 @@
 		},
 		{
 			"key": "host",
-			"value": "cybermock-caas2-sap-test.cfapps.us10.hana.ondemand.com",
+			"value": "cybermock.dev-use1.js-dev.shoot.live.k8s-hana.ondemand.com",
 			"enabled": true
 		},
 		{
 			"key": "notificationUrl",
 			"value": "https://gateway-approuter-caas2-sap-test.cfapps.us10.hana.ondemand.com/consumer/payment-service/gateway/notifications/11250",
+			"enabled": true
+		},
+		{
+			"key": "enableOverCapture",
+			"value": "false",
+			"enabled": true
+		},
+		{
+			"key": "overCapturePercentage",
+			"value": "0",
 			"enabled": true
 		}
 	],
