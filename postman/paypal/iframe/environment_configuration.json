@@ -1,6 +1,6 @@
 {
-  "id": "2f199b9a-9934-4161-93bf-99ffab37ac08",
-  "name": "PayPal iFrame",
+  "id": "f883c606-3b78-41ea-a24c-90baa734694c",
+  "name": "Paypal iFrame",
   "values": [
     {
       "key": "token",
@@ -9,28 +9,28 @@
     },
     {
       "key": "rootUrl",
-      "value": "https:\/\/gatewaystage-approuter-caas2-sap-stage.cfapps.us10.hana.ondemand.com",
+      "value": "https:\/\/gatewaytest.approuter.dev-use1.js-dev.shoot.live.k8s-hana.ondemand.com",
       "enabled": true
     },
     {
       "key": "accountGroupId",
-      "value": "56202",
+      "value": "140303",
       "enabled": true
     },
     {
       "key": "accountId",
-      "value": "69353",
+      "value": "146603",
       "enabled": true
     },
     {
-      "key": "authentication_outbound_basic_auth_username_export_1618",
-      "value": "maggiePayPalBasicAuth_username",
+      "key": "authentication_outbound_basic_auth_username_export_1519",
+      "value": "maggiePaypalTestClient_username",
       "enabled": true
     }
     ,
     {
-      "key": "authentication_outbound_basic_auth_password_export_1618",
-      "value": "maggiePayPalBasicAuth_password",
+      "key": "authentication_outbound_basic_auth_password_export_1519",
+      "value": "maggiePaypalTestClient_password",
       "enabled": true
     }
     ,
@@ -43,6 +43,18 @@
     {
       "key": "settlementInitiationType",
       "value": "AFTER_SHIPMENT",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "supportOverCapture",
+      "value": "false",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "enableOverCapture",
+      "value": "false",
       "enabled": true
     }
     ,
@@ -65,13 +77,19 @@
     }
     ,
     {
-      "key": "webhookId",
-      "value": "",
+      "key": "pickupStoreLabel",
+      "value": "Free in-store pickup",
       "enabled": true
     }
     ,
     {
       "key": "restClientId",
+      "value": "",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "webhookId",
       "value": "",
       "enabled": true
     }
