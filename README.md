@@ -28,7 +28,7 @@ For additional support, request you can request access to SAP Commerce Open Paym
 
 ## Troubleshooting
 
-Please refer to the [SAP Commerce Cloud Logging](https://help.sap.com/docs/MCS/41fb1a1906864b35b6a731dbd1d0cd86/beab05c2985242d396b6f454dc1b8bea.html?state=DRAFT&version=DEV) feature.
+Please refer to the [OPF Logging](https://help.sap.com/docs/MCS/41fb1a1906864b35b6a731dbd1d0cd86/beab05c2985242d396b6f454dc1b8bea.html?state=DRAFT&version=DEV&profile=20003453) feature.
 
 ## Contributing
 You are welcome to add collections for other gateways to this repo. 
