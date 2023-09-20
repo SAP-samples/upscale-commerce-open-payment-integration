@@ -13,7 +13,7 @@ One or more test/live merchant accounts for the Payment Gateway/Method you are i
 ## Download and Installation
 Replace the payment account specific secrets and variables in the Environment file.
 
-Import the postman collection with the updated Environment settings into your OPF tenant as described [on SAP Help Portal](https://help.sap.com/viewer/0160c41e0de84b218d05bc1185213d1d/SHIP/en-US/7f1efa3c176746548c79d984314fee94.html).
+Import the postman collection with the updated Environment settings into your OPF tenant as described on [SAP Help Portal](https://help.sap.com/docs/MCS/41fb1a1906864b35b6a731dbd1d0cd86/562879e4d6fd4826b5d82219e5f19412.html?state=DRAFT&version=DEV&profile=20003453).
 
 ## Known Issues
 No known issues.
@@ -22,7 +22,7 @@ No known issues.
 
 [Create an issue](https://github.com/SAP-samples/upscale-commerce-open-payment-integration/issues) in this repository if you find a bug or have questions about the content.
 
-Read the Open Payment Framework [documentation](https://help.sap.com/viewer/0160c41e0de84b218d05bc1185213d1d/SHIP/en-US/5efc3463b4504d27bb9c4fbbb95a4ccc.html) on SAP Help Portal.
+Read the Open Payment Framework [documentation](https://help.sap.com/docs/MCS/41fb1a1906864b35b6a731dbd1d0cd86/f3d565da0d524b8081c861b4f5dea359.html?state=DRAFT&version=DEV&profile=20003453) on SAP Help Portal.
  
 For additional support, request you can request access to SAP Commerce Open Payment Framework slack channel via your assigned integration manager.
 
