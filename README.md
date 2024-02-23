@@ -37,7 +37,7 @@ Please refer to the [Open Payment Framework Logging](https://help.sap.com/docs/S
 ## Contributing
 You are welcome to add collections for other gateways to this repo. 
 
-The repository is open for contribution. To contribute to the repository you can create a fork, and then create a Pull Request with all your changes. The administrator of the repository will look into the Pull Request and will merge your changes.
+The repository is open for contribution. To contribute to the repository you can create a fork, and then create a **Pull Request** with all your changes. The administrator of the repository will look into the **Pull Request** and will merge your changes.
 
 ## License
 Copyright (c) 2024 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
