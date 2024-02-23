@@ -1,6 +1,5 @@
 ## Create a Stripe Account ##
-You can Signup for a Stripe Account at https://dashboard.stripe.com/register.
-All testing should be one with a Test Mode account.
+You can Signup for a free Stripe Test Account at https://dashboard.stripe.com/register.
 
 ## Creating the Merchant Account Group to import Stripe Elements collection
 To import the stripe configuaration you need to create a new Account Group in the OPF Workbench.
