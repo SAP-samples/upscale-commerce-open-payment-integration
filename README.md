@@ -2,7 +2,7 @@
 
 ## Before Importing
 The meaning of some fields in environment variables:  
-token: A bearer token to access opf core.  
+token: A Bearer token to access opf core.  
 rootUrl: The root url of opf service, e.g. https://opf-iss-d0.api.commerce.stage.context.cloud.sap/opf  
 accountGroupId: The id of merchant account group you created in opf workbench.  
 accountId: The id of account you created under the account group.  
