@@ -20,14 +20,16 @@ You can obtain from your account id found at the following location in the Strip
 
 ## Preparing the Postman environment_configuration file
 
-**Token**
+**1. Token**
+
 Get your access token using the auth endpoint https://{{authendpoint}}/oauth2/token and client id and secret obtained from BTP Cockpit
 
 Copy the value of the access_token field (it’s a JWT) and set as the **token** value in the environment file.
 
 IMPORTANT: Ensure the value is prefixed with **Bearer**. e.g. Bearer {{token}}
 
-**Root url**
+**2. Root url**
+
 The **rootUrl** is the **BASE URL** of your OPF tenant
 
 E.g. if your workbench/OPF cockpit url was this …
@@ -38,30 +40,25 @@ The base Url would be
 
 https://opf-iss-d0.uis.commerce.stage.context.cloud.sap
 
-**Account and Account Group**
+**3. Account and Account Group**
 
 The **account** and **accountGroupId** values identify the merchant account group can be found in the top left of your merchant configuration
 
 ![](images/opf-account-group-id.png)
 
-**Private Key**
+**4. Private Key**
 The Secret (or Private) Key can be obtained here in the Stripe dashboard. In test it starts with **sk_test**
 
 <https://dashboard.stripe.com/test/apikeys>
 
 ![](images/stripe-elements-get-secret-key.png)
 
-Set private key as **value** for environment variable keys starting with the pattern
+* Set private key as **value** for environment variable keys starting with ``authentication_outbound_basic_auth_username``
+* Set password as **empty string** ``""`` for environment keys starting with : ``authentication_outbound_basic_auth_password``
 
-**authentication_outbound_basic_auth_username\***
+There are 2 occurrences of both in the environment file.
 
-Set password as **empty string** ``""`` for environment keys starting with :
-
-**authentication_outbound_basic_auth_password\***
-
-There should 2 occurrences of both in the environment file.
-
-**Public Key**
+**5. Public Key**
 
 The public (or Publishable) key can be obtained here in the Stripe dashboard. In Test it starts with **pk_test**
 
@@ -71,7 +68,7 @@ The public (or Publishable) key can be obtained here in the Stripe dashboard. In
 
 Replace the **publickey** variable value in the environment file with this value starting with **pk_test**
 
-**Webhook Secret**
+**6. Webhook Secret**
 
 IN OPF Workbench: For your new Stripe merchant account Navigate to Notification General and copy the Notification URL
 
