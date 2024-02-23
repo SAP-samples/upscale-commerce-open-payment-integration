@@ -24,13 +24,13 @@ You can obtain from your account id found at the following location in the Strip
 
 Get your access token using the auth endpoint https://{{authendpoint}}/oauth2/token and client id and secret obtained from BTP Cockpit
 
-Copy the value of the access_token field (it’s a JWT) and set as the **token** value in the environment file.
+Copy the value of the access_token field (it’s a JWT) and set as the ``token`` value in the environment file.
 
-IMPORTANT: Ensure the value is prefixed with **Bearer**. e.g. Bearer {{token}}
+IMPORTANT: Ensure the value is prefixed with **Bearer**. e.g. ``Bearer {{token}}``
 
 **2. Root url**
 
-The **rootUrl** is the **BASE URL** of your OPF tenant
+The ``rootUrl`` is the **BASE URL** of your OPF tenant
 
 E.g. if your workbench/OPF cockpit url was this …
 
@@ -42,7 +42,7 @@ https://opf-iss-d0.uis.commerce.stage.context.cloud.sap
 
 **3. Account and Account Group**
 
-The **account** and **accountGroupId** values identify the merchant account group can be found in the top left of your merchant configuration
+The ``accountId`` and ``accountGroupId`` values identify the merchant account group can be found in the top left of your merchant configuration
 
 ![](images/opf-account-group-id.png)
 
@@ -66,7 +66,7 @@ The public (or Publishable) key can be obtained here in the Stripe dashboard. In
 
 ![](images/stripe-elements-get-public-key.png)
 
-Replace the **publickey** variable value in the environment file with this value starting with **pk_test**
+Replace the ``publickey`` variable value in the environment file with this value starting with **pk_test**
 
 **6. Webhook Secret**
 
@@ -92,7 +92,7 @@ iv) Click Reveal the get the webhook secret, it starts with **whsec**
 
 ![](images/stripe-elements-reveal-whsecret.png)
 
-In the Environment file set the **webhookSecret** value to the key starting with **whsec_**
+v) In the Environment file set the ``webhookSecret`` value to the key starting with **whsec_**
 
 **Summary**
 
