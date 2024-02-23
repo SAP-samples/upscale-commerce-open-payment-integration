@@ -2,7 +2,7 @@
 You can Signup for a free Stripe Test Account at https://dashboard.stripe.com/register.
 
 ## Creating the Merchant Account Group 
-To import the [Stripe Configuration](Stripe elements - HOSTED_FIELDS - CAPTURE_PER_SHIPMENT - OPF_Provider_Configuration.json) you need to create a new Account Group in the OPF Workbench.
+To import the [Stripe Configuration](Stripe%20elements%20-%20HOSTED_FIELDS%20-%20CAPTURE_PER_SHIPMENT%20-%20OPF_Provider_Configuration.json) you need to create a new Account Group in the OPF Workbench.
 
 i) In payment integrations.. click Create
 ![](images/opf-payment-integrations.png)
