@@ -26,7 +26,7 @@ Import the postman collection with the updated Environment settings into your op
 No known issues.
 
 ## How to obtain support
-Read the open payment framework [documentation](https://help.sap.com/docs/MCS/41fb1a1906864b35b6a731dbd1d0cd86/f3d565da0d524b8081c861b4f5dea359.html?state=DRAFT&version=DEV&profile=20003453) on SAP Help Portal.
+Read the open payment framework [documentation](https://help.sap.com/docs/SAP_COMMERCE_CLOUD_PUBLIC_CLOUD/0996ba68e5794b8ab51db8d25d4c9f8a/f3d565da0d524b8081c861b4f5dea359.html) on SAP Help Portal.
  
 For additional support, request you can request access to open payment framework slack channel via your assigned integration manager.
 
