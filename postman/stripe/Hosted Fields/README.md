@@ -2,19 +2,20 @@
 
 i) In payment integrations.. click Create
 
-![](/images/opf-payment-integrations.png)
+![](images/opf-payment-integrations.png)
 
-ii) Add account name (can be anything) and set payment gateway to stripe![] ()
+ii) Add account name (can be anything) and set payment gateway to stripe
+![] (images/stripe-elements-set-gateway.png)
 
 iii) Click **configure** on Test column of newly created Account.
 
-![]()
+![](images/opf-account-group-id.png)
 
 **You must set a merchant ID first.**
 
 Merchant ID: You can obtain from your account id found here in the Stripe dashboard <https://dashboard.stripe.com/settings/account>
 
-![] ()
+![](images/stripe-elements-get-account.png)
 
 ## Preparing the Postman environment_configuration file
 
@@ -42,7 +43,7 @@ The base Url would be
 
 The **account** and **accountGroupId** values identify the merchant account group can be found in the top left of your merchant configuration
 
-![]()
+![](images/opf-account-group-id.png)
 
 **Private Key**
 
@@ -50,7 +51,7 @@ The Secret (or Private) Key can be obtained here in the dashboard. In test it st
 
 <https://dashboard.stripe.com/test/apikeys>
 
-![]()
+![](images/stripe-elements-get-secret-key.png)
 
 Set private key as **value** for environment variable keys starting with the pattern
 
@@ -68,7 +69,7 @@ The public (or Publishable) key can be obtained here in the dashboard. In Test i
 
 <https://dashboard.stripe.com/test/apikeys>
 
-![] ()
+![](images/stripe-elements-get-public-key.png)
 
 Replace the **publickey** variable value in the environment file with this value starting with **pk_test**
 
@@ -76,25 +77,25 @@ Replace the **publickey** variable value in the environment file with this value
 
 IN OPF cockpit: For your new merchant account Navigate to Notification General and copy the Notification URL
 
-![]()
+![](images/opf-get-notification-url.png)
 
 In Stripe Dashboard: Navigate to <https://dashboard.stripe.com/test/webhooks> and click Add an Endpoint
 
 i) Paste in your endpoint URL copied from OPF
 
-![]()
+![](images/stripe-elements-paste-webook.png)
 
 ii) For simplicity Select “All events”
 
-![]()
+![](images/stripe-elements-select-events.png)
 
 iii) click Add Endpoint
 
-![]()
+![](images/stripe-elements-add-endpoint.png)
 
 iv) Click Reveal the get the webhook secret, it starts with **whsec**
 
-![]()
+![](images/stripe-elements-reveal-whsecret.png)
 
 In the Environment file set the **webhookSecret** value to the key starting with **whsec_**
 
