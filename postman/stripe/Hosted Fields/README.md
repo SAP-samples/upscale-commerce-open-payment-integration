@@ -1,3 +1,14 @@
+## Introduction ##
+The Postman Collection enables a [Stripe Card Element](https://docs.stripe.com/js/element/other_element?type=card) to be used to Take Card Payments through OPF. 
+
+The integration supports:
+
+* Authorization of Card Payments using PCI SAQ-A Stripe Card Element
+* Deferred Capture support
+* Refunds
+* Reversals
+* Reauthorization of saved payment
+
 To import the [Stripe Elements Postman Collection](Stripe%20elements%20-%20HOSTED_FIELDS%20-%20CAPTURE_PER_SHIPMENT%20-%20OPF_Provider_Configuration.json) this page will guide you through the following steps: 
 
 a) Create Your Stripe Test Account
