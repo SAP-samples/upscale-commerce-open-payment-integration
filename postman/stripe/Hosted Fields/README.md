@@ -1,3 +1,7 @@
+## Create a Stripe Account ##
+You can Signup for a Stripe Account at https://dashboard.stripe.com/register.
+All testing should be one with a Test Mode account.
+
 ## Creating the Merchant Account Group to import Stripe Elements collection into
 
 i) In payment integrations.. click Create
