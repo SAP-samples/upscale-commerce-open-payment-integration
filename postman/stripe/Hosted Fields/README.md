@@ -5,7 +5,7 @@ i) In payment integrations.. click Create
 ![](images/opf-payment-integrations.png)
 
 ii) Add account name (can be anything) and set payment gateway to stripe
-![] (images/stripe-elements-set-gateway.png)
+![](images/stripe-elements-set-gateway.png)
 
 iii) Click **configure** on Test column of newly created Account.
 
