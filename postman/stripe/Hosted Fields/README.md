@@ -2,37 +2,33 @@
 You can Signup for a Stripe Account at https://dashboard.stripe.com/register.
 All testing should be one with a Test Mode account.
 
-## Creating the Merchant Account Group to import Stripe Elements collection into
+## Creating the Merchant Account Group to import Stripe Elements collection
+To import the stripe configuaration you need to create a new Account Group in the OPF Workbench.
 
 i) In payment integrations.. click Create
-
 ![](images/opf-payment-integrations.png)
 
 ii) Add account name (can be anything) and set payment gateway to stripe
 ![](images/stripe-elements-set-gateway.png)
 
 iii) Click **configure** on Test column of newly created Account.
-
 ![](images/opf-account-group-id.png)
 
 **You must set a merchant ID first.**
-
-Merchant ID: You can obtain from your account id found here in the Stripe dashboard <https://dashboard.stripe.com/settings/account>
+You can obtain from your account id found at the following location in the Stripe dashboard <https://dashboard.stripe.com/settings/account>
 
 ![](images/stripe-elements-get-account.png)
 
 ## Preparing the Postman environment_configuration file
 
 **Token**
-
-Gert your access token using the auth endpoint https://{{authendpoint}}/oauth2/token and client id and secret obtained from BTP Cockpit
+Get your access token using the auth endpoint https://{{authendpoint}}/oauth2/token and client id and secret obtained from BTP Cockpit
 
 Copy the value of the access_token field (it’s a JWT) and set as the **token** value in the environment file.
 
 IMPORTANT: Ensure the value is prefixed with **Bearer**. e.g. Bearer {{token}}
 
 **Root url**
-
 The **rootUrl** is the **BASE URL** of your OPF tenant
 
 E.g. if your workbench/OPF cockpit url was this …
@@ -41,7 +37,7 @@ E.g. if your workbench/OPF cockpit url was this …
 
 The base Url would be
 
-[https://opf-iss-d0.uis.commerce.stage.context.cloud.sap](https://opf-iss-d0.uis.commerce.stage.context.cloud.sap/opf-workbench)
+https://opf-iss-d0.uis.commerce.stage.context.cloud.sap
 
 **Account and Account Group**
 
@@ -50,8 +46,7 @@ The **account** and **accountGroupId** values identify the merchant account grou
 ![](images/opf-account-group-id.png)
 
 **Private Key**
-
-The Secret (or Private) Key can be obtained here in the dashboard. In test it starts with **sk_test**
+The Secret (or Private) Key can be obtained here in the Stripe dashboard. In test it starts with **sk_test**
 
 <https://dashboard.stripe.com/test/apikeys>
 
@@ -69,7 +64,7 @@ There should 2 occurrences of both in the environment file.
 
 **Public Key**
 
-The public (or Publishable) key can be obtained here in the dashboard. In Test it starts with **pk_test**
+The public (or Publishable) key can be obtained here in the Stripe dashboard. In Test it starts with **pk_test**
 
 <https://dashboard.stripe.com/test/apikeys>
 
@@ -79,7 +74,7 @@ Replace the **publickey** variable value in the environment file with this value
 
 **Webhook Secret**
 
-IN OPF cockpit: For your new merchant account Navigate to Notification General and copy the Notification URL
+IN OPF Workbench: For your new Stripe merchant account Navigate to Notification General and copy the Notification URL
 
 ![](images/opf-get-notification-url.png)
 
@@ -105,7 +100,7 @@ In the Environment file set the **webhookSecret** value to the key starting with
 
 **Summary**
 
-The file is now ready for adding to postman.
+The envrionment file is now ready for importing into postman together with the Mapping Configuration Collection file. Ensure you select the correct environment before running the collection.
 
 In summary you should have edited the following variables
 
