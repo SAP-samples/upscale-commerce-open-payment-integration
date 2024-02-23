@@ -1,11 +1,11 @@
 # SAP Commerce Cloud Open Payment Framework
 
 ## Before Importing
-The meaning of some fields in environment variables:
-token: A bearer token to access opf core.
-rootUrl: The root url of opf service, e.g. https://opf-iss-d0.api.commerce.stage.context.cloud.sap/opf
-accountGroupId: The id of merchant account group you created in opf workbench.
-accountId: The id of account you created under the account group.
+The meaning of some fields in environment variables:  
+token: A bearer token to access opf core.  
+rootUrl: The root url of opf service, e.g. https://opf-iss-d0.api.commerce.stage.context.cloud.sap/opf  
+accountGroupId: The id of merchant account group you created in opf workbench.  
+accountId: The id of account you created under the account group.  
 
 ## Description
 This repository offers sample pre-built integrations to payment gateways and methods in the form of Postman Collections that can be imported into your SAP Open Payment Framework tenant.
