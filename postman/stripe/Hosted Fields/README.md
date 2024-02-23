@@ -57,7 +57,7 @@ Set private key as **value** for environment variable keys starting with the pat
 
 **authentication_outbound_basic_auth_username\***
 
-Set password as **empty string (“”)** for environment keys starting with :
+Set password as **empty string** ``""`` for environment keys starting with :
 
 **authentication_outbound_basic_auth_password\***
 
