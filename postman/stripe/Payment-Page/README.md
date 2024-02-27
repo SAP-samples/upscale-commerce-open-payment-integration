@@ -37,7 +37,7 @@ iii) Click **configure** on Test column of newly created Account.
 **You must set a merchant ID first.**
 You can obtain from your account id found at the following location in the Stripe dashboard <https://dashboard.stripe.com/settings/account>
 
-![](images/stripe-elements-get-account.png)
+![](images/stripe-checkout-get-account.png)
 
 ## Preparing the Postman environment_configuration file
 
