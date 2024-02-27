@@ -1,15 +1,14 @@
 ## Introduction ##
-The Postman Collection enables a [Stripe Card Element](https://docs.stripe.com/js/element/other_element?type=card) to be used to Take Card Payments through OPF. 
+The Postman Collection enables a [Stripe Hosted Checkout](https://docs.stripe.com/checkout/quickstart) Payment Page to be used to Take Payments through OPF. 
 
 The integration supports:
 
-* Authorization of Card Payments using PCI SAQ-A Stripe Card Element using the OPF "Hosted Fields" UX Pattern
+* Authorization of Card Payments using PCI SAQ-A Stripe Card Element using the OPF "Payment Page" UX Pattern
 * Deferred Capture support
 * Refunds
 * Reversals
-* Reauthorization of saved payment
 
-In summary: to import the [Stripe Elements Postman Collection](Stripe%20elements%20-%20HOSTED_FIELDS%20-%20CAPTURE_PER_SHIPMENT%20-%20OPF_Provider_Configuration.json) this page will guide you through the following steps: 
+In summary: to import the [Stripe Hosted Page Postman Collection](Stripe-Hosted_Page_mapping_configuration.json) this page will guide you through the following steps: 
 
 a) Create Your Stripe Test Account
 
@@ -17,7 +16,7 @@ b) Create a Merchant Account Group in OPF Workbench
 
 c) Setup Your Stripe Test Account to work with OPF
 
-d) Prepare the [Postman Environment](Hosted%20Fields/Stripe%20elements%20-%20HOSTED_FIELDS%20-%20CAPTURE_PER_SHIPMENT%20-%20OPF_Environment_Configuration.json) file so the collection can be imported with all your OPF Tenant and Stripe Test Account unique values  
+d) Prepare the [Postman Environment](Stripe-Hosted_Page_environment_configuration.json) file so the collection can be imported with all your OPF Tenant and Stripe Test Account unique values  
 
 ## Create a Stripe Account ##
 You can Signup for a free Stripe Test Account at https://dashboard.stripe.com/register.
