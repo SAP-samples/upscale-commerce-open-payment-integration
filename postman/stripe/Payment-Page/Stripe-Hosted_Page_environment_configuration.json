@@ -24,13 +24,13 @@
     },
     {
       "key": "authentication_outbound_basic_auth_username_export_30",
-      "value": "Stripe Cotton IT_username",
+      "value": "Stripe_privateKey_username",
       "enabled": true
     }
     ,
     {
       "key": "authentication_outbound_basic_auth_password_export_30",
-      "value": "Stripe Cotton IT_password",
+      "value": "Stripe_privateKey_password",
       "enabled": true
     }
     ,
