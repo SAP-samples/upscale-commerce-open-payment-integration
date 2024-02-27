@@ -77,8 +77,6 @@ The Secret (or Private) Key can be obtained here in the Stripe dashboard. In tes
 * Set private key as **value** for environment variable keys starting with ``authentication_outbound_basic_auth_username``
 * Set password as **empty string** ``""`` for environment keys starting with : ``authentication_outbound_basic_auth_password``
 
-There are 2 occurrences of both in the environment file.
-
 **5. Public Key**
 
 The public (or Publishable) key can be obtained here in the Stripe dashboard. In Test it starts with **pk_test**
