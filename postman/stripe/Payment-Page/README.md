@@ -7,6 +7,7 @@ The integration supports:
 * Deferred Capture support
 * Refunds
 * Reversals
+* Recurrent Authorization
 
 In summary: to import the [Stripe Hosted Page Postman Collection](Stripe-Hosted_Page_mapping_configuration.json) this page will guide you through the following steps: 
 
