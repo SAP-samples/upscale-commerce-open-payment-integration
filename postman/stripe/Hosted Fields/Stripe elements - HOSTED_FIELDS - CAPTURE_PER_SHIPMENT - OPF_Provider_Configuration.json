@@ -1,5 +1,5 @@
 {
-  "id": "ca9db442-f8b2-40bf-af8d-1a3a7d13b83d",
+  "id": "c2b94524-92b3-4f13-a2be-74d81ca1a1f1",
   "name": "Stripe Card Elements",
   "values": [
     {
@@ -14,23 +14,35 @@
     },
     {
       "key": "accountGroupId",
-      "value": "21",
+      "value": "24",
       "enabled": true
     },
     {
       "key": "accountId",
-      "value": "17",
+      "value": "20",
       "enabled": true
     },
     {
-      "key": "authentication_outbound_basic_auth_username_export_30",
-      "value": "Stripe Cotton IT_username",
+      "key": "authentication_outbound_basic_auth_username_export_42",
+      "value": "Stripe Private Key_export_username",
       "enabled": true
     }
     ,
     {
-      "key": "authentication_outbound_basic_auth_password_export_30",
-      "value": "Stripe Cotton IT_password",
+      "key": "authentication_outbound_basic_auth_password_export_42",
+      "value": "Stripe Private Key_export_password",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "authentication_outbound_basic_auth_username_export_43",
+      "value": "Stripe Private Key_export_export_username",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "authentication_outbound_basic_auth_password_export_43",
+      "value": "Stripe Private Key_export_export_password",
       "enabled": true
     }
     ,
@@ -59,8 +71,14 @@
     }
     ,
     {
-      "key": "lineitemname",
-      "value": "Test Order",
+      "key": "payButtonLabel",
+      "value": "Submit Payment",
+      "enabled": true
+    }
+    ,
+    {
+      "key": "cardColor",
+      "value": "#32325d",
       "enabled": true
     }
     ,
@@ -71,8 +89,8 @@
     }
     ,
     {
-      "key": "payButtonLabel",
-      "value": "Place Order",
+      "key": "checkoutLineItemName",
+      "value": "SAP OPF Order",
       "enabled": true
     }
     ,
