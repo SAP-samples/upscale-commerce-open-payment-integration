@@ -1,5 +1,5 @@
 {
-  "id": "0a8b30ec-d63b-492a-b26e-61b5a2332878",
+  "id": "62e5e7ba-dc9d-414b-80ee-154ef7dcbe21",
   "name": "Stripe Checkout",
   "values": [
     {
@@ -24,13 +24,13 @@
     },
     {
       "key": "authentication_outbound_basic_auth_username_export_30",
-      "value": "Stripe_privateKey_username",
+      "value": "Stripe Cotton IT_username",
       "enabled": true
     }
     ,
     {
       "key": "authentication_outbound_basic_auth_password_export_30",
-      "value": "Stripe_privateKey_password",
+      "value": "Stripe Cotton IT_password",
       "enabled": true
     }
     ,
