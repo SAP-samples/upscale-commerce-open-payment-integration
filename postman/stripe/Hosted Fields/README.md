@@ -36,7 +36,7 @@ iii) Click **configure** on Test column of newly created Account.
 ![](images/opf-account-group-id.png)
 
 **You must set a merchant ID first.**
-You can obtain from your account id found at the following location in the Stripe dashboard <https://dashboard.stripe.com/settings/account>.
+You can obtain from your account ID found at the following location in the Stripe dashboard <https://dashboard.stripe.com/settings/account>.
 
 ![](images/stripe-elements-get-account.png)
 
