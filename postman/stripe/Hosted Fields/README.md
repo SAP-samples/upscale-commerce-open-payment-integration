@@ -29,7 +29,7 @@ Ceate a new Account Group in the OPF Workbench.
 i) In payment integrations.. click **Create**.
 ![](images/opf-payment-integrations.png)
 
-ii) Add account name (can be anything) and set payment gateway to stripe.
+ii) Add account name (can be anything) and set payment gateway to Stripe.
 ![](images/stripe-elements-set-gateway.png)
 
 iii) Click **configure** on Test column of newly created Account.
