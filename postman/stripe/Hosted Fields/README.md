@@ -106,7 +106,7 @@ ii) For simplicity, select “All events”.
 
 ![](images/stripe-elements-select-events.png)
 
-iii) click **Add Endpoint**.
+iii) Click **Add Endpoint**.
 
 ![](images/stripe-elements-add-endpoint.png)
 
