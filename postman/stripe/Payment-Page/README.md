@@ -101,15 +101,15 @@ i) Paste in your endpoint URL copied from OPF.
 
 ![](images/stripe-elements-paste-webook.png)
 
-ii) For simplicity Select **All events**.
+ii) For simplicity, select **All events**.
 
 ![](images/stripe-elements-select-events.png)
 
-iii) click Add Endpoint.
+iii) click **Add Endpoint**.
 
 ![](images/stripe-elements-add-endpoint.png)
 
-iv) Click Reveal the get the webhook secret, it starts with **whsec**.
+iv) Click **Reveal** to get the webhook secret, it starts with **whsec**.
 
 ![](images/stripe-elements-reveal-whsecret.png)
 
