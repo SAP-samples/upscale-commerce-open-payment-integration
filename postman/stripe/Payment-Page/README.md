@@ -33,6 +33,7 @@ ii) Add account name (can be anything) and set payment gateway to stripe
 ![](images/stripe-checkout-set-gateway.png)
 
 iii) Click **configure** on Test column of newly created Account.
+
 ![](images/opf-account-group-id.png)
 
 **You must set a merchant ID first.**
