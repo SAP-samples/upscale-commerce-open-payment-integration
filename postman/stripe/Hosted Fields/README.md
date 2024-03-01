@@ -20,7 +20,7 @@ c) Set up Your Stripe Test Account to work with OPF.
 d) Prepare the [Postman Environment](Hosted%20Fields/Stripe%20elements%20-%20HOSTED_FIELDS%20-%20CAPTURE_PER_SHIPMENT%20-%20OPF_Environment_Configuration.json) file so the collection can be imported with all your OPF Tenant and Stripe Test Account unique values. 
 
 ## Create a Stripe Account ##
-You can Sign up for a free Stripe Test Account at https://dashboard.stripe.com/register.
+You can sign up for a free Stripe Test Account at https://dashboard.stripe.com/register.
 
 
 ## Creating the Merchant Account Group 
