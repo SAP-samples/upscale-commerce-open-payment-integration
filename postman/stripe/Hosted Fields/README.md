@@ -9,7 +9,8 @@ The integration supports:
 * Reversals
 * Reauthorization of saved payment
 
-In summary: to import the [Stripe Elements Postman Collection](Stripe%20elements%20-%20HOSTED_FIELDS%20-%20CAPTURE_PER_SHIPMENT%20-%20OPF_Provider_Configuration.json) this page will guide you through the following steps: 
+In summary: to import the [Stripe Elements Postman Collection](Stripe-elements-HOSTED_FIELDS_mapping_configuration.json
+) this page will guide you through the following steps: 
 
 a) Create Your Stripe Test Account.
 
@@ -17,7 +18,7 @@ b) Create a Merchant Account Group in OPF Workbench.
 
 c) Set up Your Stripe Test Account to work with OPF.
 
-d) Prepare the [Postman Environment](Hosted%20Fields/Stripe%20elements%20-%20HOSTED_FIELDS%20-%20CAPTURE_PER_SHIPMENT%20-%20OPF_Environment_Configuration.json) file so the collection can be imported with all your OPF Tenant and Stripe Test Account unique values. 
+d) Prepare the [Postman Environment](Stripe-elements-HOSTED_FIELDS_environment_configuration.json) file so the collection can be imported with all your OPF Tenant and Stripe Test Account unique values. 
 
 ## Create a Stripe Account ##
 You can sign up for a free Stripe Test Account at https://dashboard.stripe.com/register.
